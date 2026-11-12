@@ -302,7 +302,7 @@
     }
 
     /* ==========================================================================
-       HERO SECTION (shaqdeff Hero.jsx with Diagonal Split & World Map)
+       HERO SECTION (2-Column Architecture, No Overlaps, Luxury Portrait Frame)
        ========================================================================== */
     section.hero-section {
       position: relative;
@@ -312,9 +312,9 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-top: 100px;
-      padding-bottom: 60px;
-      background: linear-gradient(135deg, rgba(244,244,246,0.92) 58%, rgba(10,10,10,0.96) 58%);
+      padding-top: 110px;
+      padding-bottom: 50px;
+      background: linear-gradient(125deg, rgba(244,244,246,0.95) 52%, rgba(10,10,10,0.97) 52%);
     }
 
     .world-map-backdrop {
@@ -325,16 +325,24 @@
       height: 100%;
       z-index: 0;
       pointer-events: none;
-      opacity: 0.18;
+      opacity: 0.16;
       object-fit: cover;
     }
 
-    .hero-inner-content {
+    .hero-split-grid {
       position: relative;
       z-index: 10;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-left-wrapper {
       display: flex;
       align-items: flex-start;
-      gap: 24px;
+      gap: 20px;
+      max-width: 600px;
     }
 
     /* Vertical line on the left */
@@ -342,7 +350,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 12px;
+      margin-top: 14px;
+      flex-shrink: 0;
     }
 
     .indicator-dot {
@@ -350,45 +359,75 @@
       height: 18px;
       border-radius: 50%;
       background: #0a0a0a;
-      box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
+      box-shadow: 0 0 0 4px rgba(0,0,0,0.12);
     }
 
     .indicator-line {
       width: 4px;
-      height: 240px;
+      height: 220px;
       background: linear-gradient(180deg, #0a0a0a 40%, rgba(153, 153, 161, 0) 100%);
       margin-top: 8px;
       border-radius: 2px;
     }
 
     .hero-text-block {
-      max-width: 750px;
+      flex: 1;
+    }
+
+    .hero-head-text {
+      font-family: var(--font-poppins);
+      font-weight: 900;
+      color: var(--color-eerie-black);
+      font-size: clamp(34px, 5.2vw, 68px);
+      line-height: 1.12;
+      text-transform: uppercase;
+    }
+
+    .hero-name-highlight {
+      font-family: var(--font-mova);
+      font-weight: 800;
+      color: #111827;
+      font-size: clamp(44px, 6.8vw, 84px);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: inline-block;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .hero-sub-text {
+      font-family: var(--font-poppins);
+      font-weight: 500;
+      color: #374151;
+      font-size: clamp(15px, 1.8vw, 19px);
+      line-height: 1.65;
+      margin-top: 18px;
     }
 
     .hero-cta-row {
       display: flex;
-      gap: 18px;
-      margin-top: 36px;
+      gap: 16px;
+      margin-top: 32px;
       flex-wrap: wrap;
     }
 
     .btn-shaq-primary {
       font-family: var(--font-beckman);
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
       background: var(--color-night);
       color: var(--color-timber-wolf);
-      padding: 16px 32px;
+      padding: 15px 30px;
       border-radius: 10px;
-      border: none;
+      border: 1px solid var(--color-night);
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 10px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.25);
       transition: all 0.25s ease;
+      white-space: nowrap;
     }
 
     .btn-shaq-primary:hover {
@@ -399,20 +438,22 @@
 
     .btn-shaq-secondary {
       font-family: var(--font-beckman);
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
-      background: transparent;
+      background: #ffffff;
       color: var(--color-eerie-black);
-      padding: 16px 32px;
+      padding: 15px 30px;
       border-radius: 10px;
       border: 2px solid var(--color-eerie-black);
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
       transition: all 0.25s ease;
+      white-space: nowrap;
     }
 
     .btn-shaq-secondary:hover {
@@ -421,32 +462,102 @@
       transform: translateY(-2px);
     }
 
-    /* Cutout Character Image on Right */
-    .hero-character-photo {
+    /* RIGHT COLUMN: Luxury Framed Portrait (No more awkward overlapping!) */
+    .hero-right-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-portrait-card {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      height: 520px;
+      border-radius: 28px;
+      overflow: hidden;
+      background: #141414;
+      border: 3px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-portrait-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 35px 80px -10px rgba(0, 0, 0, 0.65);
+    }
+
+    .hero-portrait-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+    }
+
+    /* Bottom gradient vignette for seamless depth */
+    .hero-portrait-card::after {
+      content: "";
       position: absolute;
       bottom: 0;
-      right: 4%;
-      height: 80vh;
-      max-height: 720px;
-      z-index: 5;
+      left: 0;
+      right: 0;
+      height: 150px;
+      background: linear-gradient(to top, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.4) 60%, transparent 100%);
       pointer-events: none;
-      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
     }
 
-    @media (max-width: 1024px) {
-      .hero-character-photo {
-        opacity: 0.35;
-        right: -10%;
-        height: 60vh;
-      }
-      section.hero-section {
-        background: linear-gradient(137deg, rgba(244,244,246,0.92) 65%, rgba(10,10,10,0.98) 65%);
-      }
+    /* Floating Chip Badge over portrait */
+    .portrait-floating-chip {
+      position: absolute;
+      bottom: 22px;
+      left: 20px;
+      right: 20px;
+      background: rgba(20, 20, 20, 0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 14px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 5;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     }
 
-    @media (max-width: 640px) {
-      .hero-character-photo { display: none; }
-      .indicator-line { height: 140px; }
+    .chip-icon-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #fef3c7;
+      color: #d97706;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .chip-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chip-meta h5 {
+      font-family: var(--font-poppins);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .chip-meta p {
+      font-size: 11.5px;
+      color: #94a3b8;
+      line-height: 1.3;
+      margin-top: 2px;
     }
 
     /* Bouncing Mouse Scroll Indicator (shaqdeff template) */
@@ -455,18 +566,18 @@
       z-index: 20;
       display: flex;
       justify-content: center;
-      margin-top: 60px;
+      margin-top: 40px;
     }
 
     .scroll-mouse-pill {
-      width: 35px;
-      height: 64px;
+      width: 32px;
+      height: 56px;
       border-radius: 28px;
-      border: 4px solid var(--color-french);
+      border: 3px solid var(--color-french);
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding: 8px 0;
+      padding: 6px 0;
       cursor: pointer;
       transition: border-color 0.2s ease;
     }
@@ -476,17 +587,29 @@
     }
 
     .scroll-mouse-dot {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: var(--color-taupe);
       animation: mouseBounce 1.5s infinite;
     }
 
-    @keyframes mouseBounce {
-      0% { transform: translateY(0); opacity: 1; }
-      50% { transform: translateY(22px); opacity: 0.3; }
-      100% { transform: translateY(0); opacity: 1; }
+    @media (max-width: 960px) {
+      section.hero-section {
+        background: linear-gradient(180deg, rgba(244,244,246,0.96) 60%, rgba(10,10,10,0.97) 60%);
+      }
+      .hero-split-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero-left-wrapper {
+        max-width: 100%;
+      }
+      .hero-portrait-card {
+        max-width: 360px;
+        height: 460px;
+        margin: 0 auto;
+      }
     }
 
     /* ==========================================================================
@@ -1147,43 +1270,58 @@
     </ul>
   </div>
 
-  <!-- HERO SECTION (Diagonal Split + World Map Background + Character Image) -->
+  <!-- HERO SECTION (2-Column Grid Split + Framed Portrait + No Overlaps) -->
   <section class="hero-section" id="hero">
     <!-- World Map Backdrop Texture -->
     <img src="assets/backgrounds/bw-map.jpeg" alt="world map" class="world-map-backdrop" />
 
     <div class="container">
-      <div class="hero-inner-content">
+      <div class="hero-split-grid">
         
-        <!-- Left Vertical Indicator Line -->
-        <div class="hero-indicator-column">
-          <div class="indicator-dot"></div>
-          <div class="indicator-line"></div>
+        <!-- Left Column: Typography & CTAs -->
+        <div class="hero-left-wrapper">
+          <div class="hero-indicator-column">
+            <div class="indicator-dot"></div>
+            <div class="indicator-line"></div>
+          </div>
+
+          <div class="hero-text-block">
+            <h1 class="hero-head-text">
+              HI, I'M <span class="hero-name-highlight">YOUSSEF</span>
+            </h1>
+            <p class="hero-sub-text">
+              A Full-Stack Software Developer &amp; AI Systems Architect. Crafting high-performance web systems, Gemini AI multi-modal integrations, and progressive web applications.
+            </p>
+
+            <div class="hero-cta-row">
+              <a href="#projects" class="btn-shaq-primary">
+                <span>EXPLORE PROJECTS</span>
+                <span>➔</span>
+              </a>
+              <a href="#contact" class="btn-shaq-secondary">
+                <span>GET IN TOUCH</span>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <!-- Hero Text -->
-        <div class="hero-text-block">
-          <h1 class="hero-head-text">
-            HI, I'M <span class="hero-name-highlight">YOUSSEF</span>
-          </h1>
-          <p class="hero-sub-text">
-            A Full-Stack Software Developer &amp; AI Systems Architect. Crafting high-performance web systems, Gemini AI multi-modal integrations, and progressive web applications.
-          </p>
-
-          <div class="hero-cta-row">
-            <a href="#projects" class="btn-shaq-primary">
-              <span>EXPLORE PROJECTS</span>
-              <span>➔</span>
-            </a>
-            <a href="#contact" class="btn-shaq-secondary">
-              <span>GET IN TOUCH</span>
-            </a>
+        <!-- Right Column: Framed Developer Portrait -->
+        <div class="hero-right-col">
+          <div class="hero-portrait-card">
+            <img src="portfolio.jpeg" alt="Youssef Saber Ahmed" class="hero-portrait-img" />
+            <div class="portrait-floating-chip">
+              <div class="chip-icon-box">⚡</div>
+              <div class="chip-meta">
+                <h5>Youssef Saber Ahmed</h5>
+                <p>Full-Stack &amp; AI Systems Engineer</p>
+              </div>
+            </div>
           </div>
         </div>
 
       </div>
 
-      <!-- Bouncing Mouse Scroll Indicator (from template) -->
+      <!-- Bouncing Mouse Scroll Indicator -->
       <div class="hero-scroll-wrap">
         <a href="#about" title="Scroll down">
           <div class="scroll-mouse-pill">
@@ -1192,9 +1330,6 @@
         </a>
       </div>
     </div>
-
-    <!-- Cutout Developer Portrait on Right -->
-    <img src="portfolio.jpeg" alt="Youssef Saber Ahmed" class="hero-character-photo" />
   </section>
 
   <!-- SECTION 1: ABOUT / OVERVIEW (Service Cards from shaqdeff About.jsx) -->
