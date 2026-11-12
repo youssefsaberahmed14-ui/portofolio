@@ -4,111 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Youssef Saber Ahmed — Full-Stack & AI Software Developer</title>
-  <meta name="description" content="Executive Engineering Hub & Portfolio of Youssef Saber Ahmed — Full-Stack & AI Software Developer building scalable web applications, Gemini AI integrations, and responsive PWAs." />
-  <meta name="author" content="Youssef Saber Ahmed" />
-  
+  <meta name="description" content="Portfolio of Youssef Saber Ahmed — Full-Stack & AI Developer based on the iconic Shaqdeff Portfolio Template." />
+
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
-  <!-- Google Fonts: Bricolage Grotesque (Headings) + Inter (Body/UI) + Playfair Display (Editorial Accent) + JetBrains Mono (Tech Ledger) + Tajawal (Arabic) -->
+  <!-- Google Fonts: Poppins (from template) + Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       EXECUTIVE ENGINEERING HUB DESIGN SYSTEM TOKENS (60-30-10 System)
+       SHAQDEFF PORTFOLIO TEMPLATE FONTS (@font-face)
        ========================================================================== */
-    :root {
-      /* Surface & Canvases (30%) */
-      --color-surface: #f8f9ff;
-      --color-surface-dim: #ccdbf3;
-      --color-surface-bright: #f8f9ff;
-      --color-surface-container-lowest: #ffffff;
-      --color-surface-container-low: #eff4ff;
-      --color-surface-container: #e6eeff;
-      --color-surface-mist: #f8fafc;
-      --color-border-light: #e2e8f0;
-      --color-border-hover: #cbd5e1;
-
-      /* Primary Structure & Ink (60%) */
-      --color-on-surface: #0d1c2e;
-      --color-primary-dark: #0f172a;
-      --color-midnight-ink: #0f172a;
-      --color-graphite: #334155;
-      --color-slate: #64748b;
-      --color-taupe: #94a3b8;
-
-      /* Accent Focus & Action (10%) */
-      --color-accent-amber: #f59e0b;
-      --color-accent-amber-dark: #d97706;
-      --color-accent-soft: rgba(245, 158, 11, 0.12);
-      --color-accent-glow: rgba(245, 158, 11, 0.28);
-      --color-gold-star: #f59e0b;
-
-      /* macOS Window Nodes */
-      --color-mac-close: #ff5f56;
-      --color-mac-minimize: #ffbd2e;
-      --color-mac-expand: #27c93f;
-
-      /* Legacy compatibility mappings */
-      --color-voltage-violet: #f59e0b;
-      --color-pure-white: #ffffff;
-      --color-fog: #f8fafc;
-      --color-mist: #e2e8f0;
-
-      /* Typography Families */
-      --font-display: 'Bricolage Grotesque', sans-serif;
-      --font-body: 'Inter', sans-serif;
-      --font-serif-accent: 'Playfair Display', Georgia, serif;
-      --font-mono: 'JetBrains Mono', monospace;
-      --font-arabic: 'Tajawal', sans-serif;
-
-      /* Radii */
-      --radius-sm: 0.25rem;
-      --radius-default: 0.5rem;
-      --radius-md: 0.75rem;
-      --radius-lg: 1rem;
-      --radius-xl: 1.5rem;
-      --radius-pills: 9999px;
-
-      /* Elevation & Shadows */
-      --shadow-subtle: 0 1px 3px rgba(15, 23, 42, 0.08);
-      --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.05);
-      --shadow-card-hover: 0 20px 40px rgba(15, 23, 42, 0.09);
-      --shadow-float-mockup: 0 20px 50px -12px rgba(15, 23, 42, 0.12);
-      --shadow-accent-glow: 0 8px 24px rgba(245, 158, 11, 0.28);
-
-      /* Layout */
-      --page-max-width: 1280px;
-      --section-gap: 90px;
+    @font-face {
+      font-family: 'Arenq';
+      src: url('assets/fonts/arenq.otf') format('opentype');
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Mova';
+      src: url('assets/fonts/mova.otf') format('opentype');
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Beckman';
+      src: url('assets/fonts/beckman.otf') format('opentype');
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Overcame Bold';
+      src: url('assets/fonts/overcame-bold.woff') format('woff');
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Overcame Outline';
+      src: url('assets/fonts/overcame-outline.woff') format('woff');
+      font-display: swap;
     }
 
-    /* CSS Reset */
+    /* ==========================================================================
+       SHAQDEFF COLOR TOKENS & SYSTEM
+       ========================================================================== */
+    :root {
+      --color-primary: #050816;
+      --color-secondary: #aaa6c3;
+      --color-tertiary: #151030;
+      --color-flash-white: #f4f4f6;
+      --color-platinum: #e6e6e9;
+      --color-timber-wolf: #d4d4d8;
+      --color-taupe: #9999a1;
+      --color-silver: #d6d6d6;
+      --color-dim: #66666e;
+      --color-battle-gray: #858585;
+      --color-french: #b5b5ba;
+      --color-night: #141414;
+      --color-jet: #292929;
+      --color-jet-light: #333333;
+      --color-rich-black: #2e2e2e;
+      --color-eerie-black: #1f1f1f;
+      --color-onyx: #5b5b5b;
+
+      --font-poppins: 'Poppins', sans-serif;
+      --font-mova: 'Mova', sans-serif;
+      --font-beckman: 'Beckman', sans-serif;
+      --font-arenq: 'Arenq', sans-serif;
+      --font-overcame: 'Overcame Bold', sans-serif;
+    }
+
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
-
-    html {
       scroll-behavior: smooth;
     }
 
     body {
-      background-color: var(--color-surface-container-lowest);
-      color: var(--color-on-surface);
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.7;
+      background-color: var(--color-flash-white);
+      color: var(--color-eerie-black);
+      font-family: var(--font-poppins);
       overflow-x: hidden;
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
     }
 
     ::selection {
-      background: #fef3c7;
-      color: #92400e;
+      background: var(--color-jet);
+      color: #ffffff;
     }
 
     a {
@@ -116,1508 +99,1149 @@
       text-decoration: none;
     }
 
-    /* CONTAINER */
     .container {
-      max-width: var(--page-max-width);
+      max-width: 1280px;
       margin: 0 auto;
       padding: 0 1.5rem;
       position: relative;
     }
 
-    @media (min-width: 1024px) {
-      .container {
-        padding: 0 2rem;
-      }
+    @media (min-width: 768px) {
+      .container { padding: 0 4rem; }
     }
 
-    /* TYPOGRAPHY HELPERS */
-    .editorial-accent, .serif-accent {
-      font-family: var(--font-serif-accent);
-      font-style: italic;
-      font-weight: 600;
-      color: var(--color-accent-amber-dark);
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-body);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
+    /* TYPOGRAPHY CLASSES FROM TEMPLATE */
+    .hero-head-text {
+      font-family: var(--font-poppins);
+      font-weight: 900;
+      color: var(--color-eerie-black);
+      font-size: clamp(38px, 6vw, 75px);
+      line-height: 1.15;
       text-transform: uppercase;
-      color: var(--color-accent-amber-dark);
-      margin-bottom: 14px;
     }
 
-    .eyebrow::before {
-      content: "";
+    .hero-name-highlight {
+      font-family: var(--font-mova);
+      font-weight: 800;
+      color: var(--color-battle-gray);
+      font-size: clamp(48px, 7.5vw, 90px);
+      letter-spacing: 2px;
+      text-transform: uppercase;
       display: inline-block;
-      width: 16px;
-      height: 2px;
-      background: var(--color-accent-amber);
-      border-radius: 2px;
     }
 
-    .display-headline {
-      font-family: var(--font-display);
-      font-size: clamp(36px, 5.2vw, 56px);
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      color: var(--color-midnight-ink);
+    .hero-sub-text {
+      font-family: var(--font-poppins);
+      font-weight: 500;
+      color: var(--color-eerie-black);
+      font-size: clamp(16px, 2.2vw, 24px);
+      line-height: 1.6;
+      margin-top: 16px;
+      max-width: 650px;
     }
 
-    .section-headline {
-      font-family: var(--font-display);
-      font-size: clamp(28px, 3.8vw, 40px);
-      font-weight: 700;
+    .section-sub-text {
+      font-family: var(--font-poppins);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-taupe);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .section-head-text {
+      font-family: var(--font-poppins);
+      font-weight: 900;
+      color: var(--color-eerie-black);
+      font-size: clamp(34px, 4.5vw, 56px);
       line-height: 1.2;
-      letter-spacing: -0.025em;
-      color: var(--color-midnight-ink);
     }
 
-    .sub-copy {
-      font-family: var(--font-body);
-      font-size: 17px;
-      color: var(--color-slate);
-      line-height: 1.7;
-    }
-
-    /* BUTTONS */
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: var(--color-accent-amber);
-      color: var(--color-midnight-ink);
-      border-radius: var(--radius-default);
-      padding: 14px 26px;
-      font-family: var(--font-body);
-      font-size: 15px;
-      font-weight: 600;
-      border: 1px solid var(--color-accent-amber);
-      cursor: pointer;
-      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.22);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      white-space: nowrap;
-    }
-
-    .btn-primary:hover {
-      background: var(--color-accent-amber-dark);
-      border-color: var(--color-accent-amber-dark);
-      color: #ffffff;
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-accent-glow);
-    }
-
-    .btn-dark {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: var(--color-midnight-ink);
-      color: #ffffff;
-      border-radius: var(--radius-default);
-      padding: 14px 26px;
-      font-family: var(--font-body);
-      font-size: 15px;
-      font-weight: 600;
-      border: 1px solid var(--color-midnight-ink);
-      cursor: pointer;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      white-space: nowrap;
-    }
-
-    .btn-dark:hover {
-      background: #000000;
-      border-color: var(--color-accent-amber);
-      color: var(--color-accent-amber);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.2);
-    }
-
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: transparent;
-      color: var(--color-midnight-ink);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-default);
-      padding: 14px 26px;
-      font-family: var(--font-body);
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      white-space: nowrap;
-    }
-
-    .btn-ghost:hover {
-      border-color: var(--color-midnight-ink);
-      background: var(--color-surface-mist);
-      transform: translateY(-2px);
-    }
-
-    /* SIGNATURE PILL SUBMIT BUTTON */
-    .btn-submit-pill-v2 {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      background: var(--color-midnight-ink);
-      color: #ffffff;
-      border: 1px solid var(--color-midnight-ink);
-      border-radius: var(--radius-pills);
-      padding: 8px 10px 8px 24px;
-      font-family: var(--font-body);
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
-    }
-
-    .btn-submit-pill-v2:hover {
-      background: #000000;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
-    }
-
-    .submit-arrow-circle-v2 {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--color-accent-amber);
-      color: var(--color-midnight-ink);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      font-weight: 800;
-      transition: transform 0.2s ease;
-    }
-
-    .btn-submit-pill-v2:hover .submit-arrow-circle-v2 {
-      transform: translateX(4px);
-    }
-
-    /* GLOBAL GLASSMORPHIC NAVBAR */
-    header.site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--color-border-light);
-      transition: all 0.2s ease;
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-
-    .brand-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .brand-logo-text {
-      font-family: var(--font-display);
-      font-size: 19px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--color-midnight-ink);
-    }
-
-    .brand-logo-text span {
-      color: var(--color-accent-amber);
-    }
-
-    .brand-pill-badge {
-      background: var(--color-accent-soft);
-      color: var(--color-accent-amber-dark);
-      border: 1px solid rgba(245, 158, 11, 0.25);
-      border-radius: var(--radius-pills);
-      font-size: 11px;
-      font-weight: 700;
-      padding: 3px 10px;
-      letter-spacing: 0.05em;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .nav-link {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--color-slate);
-      transition: color 0.15s ease;
-    }
-
-    .nav-link:hover {
-      color: var(--color-midnight-ink);
-    }
-
-    .btn-nav-compact {
-      background: var(--color-midnight-ink);
-      color: #ffffff;
-      border: 1px solid rgba(245, 158, 11, 0.3);
-      border-radius: var(--radius-default);
-      padding: 10px 20px;
-      font-size: 14px;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.2s ease;
-    }
-
-    .btn-nav-compact:hover {
-      background: var(--color-accent-amber);
-      color: var(--color-midnight-ink);
-      border-color: var(--color-accent-amber);
-      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
-    }
-
-    @media (max-width: 860px) {
-      .nav-links { display: none; }
+    .section-head-text-light {
+      font-family: var(--font-poppins);
+      font-weight: 900;
+      color: var(--color-timber-wolf);
+      font-size: clamp(34px, 4.5vw, 56px);
+      line-height: 1.2;
     }
 
     /* ==========================================================================
-       HERO SECTION (2-Column Asymmetric Desktop Split)
+       NAVBAR (shaqdeff Navbar.jsx)
        ========================================================================== */
-    section.hero-section {
-      padding-top: 150px;
-      padding-bottom: 80px;
-      position: relative;
-      overflow: hidden;
-      background: var(--color-surface-container-lowest);
-    }
-
-    .hero-split-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 56px;
-      align-items: center;
-    }
-
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .hero-buttons-row {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-top: 6px;
-    }
-
-    /* Social Proof Stack */
-    .social-proof-wrap {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-top: 14px;
-      padding-top: 20px;
-      border-top: 1px solid var(--color-border-light);
-    }
-
-    .avatar-stack {
-      display: flex;
-      align-items: center;
-    }
-
-    .avatar-item {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      border: 2px solid var(--color-surface-container-lowest);
-      margin-left: -10px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 13px;
-      background: #e2e8f0;
-      color: #1e293b;
-    }
-
-    .avatar-item:first-child {
-      margin-left: 0;
-    }
-
-    .avatar-item img {
+    nav.site-navbar {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background: var(--color-flash-white);
+      opacity: 0.97;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
     }
 
-    .social-proof-text {
+    .nav-wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 75px;
       display: flex;
-      flex-direction: column;
-    }
-
-    .stars-row {
-      color: var(--color-accent-amber);
-      font-size: 14px;
-      letter-spacing: 2px;
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-
-    .proof-label {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--color-slate);
-    }
-
-    /* HERO VISUAL: Tactile macOS Window Frame */
-    .hero-visual-card {
-      position: relative;
-    }
-
-    .floating-mockup-window {
-      background: var(--color-surface-container-lowest);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-float-mockup);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
-
-    .floating-mockup-window:hover {
-      transform: translateY(-4px);
-    }
-
-    .mac-window-bar {
-      height: 40px;
-      background: var(--color-surface-mist);
-      border-bottom: 1px solid var(--color-border-light);
-      display: flex;
+      justify-content: space-between;
       align-items: center;
-      padding: 0 16px;
-      gap: 12px;
     }
 
-    .traffic-lights {
+    @media (min-width: 768px) {
+      .nav-wrapper { padding: 0 4rem; }
+    }
+
+    .nav-logo-link {
       display: flex;
       align-items: center;
       gap: 8px;
     }
 
-    .traffic-dot {
-      width: 12px;
-      height: 12px;
+    .nav-logo-icon {
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      display: inline-block;
-    }
-
-    .traffic-red { background: var(--color-mac-close); }
-    .traffic-amber { background: var(--color-mac-minimize); }
-    .traffic-green { background: var(--color-mac-expand); }
-
-    .window-title {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--color-slate);
-      letter-spacing: 0.05em;
-      margin-left: auto;
-    }
-
-    .mockup-inner-photo {
-      position: relative;
-      width: 100%;
-      height: 420px;
-      background: #0f172a;
-      overflow: hidden;
-    }
-
-    .mockup-inner-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 20%;
-    }
-
-    /* Floating Chip Badge */
-    .floating-chip {
-      position: absolute;
-      bottom: -20px;
-      left: -20px;
-      background: var(--color-surface-container-lowest);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-md);
-      padding: 12px 18px;
-      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      z-index: 10;
-    }
-
-    .chip-badge {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: #fef3c7;
-      color: var(--color-accent-amber-dark);
+      background: var(--color-night);
+      color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
-      flex-shrink: 0;
-    }
-
-    .chip-info h5 {
-      font-size: 14px;
+      font-size: 20px;
       font-weight: 700;
-      color: var(--color-midnight-ink);
     }
 
-    .chip-info p {
-      font-size: 12px;
-      color: var(--color-slate);
+    .nav-logo-text {
+      font-family: var(--font-mova);
+      font-size: 26px;
+      letter-spacing: 2px;
+      color: var(--color-eerie-black);
     }
 
-    /* HERO SCROLL MOUSE INDICATOR (from shaqdeff template) */
-    .hero-scroll-indicator {
+    .nav-links-list {
       display: flex;
-      justify-content: center;
-      margin-top: 50px;
+      list-style: none;
+      gap: 36px;
+      align-items: center;
     }
 
-    .mouse-pill {
-      width: 30px;
-      height: 52px;
-      border: 2px solid var(--color-slate);
-      border-radius: var(--radius-pills);
-      display: flex;
-      justify-content: center;
-      padding-top: 8px;
-      transition: all 0.2s ease;
+    .nav-item-link {
+      font-family: var(--font-mova);
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--color-eerie-black);
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .nav-item-link:hover {
+      color: var(--color-taupe);
+    }
+
+    .nav-item-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 3px;
+      background: #292929;
+      margin: 3px auto 0;
+      transition: width 0.3s ease;
+    }
+
+    .nav-item-link:hover::after {
+      width: 80%;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
       cursor: pointer;
     }
 
-    .mouse-pill:hover {
-      border-color: var(--color-accent-amber);
-      transform: translateY(2px);
+    @media (max-width: 860px) {
+      .nav-links-list { display: none; }
+      .mobile-menu-btn { display: block; }
     }
 
-    .mouse-wheel-dot {
-      width: 6px;
+    /* Mobile Overlay Menu */
+    .mobile-menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--color-flash-white);
+      z-index: 1000;
+      padding: 30px;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .mobile-menu-overlay.active {
+      display: flex;
+    }
+
+    .mobile-nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-nav-link {
+      font-family: var(--font-arenq);
+      font-size: clamp(48px, 10vw, 80px);
+      text-transform: uppercase;
+      color: var(--color-eerie-black);
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       HERO SECTION (shaqdeff Hero.jsx with Diagonal Split & World Map)
+       ========================================================================== */
+    section.hero-section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      background: linear-gradient(135deg, rgba(244,244,246,0.92) 58%, rgba(10,10,10,0.96) 58%);
+    }
+
+    .world-map-backdrop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.18;
+      object-fit: cover;
+    }
+
+    .hero-inner-content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    /* Vertical line on the left */
+    .hero-indicator-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .indicator-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #0a0a0a;
+      box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
+    }
+
+    .indicator-line {
+      width: 4px;
+      height: 240px;
+      background: linear-gradient(180deg, #0a0a0a 40%, rgba(153, 153, 161, 0) 100%);
+      margin-top: 8px;
+      border-radius: 2px;
+    }
+
+    .hero-text-block {
+      max-width: 750px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      gap: 18px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+
+    .btn-shaq-primary {
+      font-family: var(--font-beckman);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: var(--color-night);
+      color: var(--color-timber-wolf);
+      padding: 16px 32px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      transition: all 0.25s ease;
+    }
+
+    .btn-shaq-primary:hover {
+      background: var(--color-battle-gray);
+      color: var(--color-eerie-black);
+      transform: translateY(-2px);
+    }
+
+    .btn-shaq-secondary {
+      font-family: var(--font-beckman);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--color-eerie-black);
+      padding: 16px 32px;
+      border-radius: 10px;
+      border: 2px solid var(--color-eerie-black);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.25s ease;
+    }
+
+    .btn-shaq-secondary:hover {
+      background: var(--color-eerie-black);
+      color: var(--color-flash-white);
+      transform: translateY(-2px);
+    }
+
+    /* Cutout Character Image on Right */
+    .hero-character-photo {
+      position: absolute;
+      bottom: 0;
+      right: 4%;
+      height: 80vh;
+      max-height: 720px;
+      z-index: 5;
+      pointer-events: none;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+    }
+
+    @media (max-width: 1024px) {
+      .hero-character-photo {
+        opacity: 0.35;
+        right: -10%;
+        height: 60vh;
+      }
+      section.hero-section {
+        background: linear-gradient(137deg, rgba(244,244,246,0.92) 65%, rgba(10,10,10,0.98) 65%);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-character-photo { display: none; }
+      .indicator-line { height: 140px; }
+    }
+
+    /* Bouncing Mouse Scroll Indicator (shaqdeff template) */
+    .hero-scroll-wrap {
+      position: relative;
+      z-index: 20;
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+    }
+
+    .scroll-mouse-pill {
+      width: 35px;
+      height: 64px;
+      border-radius: 28px;
+      border: 4px solid var(--color-french);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 8px 0;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+    }
+
+    .scroll-mouse-pill:hover {
+      border-color: var(--color-eerie-black);
+    }
+
+    .scroll-mouse-dot {
+      width: 10px;
       height: 10px;
-      border-radius: 4px;
-      background: var(--color-accent-amber);
-      animation: mouseBounce 1.6s infinite;
+      border-radius: 50%;
+      background: var(--color-taupe);
+      animation: mouseBounce 1.5s infinite;
     }
 
     @keyframes mouseBounce {
       0% { transform: translateY(0); opacity: 1; }
-      50% { transform: translateY(14px); opacity: 0.3; }
+      50% { transform: translateY(22px); opacity: 0.3; }
       100% { transform: translateY(0); opacity: 1; }
     }
 
-    @media (max-width: 960px) {
-      .hero-split-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .floating-chip {
-        left: 10px;
-        bottom: -15px;
-      }
-    }
-
     /* ==========================================================================
-       SECTION 1: OVERVIEW & CORE DISCIPLINES (Service Cards from shaqdeff)
+       SECTION 1: ABOUT / OVERVIEW & SERVICE CARDS (shaqdeff About.jsx)
        ========================================================================== */
-    section.overview-section {
-      padding: var(--section-gap) 0;
-      background: var(--color-surface-mist);
-      border-top: 1px solid var(--color-border-light);
-      border-bottom: 1px solid var(--color-border-light);
-    }
-
-    .section-header-center {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 50px;
-    }
-
-    .overview-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 24px;
-    }
-
-    .service-card {
-      background: var(--color-surface-container-lowest);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-md);
-      padding: 32px 24px;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.25s ease;
-      box-shadow: var(--shadow-subtle);
+    section.about-section {
+      padding: 100px 0;
       position: relative;
+      background: linear-gradient(165deg, rgba(244,244,246,1) 100%, rgba(122,122,122,1) 100%);
+      background-image: url('assets/backgrounds/white-abstract.png');
+      background-size: cover;
+      background-position: center;
     }
 
-    .service-card:hover {
-      border-color: var(--color-border-hover);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-card-hover);
+    .about-bio-text {
+      font-size: 18px;
+      color: var(--color-taupe);
+      max-width: 820px;
+      line-height: 1.8;
+      margin-top: 16px;
     }
 
-    .service-icon-box {
-      width: 56px;
-      height: 56px;
-      border-radius: var(--radius-default);
-      background: #f8fafc;
-      border: 1px solid var(--color-border-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      transition: all 0.2s ease;
-    }
-
-    .service-card:hover .service-icon-box {
-      background: #fef3c7;
-      border-color: rgba(245, 158, 11, 0.3);
-    }
-
-    .service-icon-box img {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-    }
-
-    .service-title {
-      font-family: var(--font-display);
-      font-size: 19px;
-      font-weight: 700;
-      color: var(--color-midnight-ink);
-      margin-bottom: 10px;
-    }
-
-    .service-desc {
-      font-size: 14.5px;
-      color: var(--color-slate);
-      line-height: 1.65;
-      margin-bottom: 18px;
-      flex-grow: 1;
-    }
-
-    .service-tags {
+    .services-cards-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      padding-top: 14px;
-      border-top: 1px solid #f1f5f9;
+      gap: 36px;
+      margin-top: 60px;
     }
 
-    .tag-chip {
-      background: var(--color-surface-mist);
-      color: var(--color-slate);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-pills);
-      padding: 3px 10px;
-      font-size: 11.5px;
-      font-weight: 500;
-      font-family: var(--font-mono);
+    .service-card-wrapper {
+      flex: 1 1 250px;
+      background: linear-gradient(158deg, rgba(153, 153, 161, 1) 25%, rgba(153, 153, 161, 0.4) 100%);
+      padding: 1px;
+      border-radius: 20px;
+      box-shadow: 0px 35px 120px -15px #1f1f1f;
+      transition: transform 0.3s ease;
     }
 
-    .tag-chip.accent {
-      background: var(--color-accent-soft);
-      color: var(--color-accent-amber-dark);
-      border-color: rgba(245, 158, 11, 0.25);
-      font-weight: 600;
+    .service-card-wrapper:hover {
+      transform: translateY(-8px);
     }
 
-    /* ==========================================================================
-       SECTION 2: TECHNOLOGIES & TOOLING MATRIX (Tech Grid from shaqdeff)
-       ========================================================================== */
-    section.tech-section {
-      padding: var(--section-gap) 0;
-      background: var(--color-surface-container-lowest);
-    }
-
-    .tech-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
-      gap: 16px;
-      margin-top: 40px;
-    }
-
-    .tech-box {
-      background: var(--color-surface-container-lowest);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-default);
-      padding: 20px 14px;
+    .service-card-inner {
+      background: var(--color-jet-light);
+      border-radius: 20px;
+      padding: 36px 24px;
+      min-height: 280px;
       display: flex;
       flex-direction: column;
+      justify-content: space-evenly;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
-      transition: all 0.25s ease;
-      cursor: default;
-    }
-
-    .tech-box:hover {
-      border-color: var(--color-accent-amber);
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(245, 158, 11, 0.12);
-    }
-
-    .tech-icon-wrap {
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .tech-icon-wrap img {
-      width: 38px;
-      height: 38px;
-      object-fit: contain;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));
-    }
-
-    .tech-name {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--color-midnight-ink);
       text-align: center;
     }
 
-    /* ==========================================================================
-       SECTION 3: FLAGSHIP SPOTLIGHT (Lecture Buddy AI)
-       ========================================================================== */
-    section.flagship-section {
-      padding: var(--section-gap) 0;
-      background: var(--color-surface-mist);
-      border-top: 1px solid var(--color-border-light);
-      border-bottom: 1px solid var(--color-border-light);
+    .service-card-icon {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
     }
 
-    .flagship-split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 56px;
-      align-items: center;
-    }
-
-    .flagship-card-box {
-      background: var(--color-surface-container-lowest);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-lg);
-      padding: 32px;
-      box-shadow: var(--shadow-card);
-    }
-
-    @media (max-width: 860px) {
-      .flagship-split {
-        grid-template-columns: 1fr;
-        gap: 36px;
-      }
+    .service-card-title {
+      color: var(--color-taupe);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-family: var(--font-beckman);
+      margin-top: 16px;
     }
 
     /* ==========================================================================
-       SECTION 4: LIVE DEPLOYED PROJECTS (macOS Showcase Windows)
+       SECTION 2: TECHNOLOGIES (shaqdeff Tech.jsx with nairobi.png dark bg)
        ========================================================================== */
-    section.projects-section {
-      padding: var(--section-gap) 0;
-      background: var(--color-surface-container-lowest);
+    section.tech-section {
+      padding: 100px 0 120px;
       position: relative;
+      background: linear-gradient(165deg, rgba(20,20,20,0.92) 100%, rgba(109,109,116,0.92) 100%), url('assets/backgrounds/nairobi.png');
+      background-size: cover;
+      background-position: center;
     }
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 30px;
+    .tech-balls-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 36px;
       margin-top: 50px;
     }
 
-    .product-preview-card {
-      background: var(--color-surface-container-lowest);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-md);
-      overflow: hidden;
+    .tech-ball-card {
+      width: 110px;
+      height: 110px;
+      background: rgba(30, 30, 30, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 50%;
       display: flex;
       flex-direction: column;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: var(--shadow-subtle);
-    }
-
-    .product-preview-card:hover {
-      border-color: var(--color-border-hover);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-card-hover);
-    }
-
-    .card-top-mac {
-      height: 40px;
-      background: var(--color-surface-mist);
-      border-bottom: 1px solid var(--color-border-light);
-      display: flex;
       align-items: center;
-      padding: 0 14px;
-      gap: 12px;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: default;
     }
 
-    .mac-url-pill {
-      flex: 1;
-      background: var(--color-surface-container-lowest);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-pills);
-      padding: 3px 10px;
-      font-family: var(--font-mono);
+    .tech-ball-card:hover {
+      transform: translateY(-8px) scale(1.08);
+      border-color: rgba(255, 255, 255, 0.35);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .tech-ball-card img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .tech-ball-name {
       font-size: 11px;
-      color: var(--color-slate);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      font-weight: 600;
+      color: var(--color-silver);
+      margin-top: 4px;
+      text-transform: uppercase;
+      font-family: var(--font-poppins);
     }
 
-    .card-mockup-viewport {
-      height: 200px;
+    /* ==========================================================================
+       SECTION 3: PROJECTS (shaqdeff Horizontal Expanding Cards Accordion)
+       ========================================================================== */
+    section.projects-section {
+      padding: 100px 0;
+      background: var(--color-flash-white);
       position: relative;
-      cursor: pointer;
-      background: #0f172a;
-      overflow: hidden;
     }
 
-    .mini-screen {
+    .projects-accordion-row {
+      display: flex;
+      gap: 16px;
+      height: 460px;
+      margin-top: 50px;
+      overflow-x: auto;
+      padding-bottom: 20px;
+    }
+
+    .project-acc-card {
+      position: relative;
+      height: 100%;
+      min-width: 120px;
+      border-radius: 24px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: rgba(155, 155, 155, 0.3) 0 2px 6px, rgba(155, 155, 155, 0.22) 0 0 4px;
+      transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+      flex: 0.65;
+    }
+
+    .project-acc-card.active {
+      flex: 3.5;
+      min-width: 320px;
+    }
+
+    .project-acc-img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      color: #ffffff;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      object-fit: cover;
+      transition: transform 0.5s ease;
     }
 
-    .mockup-hover-layer {
+    .project-acc-card:hover .project-acc-img {
+      transform: scale(1.04);
+    }
+
+    .project-dark-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(4px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.2s ease;
+      background: rgba(30, 30, 30, 0.55);
+      z-index: 1;
+      transition: background 0.3s ease;
     }
 
-    .card-mockup-viewport:hover .mockup-hover-layer {
-      opacity: 1;
+    .project-acc-card.active .project-dark-overlay {
+      background: rgba(20, 20, 20, 0.4);
     }
 
-    .hover-badge-btn {
-      background: var(--color-accent-amber);
-      color: var(--color-midnight-ink);
-      font-size: 13px;
-      font-weight: 700;
-      padding: 8px 18px;
-      border-radius: var(--radius-pills);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .card-body-content {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      background: var(--color-surface-container-lowest);
-    }
-
-    .card-title {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--color-midnight-ink);
-      margin-bottom: 8px;
-    }
-
-    .card-desc {
-      font-size: 14px;
-      color: var(--color-slate);
-      line-height: 1.6;
-      margin-bottom: 18px;
-      flex-grow: 1;
-    }
-
-    .card-tags-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 20px;
-    }
-
-    .card-footer-action {
-      margin-top: auto;
-    }
-
-    .btn-card-preview {
-      width: 100%;
-      padding: 12px;
-      background: var(--color-surface-mist);
-      color: var(--color-midnight-ink);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-default);
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .btn-card-preview:hover {
-      background: var(--color-midnight-ink);
-      color: var(--color-accent-amber);
-      border-color: var(--color-midnight-ink);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-    }
-
-    /* ==========================================================================
-       SECTION 5: CAREER & EDUCATION TIMELINE (with Resume Download)
-       ========================================================================== */
-    section.journey-section {
-      padding: var(--section-gap) 0;
-      background: var(--color-surface-mist);
-      border-top: 1px solid var(--color-border-light);
-      border-bottom: 1px solid var(--color-border-light);
-    }
-
-    .journey-timeline {
-      position: relative;
-      max-width: 860px;
-      margin: 40px auto 0;
-      padding-left: 32px;
-      border-left: 2px solid var(--color-border-light);
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 36px;
-    }
-
-    .timeline-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .timeline-node-dot {
+    /* Inactive Rotated Title */
+    .project-collapsed-title {
       position: absolute;
-      left: -41px;
-      top: 6px;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: var(--color-accent-amber);
-      border: 3px solid var(--color-surface-mist);
-      box-shadow: 0 0 0 2px var(--color-border-light);
-    }
-
-    .journey-card {
-      background: var(--color-surface-container-lowest);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-md);
-      padding: 24px 28px;
-      transition: all 0.2s ease;
-      box-shadow: var(--shadow-subtle);
-    }
-
-    .journey-card:hover {
-      border-color: var(--color-border-hover);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-card);
-    }
-
-    .journey-period-pill {
-      display: inline-block;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--color-accent-amber-dark);
-      background: var(--color-accent-soft);
-      padding: 3px 10px;
-      border-radius: var(--radius-pills);
-      margin-bottom: 10px;
-    }
-
-    .journey-title {
-      font-family: var(--font-display);
-      font-size: 19px;
-      font-weight: 700;
-      color: var(--color-midnight-ink);
-      margin-bottom: 4px;
-    }
-
-    .journey-org {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--color-slate);
-      margin-bottom: 12px;
-    }
-
-    .journey-desc {
-      font-size: 14.5px;
-      color: var(--color-graphite);
-      line-height: 1.65;
-    }
-
-    .resume-cta-wrap {
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
-    }
-
-    /* ==========================================================================
-       SECTION 6: CLIENT TESTIMONIALS (Wall of Impact)
-       ========================================================================== */
-    section.testimonials-section-v2 {
-      padding: var(--section-gap) 0;
-      background: var(--color-surface-container-lowest);
-    }
-
-    .testimonials-grid-v2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
-
-    .testimonial-card-v2 {
-      background: var(--color-surface-container-lowest);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-md);
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.25s ease;
-      box-shadow: var(--shadow-subtle);
-    }
-
-    .testimonial-card-v2:hover {
-      border-color: var(--color-border-hover);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-card-hover);
-    }
-
-    .t-rating-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-
-    .t-stars-gold {
-      color: var(--color-accent-amber);
-      font-size: 17px;
+      bottom: 60px;
+      left: 20px;
+      transform: rotate(-90deg);
+      transform-origin: 0 0;
+      white-space: nowrap;
+      font-family: var(--font-beckman);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--color-timber-wolf);
+      text-transform: uppercase;
       letter-spacing: 2px;
+      z-index: 2;
+      opacity: 1;
+      transition: opacity 0.3s ease;
     }
 
-    .t-rating-score {
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--color-midnight-ink);
-    }
-
-    .t-quote-v2 {
-      font-size: 14.5px;
-      line-height: 1.7;
-      color: var(--color-graphite);
-      margin-bottom: 22px;
-      flex-grow: 1;
-    }
-
-    .t-user-row-v2 {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding-top: 16px;
-      border-top: 1px solid #f1f5f9;
-    }
-
-    .t-avatar-v2 {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: #fef3c7;
-      color: var(--color-accent-amber-dark);
-      font-weight: 700;
-      font-size: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .t-user-meta h5 {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--color-midnight-ink);
-      margin-bottom: 2px;
-    }
-
-    .t-user-meta span {
-      font-size: 13px;
-      color: var(--color-slate);
-    }
-
-    /* ==========================================================================
-       SECTION 7: CONTACT MATRIX (Dual Column Lead Capture)
-       ========================================================================== */
-    section.contact-section-v2 {
-      padding: var(--section-gap) 0;
-      background: var(--color-surface-mist);
-      border-top: 1px solid var(--color-border-light);
-    }
-
-    .contact-layout-v2 {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 56px;
-      align-items: start;
-    }
-
-    .contact-intro-v2 {
-      font-size: 15.5px;
-      line-height: 1.7;
-      color: var(--color-slate);
-      margin: 16px 0 36px;
-      max-width: 460px;
-    }
-
-    .contact-channels-v2 {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .contact-item-row-v2 {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      color: var(--color-graphite);
-      font-size: 15px;
-      font-weight: 500;
-      transition: all 0.2s ease;
-      text-decoration: none;
-    }
-
-    .contact-item-row-v2:hover {
-      color: var(--color-midnight-ink);
-      transform: translateX(4px);
-    }
-
-    .contact-icon-circle-amber {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--color-accent-amber);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
-    }
-
-    .contact-form-card-v2 {
-      background: var(--color-surface-container-lowest);
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-md);
-      padding: 32px;
-      box-shadow: var(--shadow-subtle);
-    }
-
-    .form-grid-2-v2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
-    }
-
-    .form-group-v2 {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .form-group-v2.full-width {
-      margin-bottom: 24px;
-    }
-
-    .form-label-v2 {
-      font-size: 13.5px;
-      font-weight: 600;
-      color: var(--color-midnight-ink);
-    }
-
-    .form-control-v2 {
-      width: 100%;
-      background: #f8fafc;
-      border: 1px solid var(--color-border-light);
-      border-radius: var(--radius-default);
-      padding: 12px 14px;
-      font-family: var(--font-body);
-      font-size: 14px;
-      color: var(--color-midnight-ink);
-      outline: none;
-      transition: all 0.2s ease;
-    }
-
-    .form-control-v2::placeholder {
-      color: var(--color-taupe);
-    }
-
-    .form-control-v2:focus {
-      background: #ffffff;
-      border-color: var(--color-accent-amber);
-      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
-    }
-
-    textarea.form-control-v2 {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    @media (max-width: 860px) {
-      .contact-layout-v2 {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .form-grid-2-v2 {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* ==========================================================================
-       SITE FOOTER
-       ========================================================================== */
-    footer.site-footer {
-      background: var(--color-surface-container-lowest);
-      border-top: 1px solid var(--color-border-light);
-      padding: 36px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-      font-size: 14px;
-      color: var(--color-slate);
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 24px;
-    }
-
-    .footer-link {
-      color: var(--color-graphite);
-      font-weight: 500;
-      transition: color 0.15s ease;
-    }
-
-    .footer-link:hover {
-      color: var(--color-accent-amber-dark);
-    }
-
-    /* MODAL (macOS Interactive Window) */
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.6);
-      backdrop-filter: blur(8px);
-      z-index: 10000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+    .project-acc-card.active .project-collapsed-title {
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.25s ease;
     }
 
-    .modal-backdrop.active {
+    /* Active Details Overlay */
+    .project-expanded-details {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 28px;
+      background: rgba(20, 20, 20, 0.85);
+      backdrop-filter: blur(6px);
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s ease 0.1s;
+      pointer-events: none;
+    }
+
+    .project-acc-card.active .project-expanded-details {
       opacity: 1;
+      transform: translateY(0);
       pointer-events: auto;
     }
 
-    .modal-window {
-      width: 100%;
-      max-width: 1000px;
-      height: 84vh;
-      background: #ffffff;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--color-border-light);
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      transform: scale(0.96);
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    .project-expanded-title {
+      font-family: var(--font-beckman);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--color-timber-wolf);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
 
-    .modal-backdrop.active .modal-window {
-      transform: scale(1);
+    .project-expanded-desc {
+      font-size: 14px;
+      color: #cbd5e1;
+      line-height: 1.6;
+      max-width: 580px;
     }
 
-    .modal-top-bar {
-      height: 44px;
-      background: var(--color-surface-mist);
-      border-bottom: 1px solid var(--color-border-light);
+    .project-action-row {
       display: flex;
       align-items: center;
-      padding: 0 16px;
-      gap: 12px;
+      gap: 14px;
+      margin-top: 8px;
     }
 
-    .modal-close-btn {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      border: none;
-      background: var(--color-surface-mist);
-      color: var(--color-slate);
+    .btn-live-demo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-night);
+      color: var(--color-timber-wolf);
+      font-family: var(--font-beckman);
       font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-live-demo:hover {
+      background: var(--color-battle-gray);
+      color: var(--color-eerie-black);
+    }
+
+    .github-circle-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--color-night);
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
-      transition: all 0.15s ease;
+      transition: background 0.2s ease;
     }
 
-    .modal-close-btn:hover {
-      background: #fee2e2;
-      color: #ef4444;
+    .github-circle-btn:hover {
+      background: var(--color-battle-gray);
+    }
+
+    .github-circle-btn img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .projects-accordion-row {
+        flex-direction: column;
+        height: auto;
+      }
+      .project-acc-card {
+        height: 260px;
+        flex: none;
+      }
+      .project-acc-card.active {
+        height: 380px;
+        flex: none;
+      }
+      .project-collapsed-title {
+        transform: none;
+        bottom: 20px;
+        left: 20px;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION 4: WORK EXPERIENCE (shaqdeff Experience.jsx with curved container)
+       ========================================================================== */
+    .experience-curve-wrapper {
+      background: linear-gradient(135deg, rgba(244,244,246,0.6) 60%, rgba(10,10,10,0.2) 100%), url('assets/backgrounds/white-abstract.png');
+      background-size: cover;
+      background-position: center;
+      border-top-left-radius: 120px;
+      border-bottom-right-radius: 120px;
+      padding: 100px 0;
+    }
+
+    .vertical-timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 60px auto 0;
+      padding: 0 20px;
+    }
+
+    .vertical-timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: linear-gradient(180deg, rgba(66,66,66,0.8) 40%, rgba(234,234,236,0.45) 100%);
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: 768px) {
+      .vertical-timeline::before {
+        left: 28px;
+      }
+    }
+
+    .timeline-element {
+      position: relative;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+    }
+
+    .timeline-element:nth-child(even) {
+      align-self: flex-end;
+      margin-left: auto;
+      justify-content: flex-start;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-element {
+        width: 100%;
+        padding-left: 60px;
+        justify-content: flex-start !important;
+        margin-left: 0 !important;
+      }
+    }
+
+    .timeline-icon-node {
+      position: absolute;
+      top: 10px;
+      right: -24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #333333;
+      box-shadow: 0 0 0 4px #afafafd2, 0 3px 0 4px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .timeline-element:nth-child(even) .timeline-icon-node {
+      left: -24px;
+      right: auto;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-icon-node {
+        left: 4px !important;
+        right: auto !important;
+      }
+    }
+
+    .timeline-icon-node img {
+      width: 60%;
+      height: 60%;
+      object-fit: contain;
+    }
+
+    .timeline-content-card {
+      background: #eaeaec;
+      color: #292929;
+      padding: 24px 28px;
+      border-radius: 12px;
+      width: 85%;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-content-card { width: 100%; }
+    }
+
+    .timeline-date {
+      font-family: var(--font-beckman);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-dim);
+      margin-bottom: 6px;
+    }
+
+    .timeline-job-title {
+      font-family: var(--font-beckman);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-jet-light);
+      letter-spacing: 1px;
+    }
+
+    .timeline-company {
+      font-family: var(--font-overcame);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-taupe);
+      margin-bottom: 10px;
+    }
+
+    .timeline-desc {
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    /* Resume Button */
+    .timeline-resume-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .btn-resume-shaq {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--color-jet-light);
+      color: var(--color-timber-wolf);
+      font-family: var(--font-beckman);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 16px 32px;
+      border-radius: 10px;
+      transition: all 0.25s ease;
+    }
+
+    .btn-resume-shaq:hover {
+      background: var(--color-battle-gray);
+      color: var(--color-eerie-black);
+    }
+
+    .btn-resume-shaq img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    /* ==========================================================================
+       SECTION 5: CONTACT (shaqdeff Contact.jsx)
+       ========================================================================== */
+    section.contact-section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .contact-card-box {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--color-jet);
+      padding: 48px;
+      border-radius: 24px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    }
+
+    .contact-form-shaq {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 36px;
+      font-family: var(--font-poppins);
+    }
+
+    .form-field-label {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .form-field-label span {
+      color: var(--color-timber-wolf);
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .input-shaq {
+      background: var(--color-eerie-black);
+      padding: 16px 20px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      color: var(--color-timber-wolf);
+      font-family: var(--font-poppins);
+      font-size: 15px;
+      font-weight: 500;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .input-shaq::placeholder {
+      color: var(--color-taupe);
+    }
+
+    .input-shaq:focus {
+      box-shadow: 0 0 0 2px var(--color-battle-gray);
+    }
+
+    textarea.input-shaq {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .btn-send-shaq {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--color-night);
+      color: var(--color-timber-wolf);
+      font-family: var(--font-beckman);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      width: fit-content;
+      transition: all 0.2s ease;
+    }
+
+    .btn-send-shaq:hover {
+      background: var(--color-battle-gray);
+      color: var(--color-eerie-black);
+    }
+
+    .btn-send-shaq img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      background: var(--color-night);
+      color: var(--color-taupe);
+      padding: 30px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-socials a {
+      color: var(--color-timber-wolf);
+      transition: color 0.2s ease;
+    }
+
+    .footer-socials a:hover {
+      color: #ffffff;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- GLOBAL STICKY NAVBAR -->
-  <header class="site-header">
-    <div class="container">
-      <div class="nav-inner">
-        <a href="#about" class="brand-logo">
-          <span class="brand-logo-text">YOUSSEF<span>.</span></span>
-          <span class="brand-pill-badge">FULL-STACK &amp; AI</span>
-        </a>
+  <!-- NAVBAR -->
+  <nav class="site-navbar">
+    <div class="nav-wrapper">
+      <a href="#hero" class="nav-logo-link">
+        <div class="nav-logo-icon">⚡</div>
+        <span class="nav-logo-text">YOUSSEF</span>
+      </a>
 
-        <nav class="nav-links">
-          <a href="#overview" class="nav-link">Overview</a>
-          <a href="#tech" class="nav-link">Skills</a>
-          <a href="#featured" class="nav-link">Flagship AI</a>
-          <a href="#projects" class="nav-link">Live Projects</a>
-          <a href="#journey" class="nav-link">Journey</a>
-          <a href="#testimonials" class="nav-link">Reviews</a>
-          <a href="#contact" class="btn-nav-compact">
-            <span>Let's Talk</span>
-            <span>→</span>
-          </a>
-        </nav>
-      </div>
+      <ul class="nav-links-list">
+        <li><a href="#about" class="nav-item-link">ABOUT</a></li>
+        <li><a href="#tech" class="nav-item-link">SKILLS</a></li>
+        <li><a href="#projects" class="nav-item-link">PROJECTS</a></li>
+        <li><a href="#experience" class="nav-item-link">EXPERIENCE</a></li>
+        <li><a href="#contact" class="nav-item-link">CONTACT</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+        <img src="assets/icons/menu.png" alt="menu" style="width: 32px; height: 32px; object-fit: contain;" />
+      </button>
     </div>
-  </header>
+  </nav>
 
-  <!-- HERO SECTION (Asymmetric 2-Column Split + Mouse Scroll Indicator) -->
-  <section class="hero-section" id="about">
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <div style="display:flex; justify-content:flex-end;">
+      <button onclick="toggleMobileMenu()" style="background:none; border:none; cursor:pointer;" aria-label="Close Menu">
+        <img src="assets/icons/close.png" alt="close" style="width: 24px; height: 24px;" />
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#about" class="mobile-nav-link" onclick="toggleMobileMenu()">ABOUT</a></li>
+      <li><a href="#tech" class="mobile-nav-link" onclick="toggleMobileMenu()">SKILLS</a></li>
+      <li><a href="#projects" class="mobile-nav-link" onclick="toggleMobileMenu()">PROJECTS</a></li>
+      <li><a href="#experience" class="mobile-nav-link" onclick="toggleMobileMenu()">EXPERIENCE</a></li>
+      <li><a href="#contact" class="mobile-nav-link" onclick="toggleMobileMenu()">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO SECTION (Diagonal Split + World Map Background + Character Image) -->
+  <section class="hero-section" id="hero">
+    <!-- World Map Backdrop Texture -->
+    <img src="assets/backgrounds/bw-map.jpeg" alt="world map" class="world-map-backdrop" />
+
     <div class="container">
-      <div class="hero-split-grid">
+      <div class="hero-inner-content">
         
-        <!-- Left: Narrative Stack -->
-        <div class="hero-content">
-          <div>
-            <span class="eyebrow">EXECUTIVE ENGINEERING PORTFOLIO</span>
-            <h1 class="display-headline">
-              Engineering scalable web apps with <span class="editorial-accent">precision &amp; intelligence</span>.
-            </h1>
-          </div>
+        <!-- Left Vertical Indicator Line -->
+        <div class="hero-indicator-column">
+          <div class="indicator-dot"></div>
+          <div class="indicator-line"></div>
+        </div>
 
-          <p class="sub-copy">
-            Hi, I'm <strong>Youssef Saber Ahmed</strong>. I architect high-performance web systems, Gemini AI multi-modal integrations, and offline-first Progressive Web Apps (PWAs). Every project below links directly to live, deployed systems on Vercel.
+        <!-- Hero Text -->
+        <div class="hero-text-block">
+          <h1 class="hero-head-text">
+            HI, I'M <span class="hero-name-highlight">YOUSSEF</span>
+          </h1>
+          <p class="hero-sub-text">
+            A Full-Stack Software Developer &amp; AI Systems Architect. Crafting high-performance web systems, Gemini AI multi-modal integrations, and progressive web applications.
           </p>
 
-          <div class="hero-buttons-row">
-            <a href="#projects" class="btn-primary">
-              <span>✦ Explore Projects</span>
+          <div class="hero-cta-row">
+            <a href="#projects" class="btn-shaq-primary">
+              <span>EXPLORE PROJECTS</span>
+              <span>➔</span>
             </a>
-            <a href="#contact" class="btn-ghost">
-              <span>Get in Touch</span>
+            <a href="#contact" class="btn-shaq-secondary">
+              <span>GET IN TOUCH</span>
             </a>
-          </div>
-
-          <!-- Social Proof Cluster -->
-          <div class="social-proof-wrap">
-            <div class="avatar-stack">
-              <div class="avatar-item"><img src="portfolio.jpeg" alt="Youssef" /></div>
-              <div class="avatar-item" style="background:#0f172a; color:#f59e0b;">A</div>
-              <div class="avatar-item" style="background:#1e293b; color:#f59e0b;">M</div>
-              <div class="avatar-item" style="background:#f59e0b; color:#0f172a;">S</div>
-            </div>
-            <div class="social-proof-text">
-              <div class="stars-row">★★★★★</div>
-              <span class="proof-label">Trusted for Full-Stack &amp; AI Systems (5.0 Client Rating)</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Floating macOS Window Frame -->
-        <div class="hero-visual-card">
-          <div class="floating-mockup-window">
-            <div class="mac-window-bar">
-              <div class="traffic-lights">
-                <span class="traffic-dot traffic-red"></span>
-                <span class="traffic-dot traffic-amber"></span>
-                <span class="traffic-dot traffic-green"></span>
-              </div>
-              <span class="window-title">PORTFOLIO PORTAL • CAIRO, EG</span>
-            </div>
-            <div class="mockup-inner-photo">
-              <img src="portfolio.jpeg" alt="Youssef Saber Ahmed" />
-            </div>
-          </div>
-
-          <!-- Floating Badge -->
-          <div class="floating-chip">
-            <div class="chip-badge">⚡</div>
-            <div class="chip-info">
-              <h5>Full-Stack &amp; AI Systems</h5>
-              <p>Node • Python • Gemini • React • PWA</p>
-            </div>
           </div>
         </div>
 
       </div>
 
-      <!-- Animated Mouse Scroll Indicator (from shaqdeff template) -->
-      <div class="hero-scroll-indicator">
-        <a href="#overview" title="Scroll down">
-          <div class="mouse-pill">
-            <div class="mouse-wheel-dot"></div>
+      <!-- Bouncing Mouse Scroll Indicator (from template) -->
+      <div class="hero-scroll-wrap">
+        <a href="#about" title="Scroll down">
+          <div class="scroll-mouse-pill">
+            <div class="scroll-mouse-dot"></div>
           </div>
         </a>
       </div>
-
     </div>
+
+    <!-- Cutout Developer Portrait on Right -->
+    <img src="portfolio.jpeg" alt="Youssef Saber Ahmed" class="hero-character-photo" />
   </section>
 
-  <!-- SECTION 1: ENGINEERING OVERVIEW & CORE DISCIPLINES (Inspired by shaqdeff About & Service Cards) -->
-  <section class="overview-section" id="overview">
+  <!-- SECTION 1: ABOUT / OVERVIEW (Service Cards from shaqdeff About.jsx) -->
+  <section class="about-section" id="about">
     <div class="container">
       
-      <div class="section-header-center">
-        <span class="eyebrow">WHAT I DO</span>
-        <h2 class="section-headline">Engineering Disciplines &amp; <span class="editorial-accent">Core Capabilities</span></h2>
-        <p class="sub-copy" style="font-size: 16px; margin-top: 10px;">
-          Bespoke software solutions built for production: from scalable backend APIs to intelligent AI vision workflows.
-        </p>
+      <div>
+        <p class="section-sub-text">Introduction</p>
+        <h2 class="section-head-text">Overview.</h2>
       </div>
 
-      <div class="overview-grid">
+      <p class="about-bio-text">
+        I'm a skilled full-stack software developer with expertise in TypeScript, JavaScript, Python, and frameworks like React, Node.js, and Express. I engineer robust backend APIs, interactive AI systems with Google Gemini Vision, and installable Progressive Web Apps. Let's work together to bring your ideas to life!
+      </p>
+
+      <!-- 4 Specialized Service Cards -->
+      <div class="services-cards-grid">
         
         <!-- Card 1 -->
-        <div class="service-card">
-          <div class="service-icon-box">
-            <img src="assets/icons/frontend.png" alt="Full-Stack Web Architecture" />
-          </div>
-          <h3 class="service-title">Full-Stack Architecture</h3>
-          <p class="service-desc">
-            End-to-end web applications built with modern React, Express.js, and Python backends. Clean MVC structures, RESTful endpoints, and robust database modeling.
-          </p>
-          <div class="service-tags">
-            <span class="tag-chip accent">React</span>
-            <span class="tag-chip">Node.js</span>
-            <span class="tag-chip">PostgreSQL</span>
-            <span class="tag-chip">REST</span>
+        <div class="service-card-wrapper">
+          <div class="service-card-inner">
+            <img src="assets/icons/frontend.png" alt="Frontend Developer" class="service-card-icon" />
+            <h3 class="service-card-title">Frontend Developer</h3>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="service-card">
-          <div class="service-icon-box">
-            <img src="assets/icons/prototyping.png" alt="AI & Multi-Modal Systems" />
-          </div>
-          <h3 class="service-title">AI &amp; Multi-Modal Vision</h3>
-          <p class="service-desc">
-            Integrating Google Gemini Vision and LLM inference pipelines into live workflows. Automated image parsing, schedule extraction, and structured JSON output.
-          </p>
-          <div class="service-tags">
-            <span class="tag-chip accent">Gemini AI</span>
-            <span class="tag-chip">Prompt Eng</span>
-            <span class="tag-chip">Vision API</span>
-            <span class="tag-chip">JSON Parsing</span>
+        <div class="service-card-wrapper">
+          <div class="service-card-inner">
+            <img src="assets/icons/backend.png" alt="Backend Developer" class="service-card-icon" />
+            <h3 class="service-card-title">Backend Developer</h3>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="service-card">
-          <div class="service-icon-box">
-            <img src="assets/icons/ux.png" alt="Progressive Web Apps" />
-          </div>
-          <h3 class="service-title">Progressive Web Apps (PWAs)</h3>
-          <p class="service-desc">
-            Installable desktop and mobile web apps with offline LocalStorage/IndexedDB synchronization, Service Workers, and automated Web Push notification reminders.
-          </p>
-          <div class="service-tags">
-            <span class="tag-chip accent">100% PWA</span>
-            <span class="tag-chip">Service Worker</span>
-            <span class="tag-chip">Web Push</span>
-            <span class="tag-chip">Offline Cache</span>
+        <div class="service-card-wrapper">
+          <div class="service-card-inner">
+            <img src="assets/icons/prototyping.png" alt="AI & Multi-Modal Vision" class="service-card-icon" />
+            <h3 class="service-card-title">AI &amp; Vision Systems</h3>
           </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="service-card">
-          <div class="service-icon-box">
-            <img src="assets/icons/backend.png" alt="Cloud & Real-Time APIs" />
-          </div>
-          <h3 class="service-title">Cloud &amp; Real-Time Systems</h3>
-          <p class="service-desc">
-            Automated CI/CD deployments on Vercel, live exchange rate calculators, and WebRTC peer-to-peer audio/video streaming with zero server-side bottlenecks.
-          </p>
-          <div class="service-tags">
-            <span class="tag-chip accent">Vercel</span>
-            <span class="tag-chip">WebRTC</span>
-            <span class="tag-chip">Socket.io</span>
-            <span class="tag-chip">Real-Time</span>
+        <div class="service-card-wrapper">
+          <div class="service-card-inner">
+            <img src="assets/icons/ux.png" alt="Progressive Web Apps" class="service-card-icon" />
+            <h3 class="service-card-title">Progressive Web Apps</h3>
           </div>
         </div>
 
@@ -1626,552 +1250,213 @@
     </div>
   </section>
 
-  <!-- SECTION 2: TECHNOLOGIES & TOOLING MATRIX (Tech Grid from shaqdeff) -->
+  <!-- SECTION 2: TECHNOLOGIES (shaqdeff Tech.jsx on nairobi.png dark backdrop) -->
   <section class="tech-section" id="tech">
     <div class="container">
       
-      <div class="section-header-center">
-        <span class="eyebrow">TECHNICAL LEDGER</span>
-        <h2 class="section-headline">Technologies &amp; <span class="editorial-accent">Core Toolset</span></h2>
-        <p class="sub-copy" style="font-size: 16px; margin-top: 10px;">
-          The battle-tested technologies and frameworks powering my production systems.
-        </p>
+      <div>
+        <p class="section-sub-text" style="color: var(--color-taupe);">My skills</p>
+        <h2 class="section-head-text-light">Technologies.</h2>
       </div>
 
-      <div class="tech-grid">
-        <div class="tech-box">
-          <div class="tech-icon-wrap"><img src="assets/tech/reactjs.png" alt="React" /></div>
-          <span class="tech-name">React.js</span>
+      <div class="tech-balls-grid">
+        <div class="tech-ball-card">
+          <img src="assets/tech/reactjs.png" alt="React" />
+          <span class="tech-ball-name">React</span>
         </div>
-        <div class="tech-box">
-          <div class="tech-icon-wrap"><img src="assets/tech/nodejs.png" alt="Node.js" /></div>
-          <span class="tech-name">Node.js</span>
+        <div class="tech-ball-card">
+          <img src="assets/tech/nodejs.png" alt="Node JS" />
+          <span class="tech-ball-name">Node JS</span>
         </div>
-        <div class="tech-box">
-          <div class="tech-icon-wrap"><img src="assets/tech/javascript.png" alt="JavaScript" /></div>
-          <span class="tech-name">JavaScript ES6</span>
+        <div class="tech-ball-card">
+          <img src="assets/tech/javascript.png" alt="JavaScript" />
+          <span class="tech-ball-name">JavaScript</span>
         </div>
-        <div class="tech-box">
-          <div class="tech-icon-wrap"><img src="assets/tech/typescript.png" alt="TypeScript" /></div>
-          <span class="tech-name">TypeScript</span>
+        <div class="tech-ball-card">
+          <img src="assets/tech/typescript.png" alt="TypeScript" />
+          <span class="tech-ball-name">TypeScript</span>
         </div>
-        <div class="tech-box">
-          <div class="tech-icon-wrap"><img src="assets/tech/docker.png" alt="Docker" /></div>
-          <span class="tech-name">Docker</span>
+        <div class="tech-ball-card">
+          <img src="assets/tech/docker.png" alt="Docker" />
+          <span class="tech-ball-name">Docker</span>
         </div>
-        <div class="tech-box">
-          <div class="tech-icon-wrap"><img src="assets/tech/git.png" alt="Git" /></div>
-          <span class="tech-name">Git &amp; GitHub</span>
+        <div class="tech-ball-card">
+          <img src="assets/tech/git.png" alt="Git" />
+          <span class="tech-ball-name">Git</span>
         </div>
-        <div class="tech-box">
-          <div class="tech-icon-wrap"><img src="assets/tech/postgresql.png" alt="PostgreSQL" /></div>
-          <span class="tech-name">PostgreSQL</span>
+        <div class="tech-ball-card">
+          <img src="assets/tech/postgresql.png" alt="PostgreSQL" />
+          <span class="tech-ball-name">Postgres</span>
         </div>
-        <div class="tech-box">
-          <div class="tech-icon-wrap"><img src="assets/tech/tailwind.png" alt="Tailwind CSS" /></div>
-          <span class="tech-name">Tailwind CSS</span>
+        <div class="tech-ball-card">
+          <img src="assets/tech/tailwind.png" alt="Tailwind" />
+          <span class="tech-ball-name">Tailwind</span>
         </div>
-        <div class="tech-box">
-          <div class="tech-icon-wrap"><img src="assets/tech/graphql.png" alt="GraphQL" /></div>
-          <span class="tech-name">GraphQL</span>
+        <div class="tech-ball-card">
+          <img src="assets/tech/graphql.png" alt="GraphQL" />
+          <span class="tech-ball-name">GraphQL</span>
         </div>
-        <div class="tech-box">
-          <div class="tech-icon-wrap"><img src="assets/tech/figma.png" alt="Figma" /></div>
-          <span class="tech-name">Figma UI/UX</span>
+        <div class="tech-ball-card">
+          <img src="assets/tech/figma.png" alt="Figma" />
+          <span class="tech-ball-name">Figma</span>
         </div>
-        <div class="tech-box">
-          <div class="tech-icon-wrap"><img src="assets/tech/html.png" alt="HTML5" /></div>
-          <span class="tech-name">HTML5</span>
+        <div class="tech-ball-card">
+          <img src="assets/tech/html.png" alt="HTML 5" />
+          <span class="tech-ball-name">HTML 5</span>
         </div>
-        <div class="tech-box">
-          <div class="tech-icon-wrap"><img src="assets/tech/css.png" alt="CSS3" /></div>
-          <span class="tech-name">CSS3</span>
+        <div class="tech-ball-card">
+          <img src="assets/tech/css.png" alt="CSS 3" />
+          <span class="tech-ball-name">CSS 3</span>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- SECTION 3: FLAGSHIP SPOTLIGHT (Lecture Buddy AI) -->
-  <section class="flagship-section" id="featured">
-    <div class="container">
-      
-      <div class="flagship-split">
-        
-        <div>
-          <span class="eyebrow">FLAGSHIP AI SPOTLIGHT</span>
-          <h2 class="display-headline" style="font-size: clamp(32px, 4.2vw, 48px); margin-bottom: 20px;">
-            Lecture Buddy: Your AI University Timetable.
-          </h2>
-          <p class="sub-copy" style="margin-bottom: 32px;">
-            An intelligent schedule scanner built with <strong>Google Gemini AI Vision</strong>. Converts timetable screenshots directly into actionable calendars with automated <strong>Web Push reminders</strong> one hour before lectures. Deployed and fully active on Vercel.
-          </p>
-          <div>
-            <a href="https://lecture-ai-planner.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-dark">
-              <span>Explore Lecture Buddy ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="flagship-card-box">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
-            <span class="tag-chip accent" style="font-size:12px;">✨ Gemini 2.5 Active</span>
-            <span class="tag-chip" style="background:#0f172a; color:#ffffff; font-weight:700;">100% PWA</span>
-          </div>
-
-          <h3 style="font-family:var(--font-display); font-size:22px; font-weight:700; margin-bottom:8px;">
-            Instant Image-to-Schedule Engine
-          </h3>
-          <p style="font-size:14px; color:var(--color-slate); line-height:1.6; margin-bottom:20px;">
-            Upload any college timetable photo. The Gemini multi-modal API parses course codes, professors, venues, and timestamps into structured JSON, deployed seamlessly on Vercel.
-          </p>
-
-          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:16px; display:flex; flex-direction:column; gap:8px;">
-            <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600;">
-              <span>Database Systems (Lecture)</span>
-              <span style="color:var(--color-accent-amber-dark);">09:00 AM</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600;">
-              <span>Artificial Intelligence (Lab)</span>
-              <span style="color:var(--color-accent-amber-dark);">11:30 AM</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SECTION 4: LIVE DEPLOYED PROJECTS SHOWCASE (macOS Windows) -->
+  <!-- SECTION 3: PROJECTS (The Signature Horizontal Expanding Cards Accordion from shaqdeff) -->
   <section class="projects-section" id="projects">
     <div class="container">
       
-      <div class="section-header-center">
-        <span class="eyebrow">LIVE DEPLOYED PROJECTS</span>
-        <h2 class="section-headline">Real-World Applications, <span class="editorial-accent">Live on Vercel</span></h2>
-        <p class="sub-copy" style="font-size: 16px; margin-top: 10px;">
-          Click any project card or "Open Live App" to navigate directly to the fully deployed, interactive web application.
-        </p>
+      <div>
+        <p class="section-sub-text">Case Studies</p>
+        <h2 class="section-head-text">Projects.</h2>
       </div>
 
-      <div class="projects-grid">
-
-        <!-- 1. Lecture Buddy AI -->
-        <div class="product-preview-card">
-          <div class="card-top-mac">
-            <div class="traffic-lights">
-              <span class="traffic-dot traffic-red"></span>
-              <span class="traffic-dot traffic-amber"></span>
-              <span class="traffic-dot traffic-green"></span>
-            </div>
-            <div class="mac-url-pill">
-              <span>🔒</span>
-              <span>lecture-ai-planner.vercel.app</span>
-            </div>
-          </div>
-          <div class="card-mockup-viewport" onclick="window.open('https://lecture-ai-planner.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen">
-              <div style="display:flex; justify-content:space-between; font-size:12px; color:#c4b5fd; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
-                <span>✨ Lecture Buddy AI</span>
-                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; padding:1px 6px; border-radius:4px;">Gemini Vision</span>
-              </div>
-              <div style="background:rgba(255,255,255,0.06); border:1px dashed rgba(245,158,11,0.4); border-radius:6px; padding:12px; text-align:center; font-size:12px; margin-top:10px;">
-                اسحب صورة جدولك لتحليله بالذكاء الاصطناعي
-              </div>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:auto;">
-                <div style="background:rgba(255,255,255,0.05); padding:6px; border-radius:4px; font-size:11px;">
-                  <b>قواعد بيانات</b><br><span style="color:#f59e0b;">تذكير مفعل ✓</span>
-                </div>
-                <div style="background:rgba(255,255,255,0.05); padding:6px; border-radius:4px; font-size:11px;">
-                  <b>ذكاء اصطناعي</b><br><span style="color:#f59e0b;">تذكير مفعل ✓</span>
-                </div>
-              </div>
-            </div>
-            <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">Open Live App ↗</span>
-            </div>
-          </div>
-          <div class="card-body-content">
-            <h3 class="card-title">Lecture Buddy — AI Timetable &amp; Reminders</h3>
-            <p class="card-desc">AI schedule scanner powered by Google Gemini Vision. Extracts courses, timings, and rooms from photos with automated Web Push reminders.</p>
-            <div class="card-tags-list">
-              <span class="tag-chip accent">Gemini AI</span>
-              <span class="tag-chip">Node.js</span>
-              <span class="tag-chip">Web Push API</span>
-              <span class="tag-chip">PWA</span>
-            </div>
-            <div class="card-footer-action">
-              <a href="https://lecture-ai-planner.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
-                <span>Open Live App</span>
-                <span>↗</span>
+      <div class="projects-accordion-row">
+        
+        <!-- Project 1 (Active by default): Lecture Buddy AI -->
+        <div class="project-acc-card active" onclick="activateProjectCard(this)">
+          <img src="assets/projects/space-hub.png" alt="Lecture Buddy AI" class="project-acc-img" />
+          <div class="project-dark-overlay"></div>
+          <span class="project-collapsed-title">Lecture Buddy AI</span>
+          
+          <div class="project-expanded-details">
+            <h3 class="project-expanded-title">Lecture Buddy — AI Timetable &amp; Reminders</h3>
+            <p class="project-expanded-desc">
+              AI-driven schedule scanner powered by Google Gemini Vision. Extracts courses, timings, and rooms directly from photos with automated background Web Push notifications.
+            </p>
+            <div class="project-action-row">
+              <a href="https://lecture-ai-planner.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-live-demo">
+                <span>LIVE DEMO</span>
+                <img src="assets/icons/pineapple.png" alt="demo" style="width: 18px; height: 18px;" />
+              </a>
+              <a href="https://github.com/youssefsaberahmed14-ui" target="_blank" rel="noopener noreferrer" class="github-circle-btn" title="View Source on GitHub">
+                <img src="assets/icons/github.png" alt="GitHub" />
               </a>
             </div>
           </div>
         </div>
 
-        <!-- 2. Classroom App -->
-        <div class="product-preview-card">
-          <div class="card-top-mac">
-            <div class="traffic-lights">
-              <span class="traffic-dot traffic-red"></span>
-              <span class="traffic-dot traffic-amber"></span>
-              <span class="traffic-dot traffic-green"></span>
-            </div>
-            <div class="mac-url-pill">
-              <span>🔒</span>
-              <span>classroom-app-beta.vercel.app</span>
-            </div>
-          </div>
-          <div class="card-mockup-viewport" onclick="window.open('https://classroom-app-beta.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen">
-              <div style="display:flex; justify-content:space-between; font-size:12px; color:#38bdf8; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:4px;">
-                <span>🎓 منصة الفصول التعليمية</span>
-                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; padding:1px 6px; border-radius:4px; font-size:10px;">LMS Portal</span>
-              </div>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:8px;">
-                <div style="background:rgba(255,255,255,0.06); border-radius:6px; padding:8px;">
-                  <span style="font-size:10px; color:#94a3b8;">الفصل الدراسي</span>
-                  <div style="font-size:12px; font-weight:700;">هندسة البرمجيات</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.06); border-radius:6px; padding:8px;">
-                  <span style="font-size:10px; color:#94a3b8;">الواجبات</span>
-                  <div style="font-size:12px; font-weight:700; color:#f59e0b;">3 مكتملة ✓</div>
-                </div>
-              </div>
-              <div style="background:rgba(255,255,255,0.05); padding:6px 8px; border-radius:4px; font-size:11px; margin-top:auto; color:#cbd5e1;">
-                📌 جدول المحاضرات والملفات الدراسية المشتركة
-              </div>
-            </div>
-            <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">Open Live App ↗</span>
-            </div>
-          </div>
-          <div class="card-body-content">
-            <h3 class="card-title">Classroom App — Educational Learning Portal</h3>
-            <p class="card-desc">Interactive virtual classroom platform with course dashboards, student assignment trackers, real-time materials, and responsive interface.</p>
-            <div class="card-tags-list">
-              <span class="tag-chip accent">Educational LMS</span>
-              <span class="tag-chip">React</span>
-              <span class="tag-chip">Vercel</span>
-              <span class="tag-chip">REST API</span>
-            </div>
-            <div class="card-footer-action">
-              <a href="https://classroom-app-beta.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
-                <span>Open Live App</span>
-                <span>↗</span>
+        <!-- Project 2: Classroom App -->
+        <div class="project-acc-card" onclick="activateProjectCard(this)">
+          <img src="assets/projects/komikult.png" alt="Classroom App" class="project-acc-img" />
+          <div class="project-dark-overlay"></div>
+          <span class="project-collapsed-title">Classroom App</span>
+          
+          <div class="project-expanded-details">
+            <h3 class="project-expanded-title">Classroom — Educational Learning Portal</h3>
+            <p class="project-expanded-desc">
+              Interactive virtual classroom system featuring real-time course dashboards, student assignment tracking, and modular learning management.
+            </p>
+            <div class="project-action-row">
+              <a href="https://classroom-app-beta.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-live-demo">
+                <span>LIVE DEMO</span>
+                <img src="assets/icons/pineapple.png" alt="demo" style="width: 18px; height: 18px;" />
+              </a>
+              <a href="https://github.com/youssefsaberahmed14-ui" target="_blank" rel="noopener noreferrer" class="github-circle-btn" title="View Source on GitHub">
+                <img src="assets/icons/github.png" alt="GitHub" />
               </a>
             </div>
           </div>
         </div>
 
-        <!-- 3. BookVault -->
-        <div class="product-preview-card">
-          <div class="card-top-mac">
-            <div class="traffic-lights">
-              <span class="traffic-dot traffic-red"></span>
-              <span class="traffic-dot traffic-amber"></span>
-              <span class="traffic-dot traffic-green"></span>
-            </div>
-            <div class="mac-url-pill">
-              <span>🔒</span>
-              <span>book-vault-sepia-eta.vercel.app</span>
-            </div>
-          </div>
-          <div class="card-mockup-viewport" onclick="window.open('https://book-vault-sepia-eta.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen">
-              <div style="display:flex; justify-content:space-between; font-size:12px; color:#818cf8;">
-                <b>📚 BookVault</b>
-                <span>Google Books API</span>
-              </div>
-              <div style="background:rgba(255,255,255,0.08); border-radius:4px; padding:6px 10px; font-size:11px; color:#94a3b8; display:flex; align-items:center; gap:6px; margin-top:8px;">
-                <span>🔍</span><span>Search 40M+ book titles...</span>
-              </div>
-              <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; margin-top:auto;">
-                <div style="background:#1e293b; border:1px solid #334155; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:600;">Clean Code</div>
-                <div style="background:#1e293b; border:1px solid #334155; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:600;">Python Pro</div>
-                <div style="background:#1e293b; border:1px solid #334155; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:600;">System Design</div>
-              </div>
-            </div>
-            <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">Open Live App ↗</span>
-            </div>
-          </div>
-          <div class="card-body-content">
-            <h3 class="card-title">BookVault — Digital Library &amp; Discovery Hub</h3>
-            <p class="card-desc">Modern book exploration platform querying Google Books API with responsive book previews, rating badges, and categorized reading shelves.</p>
-            <div class="card-tags-list">
-              <span class="tag-chip accent">Express.js</span>
-              <span class="tag-chip">Node.js</span>
-              <span class="tag-chip">Google API</span>
-              <span class="tag-chip">Vercel</span>
-            </div>
-            <div class="card-footer-action">
-              <a href="https://book-vault-sepia-eta.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
-                <span>Open Live App</span>
-                <span>↗</span>
+        <!-- Project 3: BookVault -->
+        <div class="project-acc-card" onclick="activateProjectCard(this)">
+          <img src="assets/projects/leaderboard.png" alt="BookVault" class="project-acc-img" />
+          <div class="project-dark-overlay"></div>
+          <span class="project-collapsed-title">BookVault</span>
+          
+          <div class="project-expanded-details">
+            <h3 class="project-expanded-title">BookVault — Google Books Search Platform</h3>
+            <p class="project-expanded-desc">
+              Modern digital library indexing 40M+ book titles via Google Books API with Express backend, query parsing, and interactive modal previews.
+            </p>
+            <div class="project-action-row">
+              <a href="https://book-vault-sepia-eta.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-live-demo">
+                <span>LIVE DEMO</span>
+                <img src="assets/icons/pineapple.png" alt="demo" style="width: 18px; height: 18px;" />
+              </a>
+              <a href="https://github.com/youssefsaberahmed14-ui" target="_blank" rel="noopener noreferrer" class="github-circle-btn" title="View Source on GitHub">
+                <img src="assets/icons/github.png" alt="GitHub" />
               </a>
             </div>
           </div>
         </div>
 
-        <!-- 4. Currency Converter -->
-        <div class="product-preview-card">
-          <div class="card-top-mac">
-            <div class="traffic-lights">
-              <span class="traffic-dot traffic-red"></span>
-              <span class="traffic-dot traffic-amber"></span>
-              <span class="traffic-dot traffic-green"></span>
-            </div>
-            <div class="mac-url-pill">
-              <span>🔒</span>
-              <span>currency-converter-amber-beta.vercel.app</span>
-            </div>
-          </div>
-          <div class="card-mockup-viewport" onclick="window.open('https://currency-converter-amber-beta.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen">
-              <div style="display:flex; justify-content:space-between; font-size:12px; color:#a7f3d0; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:4px;">
-                <span>💱 Currency Converter</span>
-                <span style="color:#f59e0b;">● Live Rates</span>
-              </div>
-              <div style="background:linear-gradient(135deg, rgba(245,158,11,0.15), rgba(15,23,42,0.3)); border-radius:8px; padding:10px; margin-top:8px;">
-                <span style="font-size:11px; opacity:0.8;">1 USD to EGP Rate</span>
-                <h4 style="font-size:20px; font-weight:800; color:#fff; font-family:var(--font-mono);">49.32 EGP</h4>
-              </div>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:auto;">
-                <div style="background:rgba(255,255,255,0.04); padding:6px; border-radius:4px; font-size:11px;">
-                  <span>EUR / USD:</span> <b style="color:#f59e0b;">1.084</b>
-                </div>
-                <div style="background:rgba(255,255,255,0.04); padding:6px; border-radius:4px; font-size:11px;">
-                  <span>SAR / EGP:</span> <b style="color:#f59e0b;">13.14</b>
-                </div>
-              </div>
-            </div>
-            <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">Open Live App ↗</span>
-            </div>
-          </div>
-          <div class="card-body-content">
-            <h3 class="card-title">Currency Converter — Real-Time Exchange Engine</h3>
-            <p class="card-desc">Real-time currency exchange rates application with instant conversions, multi-currency comparisons, and interactive rates calculator.</p>
-            <div class="card-tags-list">
-              <span class="tag-chip accent">JavaScript ES6</span>
-              <span class="tag-chip">Finance API</span>
-              <span class="tag-chip">Vercel</span>
-              <span class="tag-chip">Live Rates</span>
-            </div>
-            <div class="card-footer-action">
-              <a href="https://currency-converter-amber-beta.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
-                <span>Open Live App</span>
-                <span>↗</span>
+        <!-- Project 4: Currency Converter -->
+        <div class="project-acc-card" onclick="activateProjectCard(this)">
+          <img src="assets/projects/math-magicians.png" alt="Currency Converter" class="project-acc-img" />
+          <div class="project-dark-overlay"></div>
+          <span class="project-collapsed-title">Currency Exchange</span>
+          
+          <div class="project-expanded-details">
+            <h3 class="project-expanded-title">Currency Converter — Live Rates Calculator</h3>
+            <p class="project-expanded-desc">
+              Real-time multi-currency exchange rate application with instant conversion calculations, historical charts, and high responsiveness.
+            </p>
+            <div class="project-action-row">
+              <a href="https://currency-converter-amber-beta.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-live-demo">
+                <span>LIVE DEMO</span>
+                <img src="assets/icons/pineapple.png" alt="demo" style="width: 18px; height: 18px;" />
+              </a>
+              <a href="https://github.com/youssefsaberahmed14-ui" target="_blank" rel="noopener noreferrer" class="github-circle-btn" title="View Source on GitHub">
+                <img src="assets/icons/github.png" alt="GitHub" />
               </a>
             </div>
           </div>
         </div>
 
-        <!-- 5. Zoom Free WebRTC -->
-        <div class="product-preview-card">
-          <div class="card-top-mac">
-            <div class="traffic-lights">
-              <span class="traffic-dot traffic-red"></span>
-              <span class="traffic-dot traffic-amber"></span>
-              <span class="traffic-dot traffic-green"></span>
-            </div>
-            <div class="mac-url-pill">
-              <span>🔒</span>
-              <span>zoom-clone.vercel.app</span>
-            </div>
-          </div>
-          <div class="card-mockup-viewport" onclick="window.open('https://youssefsaberahmed14-ui-zoom-clone.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen">
-              <div style="display:flex; justify-content:space-between; font-size:12px; color:#38bdf8; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:4px;">
-                <span>📹 Zoom Free Meeting</span>
-                <span style="background:#22c55e; color:#fff; padding:1px 6px; border-radius:4px; font-size:10px;">HD 1080p</span>
-              </div>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin:8px 0; flex:1;">
-                <div style="background:#1e293b; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#94a3b8; font-size:11px;">
-                  👤 Youssef (Host)
-                </div>
-                <div style="background:#1e293b; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#94a3b8; font-size:11px;">
-                  👤 Participant 2
-                </div>
-              </div>
-              <div style="display:flex; justify-content:center; gap:8px; background:rgba(255,255,255,0.05); padding:6px; border-radius:6px;">
-                <span style="font-size:11px; background:#ef4444; color:#fff; padding:2px 8px; border-radius:4px;">End Call</span>
-                <span style="font-size:11px; background:#334155; color:#fff; padding:2px 8px; border-radius:4px;">Mute</span>
-                <span style="font-size:11px; background:#334155; color:#fff; padding:2px 8px; border-radius:4px;">Share</span>
-              </div>
-            </div>
-            <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">Open Live App ↗</span>
-            </div>
-          </div>
-          <div class="card-body-content">
-            <h3 class="card-title">Zoom Free — Real-Time Video Conference</h3>
-            <p class="card-desc">High-performance video conferencing application supporting meeting rooms, screen sharing, camera controls, and session recording.</p>
-            <div class="card-tags-list">
-              <span class="tag-chip accent">WebRTC</span>
-              <span class="tag-chip">Video Streaming</span>
-              <span class="tag-chip">Socket.io</span>
-              <span class="tag-chip">Vercel</span>
-            </div>
-            <div class="card-footer-action">
-              <a href="https://youssefsaberahmed14-ui-zoom-clone.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
-                <span>Open Live App</span>
-                <span>↗</span>
+        <!-- Project 5: Zoom Free WebRTC -->
+        <div class="project-acc-card" onclick="activateProjectCard(this)">
+          <img src="assets/projects/movie-metro.png" alt="Zoom Free" class="project-acc-img" />
+          <div class="project-dark-overlay"></div>
+          <span class="project-collapsed-title">Zoom Clone</span>
+          
+          <div class="project-expanded-details">
+            <h3 class="project-expanded-title">Zoom Free — Real-Time Video Meetings</h3>
+            <p class="project-expanded-desc">
+              WebRTC peer-to-peer video conference platform supporting instant video rooms, screen sharing, camera toggles, and live text chat.
+            </p>
+            <div class="project-action-row">
+              <a href="https://youssefsaberahmed14-ui-zoom-clone.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-live-demo">
+                <span>LIVE DEMO</span>
+                <img src="assets/icons/pineapple.png" alt="demo" style="width: 18px; height: 18px;" />
+              </a>
+              <a href="https://github.com/youssefsaberahmed14-ui" target="_blank" rel="noopener noreferrer" class="github-circle-btn" title="View Source on GitHub">
+                <img src="assets/icons/github.png" alt="GitHub" />
               </a>
             </div>
           </div>
         </div>
 
-        <!-- 6. Weatherly -->
-        <div class="product-preview-card">
-          <div class="card-top-mac">
-            <div class="traffic-lights">
-              <span class="traffic-dot traffic-red"></span>
-              <span class="traffic-dot traffic-amber"></span>
-              <span class="traffic-dot traffic-green"></span>
-            </div>
-            <div class="mac-url-pill">
-              <span>🔒</span>
-              <span>weather-website-gray-ten.vercel.app</span>
-            </div>
-          </div>
-          <div class="card-mockup-viewport" onclick="window.open('https://weather-website-gray-ten.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen">
-              <div style="display:flex; justify-content:space-between; font-size:12px; color:#e0f2fe; border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:4px;">
-                <span>🌤️ Weatherly Dashboard</span>
-                <span>Cairo, EG</span>
-              </div>
-              <div style="display:flex; align-items:center; justify-content:space-between; margin:auto 0;">
-                <div>
-                  <div style="font-size:28px; font-weight:800; color:#fff;">26°C</div>
-                  <div style="font-size:11px; color:#bae6fd;">Clear Sky &amp; Sunny</div>
-                </div>
-                <div style="font-size:32px;">☀️</div>
-              </div>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; background:rgba(255,255,255,0.1); padding:6px; border-radius:6px; font-size:10px; color:#e0f2fe;">
-                <span>💨 Wind: 14 km/h</span>
-                <span>💧 Humidity: 45%</span>
-              </div>
-            </div>
-            <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">Open Live App ↗</span>
-            </div>
-          </div>
-          <div class="card-body-content">
-            <h3 class="card-title">Weatherly — Global Weather &amp; Live Forecast</h3>
-            <p class="card-desc">Clean meteorological dashboard displaying real-time global temperatures, hourly forecasts, atmospheric conditions, and city search.</p>
-            <div class="card-tags-list">
-              <span class="tag-chip accent">Weather API</span>
-              <span class="tag-chip">Geolocation</span>
-              <span class="tag-chip">Vercel</span>
-              <span class="tag-chip">UI/UX</span>
-            </div>
-            <div class="card-footer-action">
-              <a href="https://weather-website-gray-ten.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
-                <span>Open Live App</span>
-                <span>↗</span>
+        <!-- Project 6: Weatherly -->
+        <div class="project-acc-card" onclick="activateProjectCard(this)">
+          <img src="assets/projects/nyeusi.png" alt="Weatherly" class="project-acc-img" />
+          <div class="project-dark-overlay"></div>
+          <span class="project-collapsed-title">Weatherly App</span>
+          
+          <div class="project-expanded-details">
+            <h3 class="project-expanded-title">Weatherly — Global Weather &amp; Forecast Hub</h3>
+            <p class="project-expanded-desc">
+              Sleek meteorological dashboard displaying global real-time weather stats, 5-day forecasts, atmospheric indicators, and geolocation search.
+            </p>
+            <div class="project-action-row">
+              <a href="https://weather-website-gray-ten.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-live-demo">
+                <span>LIVE DEMO</span>
+                <img src="assets/icons/pineapple.png" alt="demo" style="width: 18px; height: 18px;" />
               </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. Nour Academy -->
-        <div class="product-preview-card">
-          <div class="card-top-mac">
-            <div class="traffic-lights">
-              <span class="traffic-dot traffic-red"></span>
-              <span class="traffic-dot traffic-amber"></span>
-              <span class="traffic-dot traffic-green"></span>
-            </div>
-            <div class="mac-url-pill">
-              <span>🔒</span>
-              <span>study-ashen-six.vercel.app</span>
-            </div>
-          </div>
-          <div class="card-mockup-viewport" onclick="window.open('https://study-ashen-six.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen">
-              <div style="display:flex; justify-content:space-between; font-size:12px; color:#c7d2fe; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
-                <span>📖 أكاديمية النور التعليمية</span>
-                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; padding:1px 6px; border-radius:4px; font-size:10px;">E-Learning</span>
-              </div>
-              <div style="background:rgba(255,255,255,0.06); border-radius:6px; padding:8px; margin:8px 0;">
-                <div style="font-size:11px; color:#a5b4fc; font-weight:600;">مسار تعلم البرمجة والذكاء الاصطناعي</div>
-                <div style="background:rgba(255,255,255,0.15); height:5px; border-radius:99px; margin-top:6px; overflow:hidden;">
-                  <div style="background:#f59e0b; width:75%; height:100%;"></div>
-                </div>
-              </div>
-              <div style="font-size:10px; color:#e0e7ff; margin-top:auto;">
-                ✓ 24 درس تفاعلي • اختبارات تقييمية
-              </div>
-            </div>
-            <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">Open Live App ↗</span>
-            </div>
-          </div>
-          <div class="card-body-content">
-            <h3 class="card-title">Nour Academy — Digital Learning Platform</h3>
-            <p class="card-desc">Modern e-learning academy portal with lesson browsing, curriculum navigation, student progress bars, and high responsiveness.</p>
-            <div class="card-tags-list">
-              <span class="tag-chip accent">E-Learning</span>
-              <span class="tag-chip">Interactive UI</span>
-              <span class="tag-chip">Vercel</span>
-              <span class="tag-chip">Arabic UI</span>
-            </div>
-            <div class="card-footer-action">
-              <a href="https://study-ashen-six.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
-                <span>Open Live App</span>
-                <span>↗</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. Siham Furniture -->
-        <div class="product-preview-card">
-          <div class="card-top-mac">
-            <div class="traffic-lights">
-              <span class="traffic-dot traffic-red"></span>
-              <span class="traffic-dot traffic-amber"></span>
-              <span class="traffic-dot traffic-green"></span>
-            </div>
-            <div class="mac-url-pill">
-              <span>🔒</span>
-              <span>siham-furniture-landing.vercel.app</span>
-            </div>
-          </div>
-          <div class="card-mockup-viewport" onclick="window.open('https://siham-furniture-landing.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen">
-              <div style="display:flex; justify-content:space-between; font-size:12px; color:#fbcfe8; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
-                <span>🛋️ شركة سهام للأثاث</span>
-                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; padding:1px 6px; border-radius:4px; font-size:10px;">Landing Page</span>
-              </div>
-              <div style="background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.2); border-radius:6px; padding:8px; margin:8px 0; font-size:11px; color:#fdf2f8;">
-                فحص فوري وتسعير عادل بأعلى الأسعار بالرياض
-              </div>
-              <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.08); padding:6px 8px; border-radius:4px; margin-top:auto; font-size:11px; color:#22c55e;">
-                <span>تواصل واتساب مباشر</span>
-                <span>💬 ➔</span>
-              </div>
-            </div>
-            <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">Open Live App ↗</span>
-            </div>
-          </div>
-          <div class="card-body-content">
-            <h3 class="card-title">Siham Furniture — Commercial Landing Page</h3>
-            <p class="card-desc">Commercial landing page built for high conversion, instant WhatsApp customer consultation funnels, fast load times, and SEO.</p>
-            <div class="card-tags-list">
-              <span class="tag-chip accent">Landing Page</span>
-              <span class="tag-chip">Conversion Rate</span>
-              <span class="tag-chip">Mobile First</span>
-              <span class="tag-chip">Vercel</span>
-            </div>
-            <div class="card-footer-action">
-              <a href="https://siham-furniture-landing.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
-                <span>Open Live App</span>
-                <span>↗</span>
+              <a href="https://github.com/youssefsaberahmed14-ui" target="_blank" rel="noopener noreferrer" class="github-circle-btn" title="View Source on GitHub">
+                <img src="assets/icons/github.png" alt="GitHub" />
               </a>
             </div>
           </div>
@@ -2182,54 +1467,57 @@
     </div>
   </section>
 
-  <!-- SECTION 5: CAREER & EDUCATION TIMELINE (with Resume Download CTA) -->
-  <section class="journey-section" id="journey">
+  <!-- SECTION 4: WORK EXPERIENCE (shaqdeff curved Experience.jsx with Timeline & Resume) -->
+  <div class="experience-curve-wrapper" id="experience">
     <div class="container">
       
-      <div class="section-header-center">
-        <span class="eyebrow">PROFESSIONAL MILESTONES</span>
-        <h2 class="section-headline">Career &amp; <span class="editorial-accent">Learning Journey</span></h2>
-        <p class="sub-copy" style="font-size: 16px; margin-top: 10px;">
-          Proven engineering foundations, software development roles, and continuous architectural growth.
-        </p>
+      <div>
+        <p class="section-sub-text">What I've done so far</p>
+        <h2 class="section-head-text">Work Experience.</h2>
       </div>
 
-      <div class="journey-timeline">
+      <div class="vertical-timeline">
         
-        <!-- Milestone 1 -->
-        <div class="timeline-item">
-          <div class="timeline-node-dot"></div>
-          <div class="journey-card">
-            <span class="journey-period-pill">2024 — PRESENT</span>
-            <h3 class="journey-title">Independent Full-Stack &amp; AI Engineer</h3>
-            <div class="journey-org">Remote · Cairo, Egypt</div>
-            <p class="journey-desc">
-              Architecting production web applications, multi-modal Gemini AI-driven workflows, and offline-first Progressive Web Apps (PWAs) with Node.js, Python, and modern JavaScript.
+        <!-- Element 1 -->
+        <div class="timeline-element">
+          <div class="timeline-icon-node">
+            <img src="assets/company/coverhunt.png" alt="Cover Hunt" />
+          </div>
+          <div class="timeline-content-card">
+            <div class="timeline-date">2024 — PRESENT</div>
+            <h3 class="timeline-job-title">Independent Full-Stack &amp; AI Developer</h3>
+            <p class="timeline-company">Remote · Cairo, Egypt</p>
+            <p class="timeline-desc">
+              Architecting production web apps, multi-modal Gemini AI-driven workflows, and offline-first Progressive Web Apps (PWAs) with Node.js, Python, and modern JavaScript.
             </p>
           </div>
         </div>
 
-        <!-- Milestone 2 -->
-        <div class="timeline-item">
-          <div class="timeline-node-dot"></div>
-          <div class="journey-card">
-            <span class="journey-period-pill">2023 — 2024</span>
-            <h3 class="journey-title">Frontend &amp; API Architecture Specialist</h3>
-            <div class="journey-org">Project Accelerators</div>
-            <p class="journey-desc">
+        <!-- Element 2 -->
+        <div class="timeline-element">
+          <div class="timeline-icon-node">
+            <img src="assets/company/kelhel.png" alt="Kelhel" />
+          </div>
+          <div class="timeline-content-card">
+            <div class="timeline-date">2023 — 2024</div>
+            <h3 class="timeline-job-title">Frontend &amp; API Architecture Specialist</h3>
+            <p class="timeline-company">Project Accelerators</p>
+            <p class="timeline-desc">
               Engineered responsive production web platforms, API consumers, and UI architectures focusing on sub-second load times, cross-browser compatibility, and accessibility.
             </p>
           </div>
         </div>
 
-        <!-- Milestone 3 -->
-        <div class="timeline-item">
-          <div class="timeline-node-dot"></div>
-          <div class="journey-card">
-            <span class="journey-period-pill">2020 — 2024</span>
-            <h3 class="journey-title">Computer Science Foundations</h3>
-            <div class="journey-org">Higher Education &amp; Technical Specializations</div>
-            <p class="journey-desc">
+        <!-- Element 3 -->
+        <div class="timeline-element">
+          <div class="timeline-icon-node">
+            <img src="assets/company/microverse.png" alt="Microverse" />
+          </div>
+          <div class="timeline-content-card">
+            <div class="timeline-date">2020 — 2024</div>
+            <h3 class="timeline-job-title">Computer Science Foundations</h3>
+            <p class="timeline-company">Higher Education &amp; Engineering Disciplines</p>
+            <p class="timeline-desc">
               Deep study of relational database modeling, data structures, algorithms, object-oriented software patterns, and enterprise full-stack development.
             </p>
           </div>
@@ -2237,243 +1525,63 @@
 
       </div>
 
-      <!-- Resume CTA Button (from shaqdeff template) -->
-      <div class="resume-cta-wrap">
-        <a href="https://github.com/youssefsaberahmed14-ui" target="_blank" rel="noopener noreferrer" class="btn-dark" style="gap:10px;">
-          <img src="assets/icons/download.png" alt="Download" style="width:18px; height:18px; filter:brightness(0) invert(1);" />
-          <span>View GitHub / Resume Profile</span>
-          <span>↗</span>
+      <!-- MY RESUME Button (shaqdeff template) -->
+      <div class="timeline-resume-row">
+        <a href="https://github.com/youssefsaberahmed14-ui" target="_blank" rel="noopener noreferrer" class="btn-resume-shaq">
+          <span>MY RESUME</span>
+          <img src="assets/icons/download.png" alt="download" />
         </a>
       </div>
 
     </div>
-  </section>
+  </div>
 
-  <!-- SECTION 6: CLIENT TESTIMONIALS (Wall of Impact) -->
-  <section class="testimonials-section-v2" id="testimonials">
+  <!-- SECTION 5: CONTACT (shaqdeff Contact.jsx with dark container) -->
+  <section class="contact-section" id="contact">
     <div class="container">
       
-      <div class="section-header-center">
-        <span class="eyebrow">WALL OF IMPACT</span>
-        <h2 class="section-headline">The Impact of My Work: <span class="editorial-accent">Client Testimonials</span></h2>
-      </div>
+      <div class="contact-card-box">
+        <p class="section-sub-text" style="color: var(--color-taupe);">Get in touch</p>
+        <h2 class="section-head-text-light">Contact.</h2>
 
-      <div class="testimonials-grid-v2">
-        
-        <!-- Testimonial 1 -->
-        <div class="testimonial-card-v2">
-          <div>
-            <div class="t-rating-row">
-              <span class="t-stars-gold">★★★★★</span>
-              <span class="t-rating-score">5.0</span>
-            </div>
-            <p class="t-quote-v2">
-              "Youssef engineered our Lecture Buddy AI assistant with exceptional precision. The integration with Gemini Vision for schedule extraction cut manual timetable setup time down to seconds. Outstanding technical mastery."
-            </p>
-          </div>
-          <div class="t-user-row-v2">
-            <div class="t-avatar-v2">A</div>
-            <div class="t-user-meta">
-              <h5>Ahmed Mansour</h5>
-              <span>Fintech &amp; AI Product Lead</span>
-            </div>
-          </div>
-        </div>
+        <form id="shaqContactForm" class="contact-form-shaq">
+          <label class="form-field-label">
+            <span>Your Name</span>
+            <input type="text" id="contactName" class="input-shaq" placeholder="What's your name?" required />
+          </label>
 
-        <!-- Testimonial 2 -->
-        <div class="testimonial-card-v2">
-          <div>
-            <div class="t-rating-row">
-              <span class="t-stars-gold">★★★★★</span>
-              <span class="t-rating-score">5.0</span>
-            </div>
-            <p class="t-quote-v2">
-              "Delivered our financial tracking application with flawless offline IndexedDB caching, full PWA capabilities, and an ultra-fluid UX. One of the most reliable and communicative developers I have collaborated with."
-            </p>
-          </div>
-          <div class="t-user-row-v2">
-            <div class="t-avatar-v2" style="background:#e0f2fe; color:#0284c7;">M</div>
-            <div class="t-user-meta">
-              <h5>Michael Davies</h5>
-              <span>SaaS Engineering Director</span>
-            </div>
-          </div>
-        </div>
+          <label class="form-field-label">
+            <span>Your Email</span>
+            <input type="email" id="contactEmail" class="input-shaq" placeholder="What's your email?" required />
+          </label>
 
-        <!-- Testimonial 3 -->
-        <div class="testimonial-card-v2">
-          <div>
-            <div class="t-rating-row">
-              <span class="t-stars-gold">★★★★★</span>
-              <span class="t-rating-score">5.0</span>
-            </div>
-            <p class="t-quote-v2">
-              "The security and database architecture on our Django platform was top notch. He handled complex UUID relationships, multi-tenant permissions, and automated testing ahead of our launch schedule."
-            </p>
-          </div>
-          <div class="t-user-row-v2">
-            <div class="t-avatar-v2" style="background:#dcfce7; color:#15803d;">S</div>
-            <div class="t-user-meta">
-              <h5>Sara El-Sayed</h5>
-              <span>Technical Project Manager</span>
-            </div>
-          </div>
-        </div>
+          <label class="form-field-label">
+            <span>Your Message</span>
+            <textarea id="contactMessage" class="input-shaq" placeholder="What's your message?" required></textarea>
+          </label>
 
+          <button type="submit" class="btn-send-shaq">
+            <span>Send</span>
+            <img src="assets/icons/send.png" alt="send" />
+          </button>
+        </form>
       </div>
 
     </div>
   </section>
 
-  <!-- SECTION 7: CONTACT MATRIX (Dual Column Lead Capture) -->
-  <section class="contact-section-v2" id="contact">
-    <div class="container">
-      
-      <div class="contact-layout-v2">
-        
-        <!-- Left Column: Direct Channels -->
-        <div>
-          <span class="eyebrow">DIRECT CONTACT</span>
-          <h2 class="display-headline" style="font-size: clamp(32px, 4vw, 44px); line-height: 1.15; margin-bottom: 12px;">
-            Let's Talk for <span class="editorial-accent">Your Next Projects</span>
-          </h2>
-          <p class="contact-intro-v2">
-            Have a project in mind, an opportunity, or need a high-impact full-stack and AI developer? Fill out the form or reach out directly.
-          </p>
-
-          <div class="contact-channels-v2">
-            <!-- Phone -->
-            <a href="tel:+201029619067" class="contact-item-row-v2">
-              <div class="contact-icon-circle-amber">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/>
-                </svg>
-              </div>
-              <span>+20 102 961 9067</span>
-            </a>
-
-            <!-- Email -->
-            <a href="mailto:youssefsaberahmed14@gmail.com" class="contact-item-row-v2">
-              <div class="contact-icon-circle-amber">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
-              </div>
-              <span>youssefsaberahmed14@gmail.com</span>
-            </a>
-
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/youssef-ahmed-552b89307" target="_blank" rel="noopener noreferrer" class="contact-item-row-v2">
-              <div class="contact-icon-circle-amber">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-                </svg>
-              </div>
-              <span>linkedin.com/in/youssef-ahmed</span>
-            </a>
-
-            <!-- Location -->
-            <div class="contact-item-row-v2">
-              <div class="contact-icon-circle-amber">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
-              </div>
-              <span>Cairo, Egypt</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Interactive Form -->
-        <div class="contact-form-card-v2">
-          <form id="portfolioContactForm">
-            <div class="form-grid-2-v2">
-              <div class="form-group-v2">
-                <label class="form-label-v2">Your Name *</label>
-                <input type="text" id="contactName" class="form-control-v2" placeholder="Ex. John Doe" required />
-              </div>
-              <div class="form-group-v2">
-                <label class="form-label-v2">Email *</label>
-                <input type="email" id="contactEmail" class="form-control-v2" placeholder="example@gmail.com" required />
-              </div>
-            </div>
-
-            <div class="form-grid-2-v2">
-              <div class="form-group-v2">
-                <label class="form-label-v2">Phone *</label>
-                <input type="tel" id="contactPhone" class="form-control-v2" placeholder="Enter Phone Number" required />
-              </div>
-              <div class="form-group-v2">
-                <label class="form-label-v2">I'm Interested in *</label>
-                <select id="contactType" class="form-control-v2" required>
-                  <option value="" disabled selected>Select</option>
-                  <option value="AI Web Application">AI Web Application</option>
-                  <option value="Full-Stack Web App">Full-Stack Web App</option>
-                  <option value="Progressive Web App (PWA)">Progressive Web App (PWA)</option>
-                  <option value="Backend API &amp; Architecture">Backend API &amp; Architecture</option>
-                  <option value="Other">Other Collaboration</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-grid-2-v2">
-              <div class="form-group-v2">
-                <label class="form-label-v2">Budget Range (USD) *</label>
-                <select id="contactBudget" class="form-control-v2" required>
-                  <option value="" disabled selected>Select Range</option>
-                  <option value="< $1,000">&lt; $1,000</option>
-                  <option value="$1,000 - $3,000">$1,000 - $3,000</option>
-                  <option value="$3,000 - $5,000">$3,000 - $5,000</option>
-                  <option value="$5,000+">$5,000+</option>
-                </select>
-              </div>
-              <div class="form-group-v2">
-                <label class="form-label-v2">Country *</label>
-                <select id="contactCountry" class="form-control-v2" required>
-                  <option value="" disabled selected>Select Country</option>
-                  <option value="Egypt">Egypt</option>
-                  <option value="Saudi Arabia">Saudi Arabia</option>
-                  <option value="United Arab Emirates">United Arab Emirates</option>
-                  <option value="United States">United States</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Germany">Germany</option>
-                  <option value="Canada">Canada</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group-v2 full-width">
-              <label class="form-label-v2">Your Message *</label>
-              <textarea id="contactMessage" class="form-control-v2" placeholder="Enter here.." required></textarea>
-            </div>
-
-            <div style="display:flex; align-items:center; margin-top:10px;">
-              <button type="submit" class="btn-submit-pill-v2">
-                <span>Submit</span>
-                <span class="submit-arrow-circle-v2">➔</span>
-              </button>
-            </div>
-          </form>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SITE FOOTER -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-inner">
+      <div class="footer-flex">
         <div>
-          <span>© <span id="currentYear"></span> <strong>Youssef Saber Ahmed</strong>. Executive Engineering Hub.</span>
+          <span>© <span id="currentYear"></span> <strong>Youssef Saber Ahmed</strong>. Built with Shaqdeff Template Architecture.</span>
         </div>
-        <div class="footer-links">
-          <a href="https://github.com/youssefsaberahmed14-ui" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-          <a href="https://www.linkedin.com/in/youssef-ahmed-552b89307" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
-          <a href="https://wa.me/201029619067" target="_blank" rel="noopener noreferrer" class="footer-link">WhatsApp</a>
-          <a href="mailto:youssefsaberahmed14@gmail.com" class="footer-link">Email</a>
+        <div class="footer-socials">
+          <a href="https://github.com/youssefsaberahmed14-ui" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/youssef-ahmed-552b89307" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://wa.me/201029619067" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="mailto:youssefsaberahmed14@gmail.com">Email</a>
         </div>
         <div>
           <span>Cairo, Egypt 🇪🇬</span>
@@ -2482,88 +1590,32 @@
     </div>
   </footer>
 
-  <!-- FULLSCREEN LIVE PREVIEW MODAL (macOS Style Window) -->
-  <div class="modal-backdrop" id="demoModal" onclick="closeDemoModal(event)">
-    <div class="modal-window" onclick="event.stopPropagation()">
-      <div class="modal-top-bar">
-        <div class="traffic-lights">
-          <span class="traffic-dot traffic-red" onclick="closeDemoModalDirect()" style="cursor:pointer;" title="Close"></span>
-          <span class="traffic-dot traffic-amber"></span>
-          <span class="traffic-dot traffic-green"></span>
-        </div>
-        <div class="mac-url-pill" style="max-width: 600px;">
-          <span>🔒</span>
-          <span id="modalUrlDisplay">https://app.preview.local</span>
-        </div>
-        <button class="modal-close-btn" onclick="closeDemoModalDirect()" title="Close">✕</button>
-      </div>
-      <div id="modalContentArea" style="flex:1; overflow:hidden; background:#ffffff;"></div>
-    </div>
-  </div>
-
   <script>
     // Current Year
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // Contact form WhatsApp submission
-    document.getElementById('portfolioContactForm').addEventListener('submit', function(e) {
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+
+    // Projects Expanding Cards Accordion Logic (shaqdeff template behavior)
+    function activateProjectCard(card) {
+      const allCards = document.querySelectorAll('.project-acc-card');
+      allCards.forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+    }
+
+    // Contact Form Submission straight to WhatsApp with full details
+    document.getElementById('shaqContactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = document.getElementById('contactName').value.trim();
       const email = document.getElementById('contactEmail').value.trim();
-      const phone = document.getElementById('contactPhone').value.trim();
-      const type = document.getElementById('contactType').value || 'Not specified';
-      const budget = document.getElementById('contactBudget').value || 'Not specified';
-      const country = document.getElementById('contactCountry').value || 'Not specified';
       const msg = document.getElementById('contactMessage').value.trim();
 
-      const text = `*New Portfolio Inquiry*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Interest:* ${encodeURIComponent(type)}%0A*Budget:* ${encodeURIComponent(budget)}%0A*Country:* ${encodeURIComponent(country)}%0A*Message:* ${encodeURIComponent(msg)}`;
-      
+      const text = `*New Portfolio Contact (Shaqdeff Theme)*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Message:* ${encodeURIComponent(msg)}`;
       window.open(`https://wa.me/201029619067?text=${text}`, '_blank');
-    });
-
-    // Modal Live Preview Functions
-    const projectUrls = {
-      lecturebuddy: 'https://lecture-ai-planner.vercel.app',
-      classroom: 'https://classroom-app-beta.vercel.app',
-      bookvault: 'https://book-vault-sepia-eta.vercel.app',
-      currency: 'https://currency-converter-amber-beta.vercel.app',
-      zoom: 'https://youssefsaberahmed14-ui-zoom-clone.vercel.app',
-      weather: 'https://weather-website-gray-ten.vercel.app',
-      study: 'https://study-ashen-six.vercel.app',
-      siham: 'https://siham-furniture-landing.vercel.app'
-    };
-
-    function openDemoModal(key) {
-      const url = projectUrls[key] || 'https://lecture-ai-planner.vercel.app';
-      const urlDisplay = document.getElementById('modalUrlDisplay');
-      const contentArea = document.getElementById('modalContentArea');
-      
-      urlDisplay.innerHTML = `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline;">${url}</a> <span style="margin-left:8px; font-weight:600; color:var(--color-accent-amber-dark);">[Open Full ↗]</span>`;
-      
-      contentArea.innerHTML = `
-        <iframe src="${url}" style="width:100%; height:100%; border:none;" allow="camera; microphone; fullscreen; clipboard-read; clipboard-write;" loading="lazy"></iframe>
-      `;
-
-      const modal = document.getElementById('demoModal');
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeDemoModal(e) {
-      if (e.target.id === 'demoModal') {
-        closeDemoModalDirect();
-      }
-    }
-
-    function closeDemoModalDirect() {
-      const modal = document.getElementById('demoModal');
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-      document.getElementById('modalContentArea').innerHTML = '';
-    }
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeDemoModalDirect();
     });
   </script>
 
