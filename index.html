@@ -4,85 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Youssef Saber Ahmed — Full-Stack & AI Software Developer</title>
-  <meta name="description" content="Portfolio of Youssef Saber Ahmed — Full-Stack & AI Developer building scalable web applications, Gemini AI integrations, and responsive PWAs." />
+  <meta name="description" content="Executive Engineering Hub & Portfolio of Youssef Saber Ahmed — Full-Stack & AI Software Developer building scalable web applications, Gemini AI integrations, and responsive PWAs." />
+  <meta name="author" content="Youssef Saber Ahmed" />
   
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
-  <!-- Google Fonts: Bricolage Grotesque (Display) + Inter (UI & Body) + Tajawal (Arabic) -->
+  <!-- Google Fonts: Bricolage Grotesque (Headings) + Inter (Body/UI) + Playfair Display (Editorial Accent) + JetBrains Mono (Tech Ledger) + Tajawal (Arabic) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       SUPAHUB DESIGN SYSTEM TOKENS
+       EXECUTIVE ENGINEERING HUB DESIGN SYSTEM TOKENS (60-30-10 System)
        ========================================================================== */
     :root {
-      /* ==========================================================================
-         UNIFIED 3-COLOR SYSTEM (60-30-10 Design Architecture)
-         1. Primary Dark  (60% Contrast/Structure): #0f172a (Deep Midnight Slate)
-         2. Primary Light (30% Surface/Canvas):     #ffffff & #f8fafc (Clean Mist)
-         3. Accent Focus  (10% Action/Attention):   #f59e0b / #d97706 (Warm Golden Amber)
-         ========================================================================== */
+      /* Surface & Canvases (30%) */
+      --color-surface: #f8f9ff;
+      --color-surface-dim: #ccdbf3;
+      --color-surface-bright: #f8f9ff;
+      --color-surface-container-lowest: #ffffff;
+      --color-surface-container-low: #eff4ff;
+      --color-surface-container: #e6eeff;
+      --color-surface-mist: #f8fafc;
+      --color-border-light: #e2e8f0;
+      --color-border-hover: #cbd5e1;
 
-      /* Primary Color 1: Deep Midnight (Text, Headings, Dark Surfaces, High Contrast) */
+      /* Primary Structure & Ink (60%) */
+      --color-on-surface: #0d1c2e;
       --color-primary-dark: #0f172a;
       --color-midnight-ink: #0f172a;
       --color-graphite: #334155;
       --color-slate: #64748b;
+      --color-taupe: #94a3b8;
 
-      /* Primary Color 2: Clean Light (Canvas, Card Surfaces, Borders) */
-      --color-primary-light: #ffffff;
-      --color-pure-white: #ffffff;
-      --color-surface-soft: #f8fafc;
-      --color-fog: #f8fafc;
-      --color-mist: #e2e8f0;
-      --color-border-card: #e2e8f0;
-
-      /* Accent Color 3: Radiant Amber (Strict 10% Focus, Actions, Badges, Highlights) */
-      --color-accent-focus: #f59e0b;
-      --color-accent-hover: #d97706;
-      --color-accent-text: #b45309;
+      /* Accent Focus & Action (10%) */
+      --color-accent-amber: #f59e0b;
+      --color-accent-amber-dark: #d97706;
       --color-accent-soft: rgba(245, 158, 11, 0.12);
-      --color-accent-glow: rgba(245, 158, 11, 0.25);
+      --color-accent-glow: rgba(245, 158, 11, 0.28);
       --color-gold-star: #f59e0b;
 
-      /* Complete Legacy Token Mapping to ensure 100% color unification across components */
+      /* macOS Window Nodes */
+      --color-mac-close: #ff5f56;
+      --color-mac-minimize: #ffbd2e;
+      --color-mac-expand: #27c93f;
+
+      /* Legacy compatibility mappings */
       --color-voltage-violet: #f59e0b;
-      --color-ultra-violet: #d97706;
-      --color-lavender-mist: rgba(245, 158, 11, 0.15);
-      --color-orchid-wash: rgba(245, 158, 11, 0.08);
-      --color-magenta-spark: #f59e0b;
-      --color-hot-pink-ray: #f59e0b;
-      --color-amber-pulse: #f59e0b;
-      --color-mint-wash: rgba(245, 158, 11, 0.12);
-      --color-lavender-field: #f8fafc;
+      --color-pure-white: #ffffff;
+      --color-fog: #f8fafc;
+      --color-mist: #e2e8f0;
 
       /* Typography Families */
       --font-display: 'Bricolage Grotesque', sans-serif;
       --font-body: 'Inter', sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
       --font-serif-accent: 'Playfair Display', Georgia, serif;
+      --font-mono: 'JetBrains Mono', monospace;
       --font-arabic: 'Tajawal', sans-serif;
 
       /* Radii */
-      --radius-nav: 12px;
-      --radius-buttons: 12px;
-      --radius-images: 16px;
-      --radius-cards: 20px;
-      --radius-featured-card: 32px;
+      --radius-sm: 0.25rem;
+      --radius-default: 0.5rem;
+      --radius-md: 0.75rem;
+      --radius-lg: 1rem;
+      --radius-xl: 1.5rem;
       --radius-pills: 9999px;
 
-      /* Subtle Shadows */
+      /* Elevation & Shadows */
       --shadow-subtle: 0 1px 3px rgba(15, 23, 42, 0.08);
-      --shadow-card-soft: 0 12px 30px rgba(15, 23, 42, 0.06);
-      --shadow-float-mockup: 0 20px 50px rgba(15, 23, 42, 0.1);
+      --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.05);
+      --shadow-card-hover: 0 20px 40px rgba(15, 23, 42, 0.09);
+      --shadow-float-mockup: 0 20px 50px -12px rgba(15, 23, 42, 0.12);
       --shadow-accent-glow: 0 8px 24px rgba(245, 158, 11, 0.28);
 
       /* Layout */
-      --page-max-width: 1200px;
-      --section-gap: 80px;
+      --page-max-width: 1280px;
+      --section-gap: 90px;
     }
 
     /* CSS Reset */
@@ -92,20 +91,24 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background-color: var(--color-pure-white);
-      color: var(--color-midnight-ink);
+      background-color: var(--color-surface-container-lowest);
+      color: var(--color-on-surface);
       font-family: var(--font-body);
       font-size: 16px;
-      line-height: 1.75;
+      line-height: 1.7;
       overflow-x: hidden;
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
     }
 
     ::selection {
-      background: var(--color-lavender-field);
-      color: var(--color-ultra-violet);
+      background: #fef3c7;
+      color: #92400e;
     }
 
     a {
@@ -121,35 +124,55 @@
       position: relative;
     }
 
-    /* TYPOGRAPHY HELPERS */
-    .eyebrow {
-      font-family: var(--font-body);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-voltage-violet);
-      display: inline-block;
-      margin-bottom: 16px;
+    @media (min-width: 1024px) {
+      .container {
+        padding: 0 2rem;
+      }
     }
 
-    .eyebrow.dark {
-      color: var(--color-midnight-ink);
+    /* TYPOGRAPHY HELPERS */
+    .editorial-accent, .serif-accent {
+      font-family: var(--font-serif-accent);
+      font-style: italic;
+      font-weight: 600;
+      color: var(--color-accent-amber-dark);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-accent-amber-dark);
+      margin-bottom: 14px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 2px;
+      background: var(--color-accent-amber);
+      border-radius: 2px;
     }
 
     .display-headline {
       font-family: var(--font-display);
-      font-size: clamp(38px, 5.2vw, 56px);
-      font-weight: 600;
-      line-height: 1.08;
-      letter-spacing: -0.025em;
+      font-size: clamp(36px, 5.2vw, 56px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
       color: var(--color-midnight-ink);
     }
 
     .section-headline {
       font-family: var(--font-display);
-      font-size: clamp(28px, 3.8vw, 36px);
-      font-weight: 600;
+      font-size: clamp(28px, 3.8vw, 40px);
+      font-weight: 700;
       line-height: 1.2;
       letter-spacing: -0.025em;
       color: var(--color-midnight-ink);
@@ -157,9 +180,9 @@
 
     .sub-copy {
       font-family: var(--font-body);
-      font-size: 18px;
+      font-size: 17px;
       color: var(--color-slate);
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
     /* BUTTONS */
@@ -168,24 +191,26 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: var(--color-voltage-violet);
-      color: var(--color-pure-white);
-      border-radius: var(--radius-buttons);
-      padding: 16px 24px;
+      background: var(--color-accent-amber);
+      color: var(--color-midnight-ink);
+      border-radius: var(--radius-default);
+      padding: 14px 26px;
       font-family: var(--font-body);
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      border: none;
+      border: 1px solid var(--color-accent-amber);
       cursor: pointer;
-      box-shadow: var(--shadow-subtle);
-      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.22);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       white-space: nowrap;
     }
 
     .btn-primary:hover {
-      background: var(--color-ultra-violet);
+      background: var(--color-accent-amber-dark);
+      border-color: var(--color-accent-amber-dark);
+      color: #ffffff;
       transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(134, 47, 231, 0.25);
+      box-shadow: var(--shadow-accent-glow);
     }
 
     .btn-dark {
@@ -194,22 +219,24 @@
       justify-content: center;
       gap: 8px;
       background: var(--color-midnight-ink);
-      color: var(--color-pure-white);
-      border-radius: var(--radius-buttons);
-      padding: 16px 24px;
+      color: #ffffff;
+      border-radius: var(--radius-default);
+      padding: 14px 26px;
       font-family: var(--font-body);
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      border: none;
+      border: 1px solid var(--color-midnight-ink);
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       white-space: nowrap;
     }
 
     .btn-dark:hover {
       background: #000000;
+      border-color: var(--color-accent-amber);
+      color: var(--color-accent-amber);
       transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(17, 24, 39, 0.2);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.2);
     }
 
     .btn-ghost {
@@ -219,195 +246,197 @@
       gap: 8px;
       background: transparent;
       color: var(--color-midnight-ink);
-      border: 1px solid var(--color-midnight-ink);
-      border-radius: var(--radius-buttons);
-      padding: 16px 24px;
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-default);
+      padding: 14px 26px;
       font-family: var(--font-body);
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 500;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
       white-space: nowrap;
     }
 
     .btn-ghost:hover {
-      background: var(--color-fog);
+      border-color: var(--color-midnight-ink);
+      background: var(--color-surface-mist);
       transform: translateY(-2px);
     }
 
-    .btn-nav-compact {
-      background: var(--color-voltage-violet);
-      color: var(--color-pure-white);
-      border-radius: var(--radius-buttons);
-      padding: 10px 20px;
-      font-family: var(--font-body);
-      font-size: 15px;
-      font-weight: 600;
-      border: none;
-      box-shadow: var(--shadow-subtle);
-      transition: all 0.2s ease;
+    /* SIGNATURE PILL SUBMIT BUTTON */
+    .btn-submit-pill-v2 {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-    }
-
-    .btn-nav-compact:hover {
-      background: var(--color-ultra-violet);
-    }
-
-    /* DECORATIVE GRADIENT ORBS (Supahub Signature Atmosphere) */
-    .orb-backdrop {
-      position: absolute;
+      gap: 14px;
+      background: var(--color-midnight-ink);
+      color: #ffffff;
+      border: 1px solid var(--color-midnight-ink);
       border-radius: var(--radius-pills);
-      filter: blur(80px);
-      pointer-events: none;
-      z-index: 0;
+      padding: 8px 10px 8px 24px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
     }
 
-    .orb-violet {
-      width: 480px;
-      height: 480px;
-      background: radial-gradient(circle, rgba(134, 47, 231, 0.32) 0%, rgba(173, 109, 244, 0.15) 45%, rgba(255, 255, 255, 0) 70%);
+    .btn-submit-pill-v2:hover {
+      background: #000000;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
     }
 
-    .orb-pink {
-      width: 420px;
-      height: 420px;
-      background: radial-gradient(circle, rgba(255, 95, 228, 0.26) 0%, rgba(226, 43, 164, 0.12) 50%, rgba(255, 255, 255, 0) 70%);
+    .submit-arrow-circle-v2 {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-accent-amber);
+      color: var(--color-midnight-ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+      transition: transform 0.2s ease;
     }
 
-    .orb-amber {
-      width: 380px;
-      height: 380px;
-      background: radial-gradient(circle, rgba(220, 95, 5, 0.22) 0%, rgba(255, 255, 255, 0) 70%);
+    .btn-submit-pill-v2:hover .submit-arrow-circle-v2 {
+      transform: translateX(4px);
     }
 
-    /* NAVIGATION */
-    nav.navbar {
-      position: sticky;
+    /* GLOBAL GLASSMORPHIC NAVBAR */
+    header.site-header {
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--color-mist);
       z-index: 1000;
-      padding: 16px 0;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border-light);
+      transition: all 0.2s ease;
     }
 
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      height: 72px;
     }
 
-    .nav-brand {
+    .brand-logo {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-family: var(--font-body);
+      gap: 10px;
+    }
+
+    .brand-logo-text {
+      font-family: var(--font-display);
       font-size: 19px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: -0.02em;
       color: var(--color-midnight-ink);
     }
 
-    .sparkle-icon {
-      color: var(--color-voltage-violet);
-      font-size: 20px;
+    .brand-logo-text span {
+      color: var(--color-accent-amber);
     }
 
-    .nav-menu {
+    .brand-pill-badge {
+      background: var(--color-accent-soft);
+      color: var(--color-accent-amber-dark);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: var(--radius-pills);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
-      list-style: none;
+      gap: 32px;
     }
 
     .nav-link {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 500;
-      color: var(--color-midnight-ink);
-      padding: 6px 8px;
+      color: var(--color-slate);
       transition: color 0.15s ease;
     }
 
-    .nav-link:hover, .nav-link.active {
-      color: var(--color-voltage-violet);
+    .nav-link:hover {
+      color: var(--color-midnight-ink);
     }
 
-    .mobile-toggle {
-      display: none;
-      background: transparent;
-      border: none;
-      font-size: 24px;
+    .btn-nav-compact {
+      background: var(--color-midnight-ink);
+      color: #ffffff;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: var(--radius-default);
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-nav-compact:hover {
+      background: var(--color-accent-amber);
       color: var(--color-midnight-ink);
-      cursor: pointer;
+      border-color: var(--color-accent-amber);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
     }
 
     @media (max-width: 860px) {
-      .mobile-toggle { display: block; }
-      .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--color-pure-white);
-        border-bottom: 1px solid var(--color-mist);
-        padding: 24px;
-        flex-direction: column;
-        gap: 16px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-      }
-      .nav-menu.open { display: flex; }
-      .nav-right-cta { display: none; }
+      .nav-links { display: none; }
     }
 
-    /* HERO SECTION */
+    /* ==========================================================================
+       HERO SECTION (2-Column Asymmetric Desktop Split)
+       ========================================================================== */
     section.hero-section {
-      padding: 80px 0 64px;
-      background: var(--color-pure-white);
+      padding-top: 150px;
+      padding-bottom: 80px;
       position: relative;
       overflow: hidden;
+      background: var(--color-surface-container-lowest);
     }
 
-    .hero-layout {
+    .hero-split-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 48px;
+      gap: 56px;
       align-items: center;
-      position: relative;
-      z-index: 2;
     }
 
     .hero-content {
-      max-width: 680px;
-    }
-
-    .hero-content .display-headline {
-      margin-bottom: 24px;
-    }
-
-    .hero-content .sub-copy {
-      margin-bottom: 32px;
-      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
 
     .hero-buttons-row {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       gap: 16px;
-      margin-bottom: 40px;
+      flex-wrap: wrap;
+      margin-top: 6px;
     }
 
-    /* AVATAR STACK & SOCIAL PROOF */
+    /* Social Proof Stack */
     .social-proof-wrap {
       display: flex;
       align-items: center;
       gap: 16px;
-      flex-wrap: wrap;
+      margin-top: 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border-light);
     }
 
     .avatar-stack {
@@ -416,19 +445,23 @@
     }
 
     .avatar-item {
-      width: 40px;
-      height: 40px;
-      border-radius: var(--radius-pills);
-      border: 2px solid var(--color-pure-white);
-      margin-right: -12px;
-      background: var(--color-fog);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid var(--color-surface-container-lowest);
+      margin-left: -10px;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
       font-size: 13px;
-      color: var(--color-graphite);
-      overflow: hidden;
+      background: #e2e8f0;
+      color: #1e293b;
+    }
+
+    .avatar-item:first-child {
+      margin-left: 0;
     }
 
     .avatar-item img {
@@ -440,40 +473,33 @@
     .social-proof-text {
       display: flex;
       flex-direction: column;
-      gap: 2px;
     }
 
     .stars-row {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      color: var(--color-gold-star);
+      color: var(--color-accent-amber);
       font-size: 14px;
+      letter-spacing: 2px;
+      line-height: 1;
+      margin-bottom: 4px;
     }
 
     .proof-label {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--color-midnight-ink);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-slate);
     }
 
-    /* HERO FLOATING PRODUCT PREVIEW CARD */
+    /* HERO VISUAL: Tactile macOS Window Frame */
     .hero-visual-card {
       position: relative;
-      display: flex;
-      justify-content: center;
     }
 
     .floating-mockup-window {
-      width: 100%;
-      max-width: 400px;
-      background: var(--color-pure-white);
-      border-radius: var(--radius-images);
-      border: 1px solid var(--color-mist);
+      background: var(--color-surface-container-lowest);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-lg);
       box-shadow: var(--shadow-float-mockup);
       overflow: hidden;
-      position: relative;
-      z-index: 2;
       transition: transform 0.3s ease;
     }
 
@@ -483,80 +509,81 @@
 
     .mac-window-bar {
       height: 40px;
-      background: #fafbfc;
-      border-bottom: 1px solid var(--color-mist);
+      background: var(--color-surface-mist);
+      border-bottom: 1px solid var(--color-border-light);
       display: flex;
       align-items: center;
       padding: 0 16px;
-      gap: 8px;
+      gap: 12px;
     }
 
     .traffic-lights {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
     }
 
     .traffic-dot {
-      width: 10px;
-      height: 10px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
+      display: inline-block;
     }
-    .traffic-red { background: #ff5f57; }
-    .traffic-amber { background: #febc20; }
-    .traffic-green { background: #28c840; }
+
+    .traffic-red { background: var(--color-mac-close); }
+    .traffic-amber { background: var(--color-mac-minimize); }
+    .traffic-green { background: var(--color-mac-expand); }
 
     .window-title {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-voltage-violet);
-      margin: 0 auto;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--color-slate);
+      letter-spacing: 0.05em;
+      margin-left: auto;
     }
 
     .mockup-inner-photo {
-      width: 100%;
-      aspect-ratio: 1/1.1;
-      overflow: hidden;
-      background: var(--color-fog);
       position: relative;
+      width: 100%;
+      height: 420px;
+      background: #0f172a;
+      overflow: hidden;
     }
 
     .mockup-inner-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
-      display: block;
+      object-position: center 20%;
     }
 
+    /* Floating Chip Badge */
     .floating-chip {
       position: absolute;
-      bottom: -16px;
-      right: -16px;
-      background: var(--color-pure-white);
-      border: 1px solid var(--color-mist);
-      border-radius: var(--radius-cards);
+      bottom: -20px;
+      left: -20px;
+      background: var(--color-surface-container-lowest);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
       padding: 12px 18px;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
       display: flex;
       align-items: center;
       gap: 12px;
-      box-shadow: 0 15px 35px rgba(17, 24, 39, 0.08);
-      z-index: 3;
+      z-index: 10;
     }
 
     .chip-badge {
       width: 36px;
       height: 36px;
-      border-radius: var(--radius-pills);
-      background: var(--color-mint-wash);
-      color: #0c6953;
+      border-radius: 50%;
+      background: #fef3c7;
+      color: var(--color-accent-amber-dark);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
-      font-weight: 800;
+      font-size: 18px;
+      flex-shrink: 0;
     }
 
     .chip-info h5 {
@@ -570,159 +597,355 @@
       color: var(--color-slate);
     }
 
-    @media (max-width: 900px) {
-      .hero-layout { grid-template-columns: 1fr; gap: 48px; }
-      .hero-visual-card { order: -1; }
-      .floating-chip { right: 8px; bottom: -12px; }
+    /* HERO SCROLL MOUSE INDICATOR (from shaqdeff template) */
+    .hero-scroll-indicator {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
     }
 
-    /* SECTION 2: LAVENDER FEATURE SECTION (Supahub Signature Band Pattern) */
-    section.lavender-feature-band {
-      background: var(--color-lavender-field);
-      padding: 80px 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .lavender-split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .lavender-card-highlight {
-      background: var(--color-pure-white);
-      border-radius: var(--radius-cards);
-      padding: 32px;
-      box-shadow: 0 20px 40px rgba(134, 47, 231, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      position: relative;
-    }
-
-    .mint-pill-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--color-mint-wash);
-      color: #0c6953;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 4px 12px;
+    .mouse-pill {
+      width: 30px;
+      height: 52px;
+      border: 2px solid var(--color-slate);
       border-radius: var(--radius-pills);
-      margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      padding-top: 8px;
+      transition: all 0.2s ease;
+      cursor: pointer;
     }
 
-    .impact-number-pill {
-      background: #1f2534;
-      color: #ffffff;
-      font-family: var(--font-body);
-      font-size: 12px;
-      font-weight: 700;
-      border-radius: var(--radius-pills);
-      padding: 2px 10px;
+    .mouse-pill:hover {
+      border-color: var(--color-accent-amber);
+      transform: translateY(2px);
     }
 
-    @media (max-width: 860px) {
-      .lavender-split { grid-template-columns: 1fr; gap: 36px; }
+    .mouse-wheel-dot {
+      width: 6px;
+      height: 10px;
+      border-radius: 4px;
+      background: var(--color-accent-amber);
+      animation: mouseBounce 1.6s infinite;
     }
 
-    /* SECTION 3: PROJECTS SHOWCASE (Product Preview Cards with macOS Traffic-Lights) */
-    section.projects-section {
-      padding: 80px 0;
-      background: var(--color-pure-white);
-      position: relative;
+    @keyframes mouseBounce {
+      0% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(14px); opacity: 0.3; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 960px) {
+      .hero-split-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .floating-chip {
+        left: 10px;
+        bottom: -15px;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION 1: OVERVIEW & CORE DISCIPLINES (Service Cards from shaqdeff)
+       ========================================================================== */
+    section.overview-section {
+      padding: var(--section-gap) 0;
+      background: var(--color-surface-mist);
+      border-top: 1px solid var(--color-border-light);
+      border-bottom: 1px solid var(--color-border-light);
     }
 
     .section-header-center {
       text-align: center;
-      max-width: 680px;
-      margin: 0 auto 56px;
+      max-width: 720px;
+      margin: 0 auto 50px;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--color-surface-container-lowest);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow-subtle);
+      position: relative;
+    }
+
+    .service-card:hover {
+      border-color: var(--color-border-hover);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .service-icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-default);
+      background: #f8fafc;
+      border: 1px solid var(--color-border-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .service-card:hover .service-icon-box {
+      background: #fef3c7;
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+
+    .service-icon-box img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--color-midnight-ink);
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      font-size: 14.5px;
+      color: var(--color-slate);
+      line-height: 1.65;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-top: 14px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .tag-chip {
+      background: var(--color-surface-mist);
+      color: var(--color-slate);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-pills);
+      padding: 3px 10px;
+      font-size: 11.5px;
+      font-weight: 500;
+      font-family: var(--font-mono);
+    }
+
+    .tag-chip.accent {
+      background: var(--color-accent-soft);
+      color: var(--color-accent-amber-dark);
+      border-color: rgba(245, 158, 11, 0.25);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       SECTION 2: TECHNOLOGIES & TOOLING MATRIX (Tech Grid from shaqdeff)
+       ========================================================================== */
+    section.tech-section {
+      padding: var(--section-gap) 0;
+      background: var(--color-surface-container-lowest);
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .tech-box {
+      background: var(--color-surface-container-lowest);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-default);
+      padding: 20px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.25s ease;
+      cursor: default;
+    }
+
+    .tech-box:hover {
+      border-color: var(--color-accent-amber);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(245, 158, 11, 0.12);
+    }
+
+    .tech-icon-wrap {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tech-icon-wrap img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));
+    }
+
+    .tech-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-midnight-ink);
+      text-align: center;
+    }
+
+    /* ==========================================================================
+       SECTION 3: FLAGSHIP SPOTLIGHT (Lecture Buddy AI)
+       ========================================================================== */
+    section.flagship-section {
+      padding: var(--section-gap) 0;
+      background: var(--color-surface-mist);
+      border-top: 1px solid var(--color-border-light);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .flagship-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .flagship-card-box {
+      background: var(--color-surface-container-lowest);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-card);
+    }
+
+    @media (max-width: 860px) {
+      .flagship-split {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION 4: LIVE DEPLOYED PROJECTS (macOS Showcase Windows)
+       ========================================================================== */
+    section.projects-section {
+      padding: var(--section-gap) 0;
+      background: var(--color-surface-container-lowest);
+      position: relative;
     }
 
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 32px;
-      position: relative;
-      z-index: 2;
+      gap: 30px;
+      margin-top: 50px;
     }
 
     .product-preview-card {
-      background: var(--color-pure-white);
-      border: 1px solid var(--color-mist);
-      border-radius: var(--radius-cards);
+      background: var(--color-surface-container-lowest);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 10px 30px rgba(17, 24, 39, 0.04);
-      transition: all 0.25s ease;
-      position: relative;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: var(--shadow-subtle);
     }
 
     .product-preview-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 45px rgba(134, 47, 231, 0.12);
-      border-color: var(--color-lavender-mist);
+      border-color: var(--color-border-hover);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
     }
 
     .card-top-mac {
-      height: 38px;
-      background: #f8fafc;
-      border-bottom: 1px solid var(--color-mist);
+      height: 40px;
+      background: var(--color-surface-mist);
+      border-bottom: 1px solid var(--color-border-light);
       display: flex;
       align-items: center;
-      padding: 0 16px;
-      justify-content: space-between;
+      padding: 0 14px;
+      gap: 12px;
     }
 
     .mac-url-pill {
+      flex: 1;
+      background: var(--color-surface-container-lowest);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-pills);
+      padding: 3px 10px;
       font-family: var(--font-mono);
       font-size: 11px;
       color: var(--color-slate);
-      background: rgba(0, 0, 0, 0.04);
-      padding: 2px 10px;
-      border-radius: 6px;
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .card-mockup-viewport {
-      height: 220px;
-      background: #090d16;
+      height: 200px;
       position: relative;
-      overflow: hidden;
       cursor: pointer;
+      background: #0f172a;
+      overflow: hidden;
+    }
+
+    .mini-screen {
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     }
 
     .mockup-hover-layer {
       position: absolute;
       inset: 0;
-      background: rgba(134, 47, 231, 0.75);
-      backdrop-filter: blur(3px);
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(4px);
       display: flex;
       align-items: center;
       justify-content: center;
       opacity: 0;
       transition: opacity 0.2s ease;
-      z-index: 5;
     }
 
-    .product-preview-card:hover .mockup-hover-layer {
+    .card-mockup-viewport:hover .mockup-hover-layer {
       opacity: 1;
     }
 
     .hover-badge-btn {
-      background: var(--color-pure-white);
+      background: var(--color-accent-amber);
       color: var(--color-midnight-ink);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
-      padding: 10px 20px;
+      padding: 8px 18px;
       border-radius: var(--radius-pills);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .card-body-content {
@@ -730,61 +953,43 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      background: var(--color-surface-container-lowest);
     }
 
     .card-title {
       font-family: var(--font-display);
-      font-size: 20px;
-      font-weight: 600;
+      font-size: 18px;
+      font-weight: 700;
       color: var(--color-midnight-ink);
       margin-bottom: 8px;
-      line-height: 1.3;
     }
 
     .card-desc {
       font-size: 14px;
       color: var(--color-slate);
       line-height: 1.6;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       flex-grow: 1;
     }
 
     .card-tags-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 6px;
       margin-bottom: 20px;
     }
 
-    .tag-chip {
-      font-size: 12px;
-      font-family: var(--font-body);
-      font-weight: 500;
-      background: var(--color-fog);
-      color: var(--color-graphite);
-      padding: 4px 10px;
-      border-radius: 6px;
-    }
-
-    .tag-chip.violet {
-      background: #f4ecfd;
-      color: var(--color-voltage-violet);
-      font-weight: 600;
-    }
-
     .card-footer-action {
-      border-top: 1px solid var(--color-mist);
-      padding-top: 16px;
       margin-top: auto;
     }
 
     .btn-card-preview {
       width: 100%;
       padding: 12px;
-      background: var(--color-fog);
+      background: var(--color-surface-mist);
       color: var(--color-midnight-ink);
-      border: none;
-      border-radius: var(--radius-buttons);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-default);
       font-size: 14px;
       font-weight: 600;
       cursor: pointer;
@@ -792,473 +997,142 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
+      text-decoration: none;
       transition: all 0.2s ease;
     }
 
     .btn-card-preview:hover {
-      background: var(--color-voltage-violet);
-      color: var(--color-pure-white);
+      background: var(--color-midnight-ink);
+      color: var(--color-accent-amber);
+      border-color: var(--color-midnight-ink);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
     }
 
-    /* MINI PREVIEW INTERNAL SCREENS */
-    .mini-screen {
-      padding: 16px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      color: #fff;
-    }
-    .ms-ai { background: #0c0b1a; font-family: var(--font-arabic), sans-serif; direction: rtl; }
-    .ms-cash { background: #081210; font-family: var(--font-arabic), sans-serif; direction: rtl; }
-    .ms-books { background: #0c0e18; }
-    .ms-django { background: #120e1e; }
-    .ms-youka { background: #170d14; font-family: var(--font-arabic), sans-serif; direction: rtl; }
-    .ms-cisco { background: #060910; font-family: var(--font-mono); }
-    .ms-sch { background: #0d121c; font-family: var(--font-arabic), sans-serif; direction: rtl; }
-
-    /* SECTION 4: EDUCATION & JOURNEY (Fog Background) */
+    /* ==========================================================================
+       SECTION 5: CAREER & EDUCATION TIMELINE (with Resume Download)
+       ========================================================================== */
     section.journey-section {
-      padding: 80px 0;
-      background: var(--color-fog);
+      padding: var(--section-gap) 0;
+      background: var(--color-surface-mist);
+      border-top: 1px solid var(--color-border-light);
+      border-bottom: 1px solid var(--color-border-light);
     }
 
-    .journey-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
+    .journey-timeline {
+      position: relative;
+      max-width: 860px;
+      margin: 40px auto 0;
+      padding-left: 32px;
+      border-left: 2px solid var(--color-border-light);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 36px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-node-dot {
+      position: absolute;
+      left: -41px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--color-accent-amber);
+      border: 3px solid var(--color-surface-mist);
+      box-shadow: 0 0 0 2px var(--color-border-light);
     }
 
     .journey-card {
-      background: var(--color-pure-white);
-      border: 1px solid var(--color-mist);
-      border-radius: var(--radius-cards);
-      padding: 32px 24px;
-      transition: transform 0.2s ease;
+      background: var(--color-surface-container-lowest);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-subtle);
     }
 
     .journey-card:hover {
-      transform: translateY(-4px);
+      border-color: var(--color-border-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-card);
     }
 
-    .journey-period {
-      font-family: var(--font-body);
-      font-size: 13px;
+    .journey-period-pill {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 12px;
       font-weight: 700;
-      color: var(--color-voltage-violet);
-      margin-bottom: 8px;
+      color: var(--color-accent-amber-dark);
+      background: var(--color-accent-soft);
+      padding: 3px 10px;
+      border-radius: var(--radius-pills);
+      margin-bottom: 10px;
     }
 
     .journey-title {
       font-family: var(--font-display);
-      font-size: 20px;
-      font-weight: 600;
+      font-size: 19px;
+      font-weight: 700;
       color: var(--color-midnight-ink);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .journey-org {
       font-size: 14px;
+      font-weight: 500;
       color: var(--color-slate);
       margin-bottom: 12px;
     }
 
     .journey-desc {
-      font-size: 14px;
+      font-size: 14.5px;
       color: var(--color-graphite);
-      line-height: 1.6;
-    }
-
-    /* SECTION 5: WALL OF LOVE / TESTIMONIALS (Supahub Masonry Style) */
-    section.testimonials-section {
-      padding: 80px 0;
-      background: var(--color-pure-white);
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      margin-top: 48px;
-    }
-
-    .testimonial-card {
-      background: var(--color-pure-white);
-      border: 1px solid var(--color-mist);
-      border-radius: var(--radius-cards);
-      padding: 24px;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.2s ease;
-    }
-
-    .testimonial-card:hover {
-      border-color: var(--color-lavender-mist);
-      box-shadow: var(--shadow-card-soft);
-    }
-
-    .t-close-icon {
-      position: absolute;
-      top: 24px;
-      right: 24px;
-      color: var(--color-mist);
-      font-size: 16px;
-      cursor: default;
-    }
-
-    .t-user-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .t-avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: var(--radius-pills);
-      background: var(--color-fog);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: var(--color-voltage-violet);
-      font-size: 16px;
-    }
-
-    .t-user-info h5 {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--color-midnight-ink);
-    }
-
-    .t-user-info span {
-      font-size: 14px;
-      color: var(--color-slate);
-    }
-
-    .t-quote {
-      font-size: 15px;
-      color: var(--color-midnight-ink);
       line-height: 1.65;
-      margin-bottom: 20px;
     }
 
-    .t-stars-bottom {
+    .resume-cta-wrap {
       display: flex;
-      align-items: center;
-      gap: 2px;
-      color: var(--color-gold-star);
-      font-size: 14px;
-    }
-
-    /* SECTION 6: CONTACT FORM & CHANNELS */
-    section.contact-section {
-      padding: 80px 0;
-      background: var(--color-fog);
-      border-top: 1px solid var(--color-mist);
-    }
-
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 48px;
-      align-items: start;
-    }
-
-    .contact-info-panel p {
-      color: var(--color-slate);
-      font-size: 16px;
-      margin: 16px 0 32px;
-      line-height: 1.7;
-    }
-
-    .contact-channels {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .channel-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: var(--color-pure-white);
-      border: 1px solid var(--color-mist);
-      border-radius: 16px;
-      padding: 16px;
-      transition: all 0.2s ease;
-    }
-
-    .channel-item:hover {
-      border-color: var(--color-voltage-violet);
-      transform: translateX(4px);
-    }
-
-    .channel-icon-pill {
-      width: 44px;
-      height: 44px;
-      border-radius: var(--radius-pills);
-      background: #f4ecfd;
-      color: var(--color-voltage-violet);
-      display: flex;
-      align-items: center;
       justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
+      margin-top: 40px;
     }
 
-    .channel-text h6 {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--color-slate);
-    }
-
-    .channel-text p {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--color-midnight-ink);
-      margin: 0;
-    }
-
-    /* CONTACT FORM */
-    .contact-form-card {
-      background: var(--color-pure-white);
-      border: 1px solid var(--color-mist);
-      border-radius: var(--radius-cards);
-      padding: 36px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    }
-
-    .form-grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 16px;
-    }
-
-    .form-label {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--color-midnight-ink);
-    }
-
-    .form-control {
-      background: #ffffff;
-      border: 1px solid var(--color-mist);
-      border-radius: 10px;
-      padding: 14px 16px;
-      font-family: var(--font-body);
-      font-size: 15px;
-      color: var(--color-midnight-ink);
-      outline: none;
-      transition: all 0.2s ease;
-    }
-
-    .form-control:focus {
-      border-color: var(--color-voltage-violet);
-      box-shadow: 0 0 0 3px rgba(134, 47, 231, 0.15);
-    }
-
-    textarea.form-control {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    @media (max-width: 860px) {
-      .contact-layout { grid-template-columns: 1fr; gap: 36px; }
-      .form-grid-2 { grid-template-columns: 1fr; }
-    }
-
-    /* FOOTER */
-    footer.site-footer {
-      background: var(--color-pure-white);
-      border-top: 1px solid var(--color-mist);
-      padding: 32px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-      font-size: 14px;
-      color: var(--color-slate);
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .footer-link {
-      color: var(--color-graphite);
-      font-weight: 500;
-      transition: color 0.15s ease;
-    }
-
-    .footer-link:hover {
-      color: var(--color-voltage-violet);
-    }
-
-    /* INTERACTIVE MODAL (macOS Style Preview Window) */
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(17, 24, 39, 0.6);
-      backdrop-filter: blur(8px);
-      z-index: 10000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease;
-    }
-
-    .modal-backdrop.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .modal-window {
-      width: 100%;
-      max-width: 960px;
-      height: 82vh;
-      background: var(--color-pure-white);
-      border-radius: var(--radius-cards);
-      border: 1px solid var(--color-mist);
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      transform: scale(0.96);
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .modal-backdrop.active .modal-window {
-      transform: scale(1);
-    }
-
-    .modal-top-bar {
-      height: 48px;
-      background: #fafbfc;
-      border-bottom: 1px solid var(--color-mist);
-      display: flex;
-      align-items: center;
-      padding: 0 16px;
-      gap: 12px;
-    }
-
-    .modal-url-display {
-      flex: 1;
-      background: var(--color-fog);
-      border: 1px solid var(--color-mist);
-      border-radius: 8px;
-      padding: 4px 12px;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--color-slate);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .modal-close-btn {
-      width: 28px;
-      height: 28px;
-      border-radius: var(--radius-pills);
-      border: none;
-      background: var(--color-fog);
-      color: var(--color-slate);
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.15s ease;
-    }
-
-    .modal-close-btn:hover {
-      background: #fee2e2;
-      color: #ef4444;
-    }
-
-    .modal-content-area {
-      flex: 1;
-      overflow-y: auto;
-      padding: 32px;
-      background: var(--color-pure-white);
-    }
-  
     /* ==========================================================================
-       EXACT MATCH TO DESIGN SCREENSHOT: LUXURY MINIMAL CONTACT & TESTIMONIALS
+       SECTION 6: CLIENT TESTIMONIALS (Wall of Impact)
        ========================================================================== */
-    .serif-accent {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-style: italic;
-      font-weight: 600;
-      color: #e59819;
-    }
-
-    .eyebrow-minimal {
-      display: inline-block;
-      font-family: var(--font-body);
-      font-size: 14px;
-      font-weight: 600;
-      color: #6b7280;
-      margin-bottom: 12px;
-      letter-spacing: -0.01em;
-    }
-
-    /* Testimonials Image Match */
-    .testimonials-section-v2 {
-      padding: 90px 0;
-      background: #ffffff;
-      border-top: 1px solid #f1f5f9;
-    }
-
-    .testimonials-header-v2 {
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto 50px;
+    section.testimonials-section-v2 {
+      padding: var(--section-gap) 0;
+      background: var(--color-surface-container-lowest);
     }
 
     .testimonials-grid-v2 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
+      margin-top: 40px;
     }
 
     .testimonial-card-v2 {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
+      background: var(--color-surface-container-lowest);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
       padding: 28px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       transition: all 0.25s ease;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.02);
+      box-shadow: var(--shadow-subtle);
     }
 
     .testimonial-card-v2:hover {
-      border-color: #d1d5db;
+      border-color: var(--color-border-hover);
       transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+      box-shadow: var(--shadow-card-hover);
     }
 
     .t-rating-row {
@@ -1269,7 +1143,7 @@
     }
 
     .t-stars-gold {
-      color: #f59e0b;
+      color: var(--color-accent-amber);
       font-size: 17px;
       letter-spacing: 2px;
     }
@@ -1277,14 +1151,13 @@
     .t-rating-score {
       font-weight: 700;
       font-size: 14px;
-      color: #111827;
-      margin-left: 2px;
+      color: var(--color-midnight-ink);
     }
 
     .t-quote-v2 {
       font-size: 14.5px;
       line-height: 1.7;
-      color: #4b5563;
+      color: var(--color-graphite);
       margin-bottom: 22px;
       flex-grow: 1;
     }
@@ -1294,7 +1167,7 @@
       align-items: center;
       gap: 12px;
       padding-top: 16px;
-      border-top: 1px solid #f3f4f6;
+      border-top: 1px solid #f1f5f9;
     }
 
     .t-avatar-v2 {
@@ -1302,7 +1175,7 @@
       height: 42px;
       border-radius: 50%;
       background: #fef3c7;
-      color: #d97706;
+      color: var(--color-accent-amber-dark);
       font-weight: 700;
       font-size: 15px;
       display: flex;
@@ -1314,20 +1187,22 @@
     .t-user-meta h5 {
       font-size: 15px;
       font-weight: 700;
-      color: #111827;
+      color: var(--color-midnight-ink);
       margin-bottom: 2px;
     }
 
     .t-user-meta span {
       font-size: 13px;
-      color: #6b7280;
+      color: var(--color-slate);
     }
 
-    /* Contact Section Image Match */
-    .contact-section-v2 {
-      padding: 90px 0;
-      background: #ffffff;
-      border-top: 1px solid #f1f5f9;
+    /* ==========================================================================
+       SECTION 7: CONTACT MATRIX (Dual Column Lead Capture)
+       ========================================================================== */
+    section.contact-section-v2 {
+      padding: var(--section-gap) 0;
+      background: var(--color-surface-mist);
+      border-top: 1px solid var(--color-border-light);
     }
 
     .contact-layout-v2 {
@@ -1338,9 +1213,9 @@
     }
 
     .contact-intro-v2 {
-      font-size: 15px;
+      font-size: 15.5px;
       line-height: 1.7;
-      color: #6b7280;
+      color: var(--color-slate);
       margin: 16px 0 36px;
       max-width: 460px;
     }
@@ -1355,7 +1230,7 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      color: #374151;
+      color: var(--color-graphite);
       font-size: 15px;
       font-weight: 500;
       transition: all 0.2s ease;
@@ -1363,15 +1238,15 @@
     }
 
     .contact-item-row-v2:hover {
-      color: #111827;
+      color: var(--color-midnight-ink);
       transform: translateX(4px);
     }
 
     .contact-icon-circle-amber {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background: #f59e0b;
+      background: var(--color-accent-amber);
       color: #ffffff;
       display: flex;
       align-items: center;
@@ -1380,8 +1255,12 @@
       box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
     }
 
-    .contact-form-v2 {
-      background: #ffffff;
+    .contact-form-card-v2 {
+      background: var(--color-surface-container-lowest);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      box-shadow: var(--shadow-subtle);
     }
 
     .form-grid-2-v2 {
@@ -1402,89 +1281,37 @@
     }
 
     .form-label-v2 {
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 600;
-      color: #1f2937;
+      color: var(--color-midnight-ink);
     }
 
     .form-control-v2 {
       width: 100%;
-      background: #f3f4f6;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
+      background: #f8fafc;
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-default);
       padding: 12px 14px;
       font-family: var(--font-body);
       font-size: 14px;
-      color: #111827;
+      color: var(--color-midnight-ink);
       outline: none;
       transition: all 0.2s ease;
     }
 
     .form-control-v2::placeholder {
-      color: #9ca3af;
+      color: var(--color-taupe);
     }
 
     .form-control-v2:focus {
       background: #ffffff;
-      border-color: #f59e0b;
+      border-color: var(--color-accent-amber);
       box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
-    }
-
-    select.form-control-v2 {
-      cursor: pointer;
-      appearance: auto;
     }
 
     textarea.form-control-v2 {
       min-height: 120px;
       resize: vertical;
-    }
-
-    .form-submit-row-v2 {
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
-    }
-
-    .btn-submit-pill-v2 {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      background: #1b382b;
-      color: #ffffff;
-      border: none;
-      border-radius: 9999px;
-      padding: 7px 8px 7px 22px;
-      font-family: var(--font-body);
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 14px rgba(27, 56, 43, 0.2);
-    }
-
-    .btn-submit-pill-v2:hover {
-      background: #12281e;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(27, 56, 43, 0.3);
-    }
-
-    .submit-arrow-circle-v2 {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: #f59e0b;
-      color: #111827;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      font-weight: 800;
-      transition: transform 0.2s ease;
-    }
-
-    .btn-submit-pill-v2:hover .submit-arrow-circle-v2 {
-      transform: translateX(3px);
     }
 
     @media (max-width: 860px) {
@@ -1497,284 +1324,155 @@
       }
     }
 
-  
     /* ==========================================================================
-       UNIFIED COMPONENT REFINEMENTS
+       SITE FOOTER
        ========================================================================== */
-    ::selection {
-      background: #fef3c7;
-      color: #92400e;
+    footer.site-footer {
+      background: var(--color-surface-container-lowest);
+      border-top: 1px solid var(--color-border-light);
+      padding: 36px 0;
     }
 
-    .eyebrow {
-      color: var(--color-accent-hover);
-      letter-spacing: 0.1em;
-      font-weight: 700;
-      font-size: 12px;
-      text-transform: uppercase;
-    }
-
-    .serif-accent {
-      font-family: var(--font-serif-accent);
-      font-style: italic;
-      font-weight: 600;
-      color: var(--color-accent-hover);
-    }
-
-    .eyebrow-minimal {
-      display: inline-flex;
+    .footer-inner {
+      display: flex;
       align-items: center;
-      gap: 6px;
-      font-family: var(--font-body);
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
       font-size: 14px;
-      font-weight: 600;
       color: var(--color-slate);
-      margin-bottom: 12px;
     }
 
-    .eyebrow-minimal::before {
-      content: "";
-      display: inline-block;
-      width: 14px;
-      height: 2px;
-      background: var(--color-accent-focus);
-      border-radius: 2px;
+    .footer-links {
+      display: flex;
+      gap: 24px;
     }
 
-    /* Ambient atmospheric orbs - Unified subtle amber & slate mist */
-    .orb-violet, .orb-backdrop.orb-violet {
-      background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, rgba(245, 158, 11, 0) 70%) !important;
-    }
-    .orb-pink, .orb-backdrop.orb-pink {
-      background: radial-gradient(circle, rgba(15, 23, 42, 0.04) 0%, rgba(15, 23, 42, 0) 70%) !important;
+    .footer-link {
+      color: var(--color-graphite);
+      font-weight: 500;
+      transition: color 0.15s ease;
     }
 
-    /* Buttons Unified System */
-    .btn-primary {
-      background: var(--color-accent-focus);
-      color: var(--color-midnight-ink);
-      font-weight: 700;
-      border: 1px solid var(--color-accent-focus);
-      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.22);
-    }
-    .btn-primary:hover {
-      background: var(--color-accent-hover);
-      border-color: var(--color-accent-hover);
-      color: #ffffff;
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-accent-glow);
+    .footer-link:hover {
+      color: var(--color-accent-amber-dark);
     }
 
-    .btn-dark {
-      background: var(--color-midnight-ink);
-      color: #ffffff;
-      border: 1px solid var(--color-midnight-ink);
-    }
-    .btn-dark:hover {
-      background: #000000;
-      border-color: var(--color-accent-focus);
-      color: var(--color-accent-focus);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.18);
-    }
-
-    .btn-ghost {
-      border: 1px solid var(--color-mist);
-      color: var(--color-midnight-ink);
-    }
-    .btn-ghost:hover {
-      border-color: var(--color-midnight-ink);
-      background: var(--color-surface-soft);
-      transform: translateY(-2px);
+    /* MODAL (macOS Interactive Window) */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(8px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
     }
 
-    .btn-nav-compact {
-      background: var(--color-midnight-ink);
-      color: #ffffff;
-      border: 1px solid rgba(245, 158, 11, 0.3);
-    }
-    .btn-nav-compact:hover {
-      background: var(--color-accent-focus);
-      color: var(--color-midnight-ink);
-      border-color: var(--color-accent-focus);
-      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
     }
 
-    .btn-card-preview {
-      background: var(--color-surface-soft);
-      color: var(--color-midnight-ink);
-      border: 1px solid var(--color-mist);
-    }
-    .btn-card-preview:hover {
-      background: var(--color-midnight-ink);
-      color: var(--color-accent-focus);
-      border-color: var(--color-midnight-ink);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+    .modal-window {
+      width: 100%;
+      max-width: 1000px;
+      height: 84vh;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border-light);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transform: scale(0.96);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* Tag Chips Unified */
-    .tag-chip {
-      background: var(--color-surface-soft);
+    .modal-backdrop.active .modal-window {
+      transform: scale(1);
+    }
+
+    .modal-top-bar {
+      height: 44px;
+      background: var(--color-surface-mist);
+      border-bottom: 1px solid var(--color-border-light);
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      gap: 12px;
+    }
+
+    .modal-close-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: none;
+      background: var(--color-surface-mist);
       color: var(--color-slate);
-      border: 1px solid var(--color-mist);
-    }
-    .tag-chip.violet,
-    .tag-chip.accent {
-      background: rgba(245, 158, 11, 0.12) !important;
-      color: #b45309 !important;
-      border-color: rgba(245, 158, 11, 0.25) !important;
-      font-weight: 600;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
     }
 
-    /* Navbar Brand Dot */
-    .brand-logo-text span {
-      color: var(--color-accent-focus);
+    .modal-close-btn:hover {
+      background: #fee2e2;
+      color: #ef4444;
     }
-
-    /* Hover badges on card mockups */
-    .hover-badge-btn {
-      background: var(--color-accent-focus);
-      color: var(--color-midnight-ink);
-      font-weight: 700;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-    }
-
-    /* Product Card Borders */
-    .product-preview-card {
-      border: 1px solid var(--color-mist);
-      background: var(--color-pure-white);
-    }
-    .product-preview-card:hover {
-      border-color: #cbd5e1;
-      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
-    }
-
-    /* Section 2 (Featured Band) */
-    section.lavender-feature-band {
-      background: var(--color-surface-soft) !important;
-      border-top: 1px solid var(--color-mist) !important;
-      border-bottom: 1px solid var(--color-mist) !important;
-    }
-    .lavender-card-highlight {
-      background: var(--color-pure-white) !important;
-      border: 1px solid var(--color-mist) !important;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
-    }
-    .mint-pill-tag {
-      background: rgba(245, 158, 11, 0.12) !important;
-      color: #b45309 !important;
-      border: 1px solid rgba(245, 158, 11, 0.25) !important;
-      font-weight: 700;
-    }
-    .impact-number-pill {
-      background: var(--color-midnight-ink) !important;
-      color: #ffffff !important;
-      font-weight: 700;
-    }
-
-    /* Section 4 (Journey / Education) */
-    section.journey-section {
-      background: var(--color-pure-white) !important;
-      border-top: 1px solid var(--color-mist) !important;
-    }
-    .journey-card {
-      background: var(--color-surface-soft) !important;
-      border: 1px solid var(--color-mist) !important;
-    }
-    .journey-card:hover {
-      border-color: #cbd5e1;
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
-    }
-    .journey-period {
-      color: var(--color-accent-hover) !important;
-      font-weight: 700;
-    }
-
-    /* Contact channels & Submit button */
-    .contact-icon-circle-amber {
-      background: var(--color-accent-focus) !important;
-      box-shadow: 0 4px 10px rgba(245, 158, 11, 0.25) !important;
-    }
-    .btn-submit-pill-v2 {
-      background: var(--color-midnight-ink) !important;
-    }
-    .btn-submit-pill-v2:hover {
-      background: #000000 !important;
-    }
-    .submit-arrow-circle-v2 {
-      background: var(--color-accent-focus) !important;
-      color: var(--color-midnight-ink) !important;
-    }
-
-    /* Form controls focus */
-    .form-control-v2:focus,
-    .form-control:focus {
-      border-color: var(--color-accent-focus) !important;
-      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15) !important;
-    }
-
   </style>
 </head>
+
 <body>
 
-  <!-- TOP NAVIGATION BAR -->
-  <nav class="navbar" id="navbar">
+  <!-- GLOBAL STICKY NAVBAR -->
+  <header class="site-header">
     <div class="container">
       <div class="nav-inner">
-        
-        <!-- Logo -->
-        <a href="#" class="nav-brand">
-          <span class="sparkle-icon">✦</span>
-          <span>Youssef</span>
+        <a href="#about" class="brand-logo">
+          <span class="brand-logo-text">YOUSSEF<span>.</span></span>
+          <span class="brand-pill-badge">FULL-STACK &amp; AI</span>
         </a>
 
-        <!-- Center Links -->
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#featured" class="nav-link">Featured AI</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#journey" class="nav-link">Journey</a></li>
-          <li><a href="#testimonials" class="nav-link">Wall of Love</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-
-        <!-- Right CTA Button -->
-        <div class="nav-right-cta">
+        <nav class="nav-links">
+          <a href="#overview" class="nav-link">Overview</a>
+          <a href="#tech" class="nav-link">Skills</a>
+          <a href="#featured" class="nav-link">Flagship AI</a>
+          <a href="#projects" class="nav-link">Live Projects</a>
+          <a href="#journey" class="nav-link">Journey</a>
+          <a href="#testimonials" class="nav-link">Reviews</a>
           <a href="#contact" class="btn-nav-compact">
             <span>Let's Talk</span>
             <span>→</span>
           </a>
-        </div>
-
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
-          ☰
-        </button>
-
+        </nav>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION (Asymmetric 2-Column Split + Mouse Scroll Indicator) -->
   <section class="hero-section" id="about">
     <div class="container">
-      
-      <!-- Atmospheric Gradient Orbs -->
-      <div class="orb-backdrop orb-violet" style="top: -60px; right: 10%;"></div>
-      <div class="orb-backdrop orb-pink" style="bottom: -80px; left: 5%;"></div>
-      <div class="orb-backdrop orb-amber" style="top: 20%; right: 45%;"></div>
-
-      <div class="hero-layout">
+      <div class="hero-split-grid">
         
-        <!-- Left: Text Stack -->
+        <!-- Left: Narrative Stack -->
         <div class="hero-content">
-          <span class="eyebrow">FULL-STACK & AI SOFTWARE ENGINEER</span>
-          <h1 class="display-headline">
-            Engineering scalable web apps with <span class="serif-accent">precision & intelligence</span>.
-          </h1>
+          <div>
+            <span class="eyebrow">EXECUTIVE ENGINEERING PORTFOLIO</span>
+            <h1 class="display-headline">
+              Engineering scalable web apps with <span class="editorial-accent">precision &amp; intelligence</span>.
+            </h1>
+          </div>
+
           <p class="sub-copy">
-            Hi, I'm <strong>Youssef Saber Ahmed</strong>. I build high-performance web systems, Gemini AI integrations, and Progressive Web Apps (PWAs) that turn complex challenges into seamless experiences.
+            Hi, I'm <strong>Youssef Saber Ahmed</strong>. I architect high-performance web systems, Gemini AI multi-modal integrations, and offline-first Progressive Web Apps (PWAs). Every project below links directly to live, deployed systems on Vercel.
           </p>
 
           <div class="hero-buttons-row">
@@ -1786,7 +1484,7 @@
             </a>
           </div>
 
-          <!-- Social Proof Avatar Stack -->
+          <!-- Social Proof Cluster -->
           <div class="social-proof-wrap">
             <div class="avatar-stack">
               <div class="avatar-item"><img src="portfolio.jpeg" alt="Youssef" /></div>
@@ -1796,13 +1494,12 @@
             </div>
             <div class="social-proof-text">
               <div class="stars-row">★★★★★</div>
-              <span class="proof-label">Trusted for Full-Stack & AI Systems</span>
+              <span class="proof-label">Trusted for Full-Stack &amp; AI Systems (5.0 Client Rating)</span>
             </div>
           </div>
-
         </div>
 
-        <!-- Right: Floating UI Mockup Card -->
+        <!-- Right: Floating macOS Window Frame -->
         <div class="hero-visual-card">
           <div class="floating-mockup-window">
             <div class="mac-window-bar">
@@ -1811,20 +1508,116 @@
                 <span class="traffic-dot traffic-amber"></span>
                 <span class="traffic-dot traffic-green"></span>
               </div>
-              <span class="window-title">PORTFOLIO PORTAL</span>
+              <span class="window-title">PORTFOLIO PORTAL • CAIRO, EG</span>
             </div>
             <div class="mockup-inner-photo">
-              <img src="portfolio.jpeg" alt="Youssef Saber Ahmed" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534972195531-a756b1129f63?auto=format&fit=crop&w=800&q=80';" />
+              <img src="portfolio.jpeg" alt="Youssef Saber Ahmed" />
             </div>
           </div>
 
-          <!-- Floating Chip Badge -->
+          <!-- Floating Badge -->
           <div class="floating-chip">
-            <div class="chip-badge" style="background:#fef3c7; color:#d97706;">⚡</div>
+            <div class="chip-badge">⚡</div>
             <div class="chip-info">
-              <h5>Full-Stack & AI</h5>
-              <p>Node • Python • PWA • React</p>
+              <h5>Full-Stack &amp; AI Systems</h5>
+              <p>Node • Python • Gemini • React • PWA</p>
             </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Animated Mouse Scroll Indicator (from shaqdeff template) -->
+      <div class="hero-scroll-indicator">
+        <a href="#overview" title="Scroll down">
+          <div class="mouse-pill">
+            <div class="mouse-wheel-dot"></div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 1: ENGINEERING OVERVIEW & CORE DISCIPLINES (Inspired by shaqdeff About & Service Cards) -->
+  <section class="overview-section" id="overview">
+    <div class="container">
+      
+      <div class="section-header-center">
+        <span class="eyebrow">WHAT I DO</span>
+        <h2 class="section-headline">Engineering Disciplines &amp; <span class="editorial-accent">Core Capabilities</span></h2>
+        <p class="sub-copy" style="font-size: 16px; margin-top: 10px;">
+          Bespoke software solutions built for production: from scalable backend APIs to intelligent AI vision workflows.
+        </p>
+      </div>
+
+      <div class="overview-grid">
+        
+        <!-- Card 1 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <img src="assets/icons/frontend.png" alt="Full-Stack Web Architecture" />
+          </div>
+          <h3 class="service-title">Full-Stack Architecture</h3>
+          <p class="service-desc">
+            End-to-end web applications built with modern React, Express.js, and Python backends. Clean MVC structures, RESTful endpoints, and robust database modeling.
+          </p>
+          <div class="service-tags">
+            <span class="tag-chip accent">React</span>
+            <span class="tag-chip">Node.js</span>
+            <span class="tag-chip">PostgreSQL</span>
+            <span class="tag-chip">REST</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <img src="assets/icons/prototyping.png" alt="AI & Multi-Modal Systems" />
+          </div>
+          <h3 class="service-title">AI &amp; Multi-Modal Vision</h3>
+          <p class="service-desc">
+            Integrating Google Gemini Vision and LLM inference pipelines into live workflows. Automated image parsing, schedule extraction, and structured JSON output.
+          </p>
+          <div class="service-tags">
+            <span class="tag-chip accent">Gemini AI</span>
+            <span class="tag-chip">Prompt Eng</span>
+            <span class="tag-chip">Vision API</span>
+            <span class="tag-chip">JSON Parsing</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <img src="assets/icons/ux.png" alt="Progressive Web Apps" />
+          </div>
+          <h3 class="service-title">Progressive Web Apps (PWAs)</h3>
+          <p class="service-desc">
+            Installable desktop and mobile web apps with offline LocalStorage/IndexedDB synchronization, Service Workers, and automated Web Push notification reminders.
+          </p>
+          <div class="service-tags">
+            <span class="tag-chip accent">100% PWA</span>
+            <span class="tag-chip">Service Worker</span>
+            <span class="tag-chip">Web Push</span>
+            <span class="tag-chip">Offline Cache</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <img src="assets/icons/backend.png" alt="Cloud & Real-Time APIs" />
+          </div>
+          <h3 class="service-title">Cloud &amp; Real-Time Systems</h3>
+          <p class="service-desc">
+            Automated CI/CD deployments on Vercel, live exchange rate calculators, and WebRTC peer-to-peer audio/video streaming with zero server-side bottlenecks.
+          </p>
+          <div class="service-tags">
+            <span class="tag-chip accent">Vercel</span>
+            <span class="tag-chip">WebRTC</span>
+            <span class="tag-chip">Socket.io</span>
+            <span class="tag-chip">Real-Time</span>
           </div>
         </div>
 
@@ -1833,48 +1626,114 @@
     </div>
   </section>
 
-  <!-- SECTION 2: LAVENDER FEATURE SECTION (Supahub Signature Band Pattern) -->
-  <section class="lavender-feature-band" id="featured">
+  <!-- SECTION 2: TECHNOLOGIES & TOOLING MATRIX (Tech Grid from shaqdeff) -->
+  <section class="tech-section" id="tech">
     <div class="container">
       
-      <div class="lavender-split">
+      <div class="section-header-center">
+        <span class="eyebrow">TECHNICAL LEDGER</span>
+        <h2 class="section-headline">Technologies &amp; <span class="editorial-accent">Core Toolset</span></h2>
+        <p class="sub-copy" style="font-size: 16px; margin-top: 10px;">
+          The battle-tested technologies and frameworks powering my production systems.
+        </p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-box">
+          <div class="tech-icon-wrap"><img src="assets/tech/reactjs.png" alt="React" /></div>
+          <span class="tech-name">React.js</span>
+        </div>
+        <div class="tech-box">
+          <div class="tech-icon-wrap"><img src="assets/tech/nodejs.png" alt="Node.js" /></div>
+          <span class="tech-name">Node.js</span>
+        </div>
+        <div class="tech-box">
+          <div class="tech-icon-wrap"><img src="assets/tech/javascript.png" alt="JavaScript" /></div>
+          <span class="tech-name">JavaScript ES6</span>
+        </div>
+        <div class="tech-box">
+          <div class="tech-icon-wrap"><img src="assets/tech/typescript.png" alt="TypeScript" /></div>
+          <span class="tech-name">TypeScript</span>
+        </div>
+        <div class="tech-box">
+          <div class="tech-icon-wrap"><img src="assets/tech/docker.png" alt="Docker" /></div>
+          <span class="tech-name">Docker</span>
+        </div>
+        <div class="tech-box">
+          <div class="tech-icon-wrap"><img src="assets/tech/git.png" alt="Git" /></div>
+          <span class="tech-name">Git &amp; GitHub</span>
+        </div>
+        <div class="tech-box">
+          <div class="tech-icon-wrap"><img src="assets/tech/postgresql.png" alt="PostgreSQL" /></div>
+          <span class="tech-name">PostgreSQL</span>
+        </div>
+        <div class="tech-box">
+          <div class="tech-icon-wrap"><img src="assets/tech/tailwind.png" alt="Tailwind CSS" /></div>
+          <span class="tech-name">Tailwind CSS</span>
+        </div>
+        <div class="tech-box">
+          <div class="tech-icon-wrap"><img src="assets/tech/graphql.png" alt="GraphQL" /></div>
+          <span class="tech-name">GraphQL</span>
+        </div>
+        <div class="tech-box">
+          <div class="tech-icon-wrap"><img src="assets/tech/figma.png" alt="Figma" /></div>
+          <span class="tech-name">Figma UI/UX</span>
+        </div>
+        <div class="tech-box">
+          <div class="tech-icon-wrap"><img src="assets/tech/html.png" alt="HTML5" /></div>
+          <span class="tech-name">HTML5</span>
+        </div>
+        <div class="tech-box">
+          <div class="tech-icon-wrap"><img src="assets/tech/css.png" alt="CSS3" /></div>
+          <span class="tech-name">CSS3</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: FLAGSHIP SPOTLIGHT (Lecture Buddy AI) -->
+  <section class="flagship-section" id="featured">
+    <div class="container">
+      
+      <div class="flagship-split">
         
-        <!-- Left: Feature Details -->
         <div>
-          <span class="eyebrow dark">FLAGSHIP AI PROJECT</span>
+          <span class="eyebrow">FLAGSHIP AI SPOTLIGHT</span>
           <h2 class="display-headline" style="font-size: clamp(32px, 4.2vw, 48px); margin-bottom: 20px;">
             Lecture Buddy: Your AI University Timetable.
           </h2>
-          <p class="sub-copy" style="color: var(--color-graphite); margin-bottom: 32px;">
-            An intelligent schedule scanner built with <strong>Google Gemini AI Vision</strong>. Converts timetable screenshots directly into actionable calendars with automated <strong>Web Push reminders</strong> one hour before lectures.
+          <p class="sub-copy" style="margin-bottom: 32px;">
+            An intelligent schedule scanner built with <strong>Google Gemini AI Vision</strong>. Converts timetable screenshots directly into actionable calendars with automated <strong>Web Push reminders</strong> one hour before lectures. Deployed and fully active on Vercel.
           </p>
           <div>
-            <a href="https://lecture-ai-planner.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;"><span>Explore Lecture Buddy ↗</span></a>
+            <a href="https://lecture-ai-planner.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-dark">
+              <span>Explore Lecture Buddy ↗</span>
+            </a>
           </div>
         </div>
 
-        <!-- Right: Highlighted Feature Card -->
-        <div class="lavender-card-highlight">
+        <div class="flagship-card-box">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
-            <span class="mint-pill-tag">✨ Gemini 2.5 Active</span>
-            <span class="impact-number-pill">100% PWA</span>
+            <span class="tag-chip accent" style="font-size:12px;">✨ Gemini 2.5 Active</span>
+            <span class="tag-chip" style="background:#0f172a; color:#ffffff; font-weight:700;">100% PWA</span>
           </div>
 
-          <h3 style="font-family:var(--font-display); font-size:22px; font-weight:600; margin-bottom:8px;">
+          <h3 style="font-family:var(--font-display); font-size:22px; font-weight:700; margin-bottom:8px;">
             Instant Image-to-Schedule Engine
           </h3>
           <p style="font-size:14px; color:var(--color-slate); line-height:1.6; margin-bottom:20px;">
             Upload any college timetable photo. The Gemini multi-modal API parses course codes, professors, venues, and timestamps into structured JSON, deployed seamlessly on Vercel.
           </p>
 
-          <div style="background:var(--color-fog); border-radius:12px; padding:16px; display:flex; flex-direction:column; gap:8px;">
+          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:16px; display:flex; flex-direction:column; gap:8px;">
             <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600;">
               <span>Database Systems (Lecture)</span>
-              <span style="color:var(--color-accent-hover);">09:00 AM</span>
+              <span style="color:var(--color-accent-amber-dark);">09:00 AM</span>
             </div>
             <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600;">
               <span>Artificial Intelligence (Lab)</span>
-              <span style="color:var(--color-accent-hover);">11:30 AM</span>
+              <span style="color:var(--color-accent-amber-dark);">11:30 AM</span>
             </div>
           </div>
         </div>
@@ -1884,18 +1743,14 @@
     </div>
   </section>
 
-    <!-- SECTION 3: PROJECTS SHOWCASE (Live Deployed Vercel Projects) -->
+  <!-- SECTION 4: LIVE DEPLOYED PROJECTS SHOWCASE (macOS Windows) -->
   <section class="projects-section" id="projects">
     <div class="container">
       
-      <!-- Atmospheric Orbs behind product cards -->
-      <div class="orb-backdrop orb-violet" style="top: 15%; left: 30%;"></div>
-      <div class="orb-backdrop orb-pink" style="bottom: 10%; right: 15%;"></div>
-
       <div class="section-header-center">
         <span class="eyebrow">LIVE DEPLOYED PROJECTS</span>
-        <h2 class="section-headline">Real-world applications, live on Vercel.</h2>
-        <p class="sub-copy" style="font-size: 16px; margin-top: 12px;">
+        <h2 class="section-headline">Real-World Applications, <span class="editorial-accent">Live on Vercel</span></h2>
+        <p class="sub-copy" style="font-size: 16px; margin-top: 10px;">
           Click any project card or "Open Live App" to navigate directly to the fully deployed, interactive web application.
         </p>
       </div>
@@ -1916,20 +1771,20 @@
             </div>
           </div>
           <div class="card-mockup-viewport" onclick="window.open('https://lecture-ai-planner.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen ms-ai">
+            <div class="mini-screen">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#c4b5fd; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
                 <span>✨ Lecture Buddy AI</span>
-                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); padding:1px 6px; border-radius:4px;">Gemini Vision</span>
+                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; padding:1px 6px; border-radius:4px;">Gemini Vision</span>
               </div>
-              <div style="background:rgba(255,255,255,0.06); border:1px dashed rgba(245,158,11,0.4); border-radius:6px; padding:12px; text-align:center; font-size:12px;">
+              <div style="background:rgba(255,255,255,0.06); border:1px dashed rgba(245,158,11,0.4); border-radius:6px; padding:12px; text-align:center; font-size:12px; margin-top:10px;">
                 اسحب صورة جدولك لتحليله بالذكاء الاصطناعي
               </div>
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:auto;">
                 <div style="background:rgba(255,255,255,0.05); padding:6px; border-radius:4px; font-size:11px;">
-                  <b style="color:#a78bfa;">قواعد بيانات</b><br><span style="color:#34d399;">تذكير مفعل ✓</span>
+                  <b>قواعد بيانات</b><br><span style="color:#f59e0b;">تذكير مفعل ✓</span>
                 </div>
                 <div style="background:rgba(255,255,255,0.05); padding:6px; border-radius:4px; font-size:11px;">
-                  <b style="color:#a78bfa;">ذكاء اصطناعي</b><br><span style="color:#34d399;">تذكير مفعل ✓</span>
+                  <b>ذكاء اصطناعي</b><br><span style="color:#f59e0b;">تذكير مفعل ✓</span>
                 </div>
               </div>
             </div>
@@ -1938,10 +1793,10 @@
             </div>
           </div>
           <div class="card-body-content">
-            <h3 class="card-title">Lecture Buddy — AI Timetable & Reminders</h3>
+            <h3 class="card-title">Lecture Buddy — AI Timetable &amp; Reminders</h3>
             <p class="card-desc">AI schedule scanner powered by Google Gemini Vision. Extracts courses, timings, and rooms from photos with automated Web Push reminders.</p>
             <div class="card-tags-list">
-              <span class="tag-chip violet">Gemini AI</span>
+              <span class="tag-chip accent">Gemini AI</span>
               <span class="tag-chip">Node.js</span>
               <span class="tag-chip">Web Push API</span>
               <span class="tag-chip">PWA</span>
@@ -1969,19 +1824,19 @@
             </div>
           </div>
           <div class="card-mockup-viewport" onclick="window.open('https://classroom-app-beta.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen ms-classroom" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+            <div class="mini-screen">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#38bdf8; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:4px;">
                 <span>🎓 منصة الفصول التعليمية</span>
-                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); padding:1px 6px; border-radius:4px; font-size:10px;">LMS Portal</span>
+                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; padding:1px 6px; border-radius:4px; font-size:10px;">LMS Portal</span>
               </div>
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:8px;">
-                <div style="background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.2); border-radius:6px; padding:8px;">
+                <div style="background:rgba(255,255,255,0.06); border-radius:6px; padding:8px;">
                   <span style="font-size:10px; color:#94a3b8;">الفصل الدراسي</span>
-                  <div style="font-size:12px; font-weight:700; color:#fff;">هندسة البرمجيات</div>
+                  <div style="font-size:12px; font-weight:700;">هندسة البرمجيات</div>
                 </div>
-                <div style="background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.2); border-radius:6px; padding:8px;">
+                <div style="background:rgba(255,255,255,0.06); border-radius:6px; padding:8px;">
                   <span style="font-size:10px; color:#94a3b8;">الواجبات</span>
-                  <div style="font-size:12px; font-weight:700; color:#34d399;">3 مكتملة ✓</div>
+                  <div style="font-size:12px; font-weight:700; color:#f59e0b;">3 مكتملة ✓</div>
                 </div>
               </div>
               <div style="background:rgba(255,255,255,0.05); padding:6px 8px; border-radius:4px; font-size:11px; margin-top:auto; color:#cbd5e1;">
@@ -1996,7 +1851,7 @@
             <h3 class="card-title">Classroom App — Educational Learning Portal</h3>
             <p class="card-desc">Interactive virtual classroom platform with course dashboards, student assignment trackers, real-time materials, and responsive interface.</p>
             <div class="card-tags-list">
-              <span class="tag-chip violet">Educational LMS</span>
+              <span class="tag-chip accent">Educational LMS</span>
               <span class="tag-chip">React</span>
               <span class="tag-chip">Vercel</span>
               <span class="tag-chip">REST API</span>
@@ -2024,18 +1879,18 @@
             </div>
           </div>
           <div class="card-mockup-viewport" onclick="window.open('https://book-vault-sepia-eta.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen ms-books">
+            <div class="mini-screen">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#818cf8;">
                 <b>📚 BookVault</b>
                 <span>Google Books API</span>
               </div>
-              <div style="background:rgba(255,255,255,0.08); border-radius:4px; padding:6px 10px; font-size:11px; color:#94a3b8; display:flex; align-items:center; gap:6px;">
+              <div style="background:rgba(255,255,255,0.08); border-radius:4px; padding:6px 10px; font-size:11px; color:#94a3b8; display:flex; align-items:center; gap:6px; margin-top:8px;">
                 <span>🔍</span><span>Search 40M+ book titles...</span>
               </div>
               <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; margin-top:auto;">
-                <div style="background:#1e293b; border:1px solid #334155; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:600; color:#f8fafc;">Clean Code</div>
-                <div style="background:#1e293b; border:1px solid #334155; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:600; color:#f8fafc;">Python Pro</div>
-                <div style="background:#1e293b; border:1px solid #334155; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:600; color:#f8fafc;">System Design</div>
+                <div style="background:#1e293b; border:1px solid #334155; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:600;">Clean Code</div>
+                <div style="background:#1e293b; border:1px solid #334155; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:600;">Python Pro</div>
+                <div style="background:#1e293b; border:1px solid #334155; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:600;">System Design</div>
               </div>
             </div>
             <div class="mockup-hover-layer">
@@ -2043,10 +1898,10 @@
             </div>
           </div>
           <div class="card-body-content">
-            <h3 class="card-title">BookVault — Digital Library & Discovery Engine</h3>
+            <h3 class="card-title">BookVault — Digital Library &amp; Discovery Hub</h3>
             <p class="card-desc">Modern book exploration platform querying Google Books API with responsive book previews, rating badges, and categorized reading shelves.</p>
             <div class="card-tags-list">
-              <span class="tag-chip violet">Express.js</span>
+              <span class="tag-chip accent">Express.js</span>
               <span class="tag-chip">Node.js</span>
               <span class="tag-chip">Google API</span>
               <span class="tag-chip">Vercel</span>
@@ -2074,21 +1929,21 @@
             </div>
           </div>
           <div class="card-mockup-viewport" onclick="window.open('https://currency-converter-amber-beta.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen ms-cash">
+            <div class="mini-screen">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#a7f3d0; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:4px;">
                 <span>💱 Currency Converter</span>
-                <span style="color:#34d399;">● Live Rates</span>
+                <span style="color:#f59e0b;">● Live Rates</span>
               </div>
-              <div style="background:linear-gradient(135deg, rgba(16,185,129,0.2), rgba(6,78,59,0.3)); border-radius:8px; padding:10px;">
+              <div style="background:linear-gradient(135deg, rgba(245,158,11,0.15), rgba(15,23,42,0.3)); border-radius:8px; padding:10px; margin-top:8px;">
                 <span style="font-size:11px; opacity:0.8;">1 USD to EGP Rate</span>
                 <h4 style="font-size:20px; font-weight:800; color:#fff; font-family:var(--font-mono);">49.32 EGP</h4>
               </div>
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:auto;">
                 <div style="background:rgba(255,255,255,0.04); padding:6px; border-radius:4px; font-size:11px;">
-                  <span>EUR / USD:</span> <b style="color:#10b981;">1.084</b>
+                  <span>EUR / USD:</span> <b style="color:#f59e0b;">1.084</b>
                 </div>
                 <div style="background:rgba(255,255,255,0.04); padding:6px; border-radius:4px; font-size:11px;">
-                  <span>SAR / EGP:</span> <b style="color:#10b981;">13.14</b>
+                  <span>SAR / EGP:</span> <b style="color:#f59e0b;">13.14</b>
                 </div>
               </div>
             </div>
@@ -2100,7 +1955,7 @@
             <h3 class="card-title">Currency Converter — Real-Time Exchange Engine</h3>
             <p class="card-desc">Real-time currency exchange rates application with instant conversions, multi-currency comparisons, and interactive rates calculator.</p>
             <div class="card-tags-list">
-              <span class="tag-chip violet">JavaScript ES6</span>
+              <span class="tag-chip accent">JavaScript ES6</span>
               <span class="tag-chip">Finance API</span>
               <span class="tag-chip">Vercel</span>
               <span class="tag-chip">Live Rates</span>
@@ -2128,7 +1983,7 @@
             </div>
           </div>
           <div class="card-mockup-viewport" onclick="window.open('https://youssefsaberahmed14-ui-zoom-clone.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen" style="background:#0f172a; border-radius:8px; padding:12px; display:flex; flex-direction:column; height:100%;">
+            <div class="mini-screen">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#38bdf8; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:4px;">
                 <span>📹 Zoom Free Meeting</span>
                 <span style="background:#22c55e; color:#fff; padding:1px 6px; border-radius:4px; font-size:10px;">HD 1080p</span>
@@ -2155,7 +2010,7 @@
             <h3 class="card-title">Zoom Free — Real-Time Video Conference</h3>
             <p class="card-desc">High-performance video conferencing application supporting meeting rooms, screen sharing, camera controls, and session recording.</p>
             <div class="card-tags-list">
-              <span class="tag-chip violet">WebRTC</span>
+              <span class="tag-chip accent">WebRTC</span>
               <span class="tag-chip">Video Streaming</span>
               <span class="tag-chip">Socket.io</span>
               <span class="tag-chip">Vercel</span>
@@ -2183,7 +2038,7 @@
             </div>
           </div>
           <div class="card-mockup-viewport" onclick="window.open('https://weather-website-gray-ten.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius:8px; padding:12px; display:flex; flex-direction:column; height:100%;">
+            <div class="mini-screen">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#e0f2fe; border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:4px;">
                 <span>🌤️ Weatherly Dashboard</span>
                 <span>Cairo, EG</span>
@@ -2191,7 +2046,7 @@
               <div style="display:flex; align-items:center; justify-content:space-between; margin:auto 0;">
                 <div>
                   <div style="font-size:28px; font-weight:800; color:#fff;">26°C</div>
-                  <div style="font-size:11px; color:#bae6fd;">Clear Sky & Sunny</div>
+                  <div style="font-size:11px; color:#bae6fd;">Clear Sky &amp; Sunny</div>
                 </div>
                 <div style="font-size:32px;">☀️</div>
               </div>
@@ -2205,10 +2060,10 @@
             </div>
           </div>
           <div class="card-body-content">
-            <h3 class="card-title">Weatherly — Global Weather & Live Forecast</h3>
+            <h3 class="card-title">Weatherly — Global Weather &amp; Live Forecast</h3>
             <p class="card-desc">Clean meteorological dashboard displaying real-time global temperatures, hourly forecasts, atmospheric conditions, and city search.</p>
             <div class="card-tags-list">
-              <span class="tag-chip violet">Weather API</span>
+              <span class="tag-chip accent">Weather API</span>
               <span class="tag-chip">Geolocation</span>
               <span class="tag-chip">Vercel</span>
               <span class="tag-chip">UI/UX</span>
@@ -2236,10 +2091,10 @@
             </div>
           </div>
           <div class="card-mockup-viewport" onclick="window.open('https://study-ashen-six.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius:8px; padding:12px; display:flex; flex-direction:column; height:100%;">
+            <div class="mini-screen">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#c7d2fe; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
                 <span>📖 أكاديمية النور التعليمية</span>
-                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); padding:1px 6px; border-radius:4px; font-size:10px;">E-Learning</span>
+                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; padding:1px 6px; border-radius:4px; font-size:10px;">E-Learning</span>
               </div>
               <div style="background:rgba(255,255,255,0.06); border-radius:6px; padding:8px; margin:8px 0;">
                 <div style="font-size:11px; color:#a5b4fc; font-weight:600;">مسار تعلم البرمجة والذكاء الاصطناعي</div>
@@ -2259,7 +2114,7 @@
             <h3 class="card-title">Nour Academy — Digital Learning Platform</h3>
             <p class="card-desc">Modern e-learning academy portal with lesson browsing, curriculum navigation, student progress bars, and high responsiveness.</p>
             <div class="card-tags-list">
-              <span class="tag-chip violet">E-Learning</span>
+              <span class="tag-chip accent">E-Learning</span>
               <span class="tag-chip">Interactive UI</span>
               <span class="tag-chip">Vercel</span>
               <span class="tag-chip">Arabic UI</span>
@@ -2287,10 +2142,10 @@
             </div>
           </div>
           <div class="card-mockup-viewport" onclick="window.open('https://siham-furniture-landing.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen ms-youka">
+            <div class="mini-screen">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#fbcfe8; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
                 <span>🛋️ شركة سهام للأثاث</span>
-                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); padding:1px 6px; border-radius:4px; font-size:10px;">Landing Page</span>
+                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; padding:1px 6px; border-radius:4px; font-size:10px;">Landing Page</span>
               </div>
               <div style="background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.2); border-radius:6px; padding:8px; margin:8px 0; font-size:11px; color:#fdf2f8;">
                 فحص فوري وتسعير عادل بأعلى الأسعار بالرياض
@@ -2308,7 +2163,7 @@
             <h3 class="card-title">Siham Furniture — Commercial Landing Page</h3>
             <p class="card-desc">Commercial landing page built for high conversion, instant WhatsApp customer consultation funnels, fast load times, and SEO.</p>
             <div class="card-tags-list">
-              <span class="tag-chip violet">Landing Page</span>
+              <span class="tag-chip accent">Landing Page</span>
               <span class="tag-chip">Conversion Rate</span>
               <span class="tag-chip">Mobile First</span>
               <span class="tag-chip">Vercel</span>
@@ -2327,56 +2182,80 @@
     </div>
   </section>
 
-  <!-- SECTION 4: EDUCATION & JOURNEY (Fog Background) -->
+  <!-- SECTION 5: CAREER & EDUCATION TIMELINE (with Resume Download CTA) -->
   <section class="journey-section" id="journey">
     <div class="container">
       
-      <span class="eyebrow">CAREER & EDUCATION</span>
-      <h2 class="section-headline">Experience & Learning Journey</h2>
+      <div class="section-header-center">
+        <span class="eyebrow">PROFESSIONAL MILESTONES</span>
+        <h2 class="section-headline">Career &amp; <span class="editorial-accent">Learning Journey</span></h2>
+        <p class="sub-copy" style="font-size: 16px; margin-top: 10px;">
+          Proven engineering foundations, software development roles, and continuous architectural growth.
+        </p>
+      </div>
 
-      <div class="journey-grid">
+      <div class="journey-timeline">
         
-        <div class="journey-card">
-          <div class="journey-period">2024 — PRESENT</div>
-          <h3 class="journey-title">Independent Full-Stack Developer</h3>
-          <div class="journey-org">Remote · Cairo, Egypt</div>
-          <p class="journey-desc">
-            Architecting modern web applications, Gemini AI-powered workflows, and Progressive Web Apps (PWAs) with Node.js, Python, and modern JavaScript.
-          </p>
+        <!-- Milestone 1 -->
+        <div class="timeline-item">
+          <div class="timeline-node-dot"></div>
+          <div class="journey-card">
+            <span class="journey-period-pill">2024 — PRESENT</span>
+            <h3 class="journey-title">Independent Full-Stack &amp; AI Engineer</h3>
+            <div class="journey-org">Remote · Cairo, Egypt</div>
+            <p class="journey-desc">
+              Architecting production web applications, multi-modal Gemini AI-driven workflows, and offline-first Progressive Web Apps (PWAs) with Node.js, Python, and modern JavaScript.
+            </p>
+          </div>
         </div>
 
-        <div class="journey-card">
-          <div class="journey-period">2023 — 2024</div>
-          <h3 class="journey-title">Frontend & API Specialist</h3>
-          <div class="journey-org">Project Accelerators</div>
-          <p class="journey-desc">
-            Engineered multiple responsive production web systems, API consumers, and UI architectures focusing on performance and accessibility.
-          </p>
+        <!-- Milestone 2 -->
+        <div class="timeline-item">
+          <div class="timeline-node-dot"></div>
+          <div class="journey-card">
+            <span class="journey-period-pill">2023 — 2024</span>
+            <h3 class="journey-title">Frontend &amp; API Architecture Specialist</h3>
+            <div class="journey-org">Project Accelerators</div>
+            <p class="journey-desc">
+              Engineered responsive production web platforms, API consumers, and UI architectures focusing on sub-second load times, cross-browser compatibility, and accessibility.
+            </p>
+          </div>
         </div>
 
-        <div class="journey-card">
-          <div class="journey-period">2020 — 2024</div>
-          <h3 class="journey-title">Computer Science Foundations</h3>
-          <div class="journey-org">Higher Education & Specializations</div>
-          <p class="journey-desc">
-            Deep dive into relational database modeling, algorithms, software design patterns, and full-stack software architecture.
-          </p>
+        <!-- Milestone 3 -->
+        <div class="timeline-item">
+          <div class="timeline-node-dot"></div>
+          <div class="journey-card">
+            <span class="journey-period-pill">2020 — 2024</span>
+            <h3 class="journey-title">Computer Science Foundations</h3>
+            <div class="journey-org">Higher Education &amp; Technical Specializations</div>
+            <p class="journey-desc">
+              Deep study of relational database modeling, data structures, algorithms, object-oriented software patterns, and enterprise full-stack development.
+            </p>
+          </div>
         </div>
 
+      </div>
+
+      <!-- Resume CTA Button (from shaqdeff template) -->
+      <div class="resume-cta-wrap">
+        <a href="https://github.com/youssefsaberahmed14-ui" target="_blank" rel="noopener noreferrer" class="btn-dark" style="gap:10px;">
+          <img src="assets/icons/download.png" alt="Download" style="width:18px; height:18px; filter:brightness(0) invert(1);" />
+          <span>View GitHub / Resume Profile</span>
+          <span>↗</span>
+        </a>
       </div>
 
     </div>
   </section>
 
-    <!-- SECTION 5: CLIENT TESTIMONIALS (EXACT DESIGN MATCH) -->
+  <!-- SECTION 6: CLIENT TESTIMONIALS (Wall of Impact) -->
   <section class="testimonials-section-v2" id="testimonials">
     <div class="container">
       
-      <div class="testimonials-header-v2">
-        <span class="eyebrow-minimal">- Clients Testimonials</span>
-        <h2 class="section-headline">
-          The Impact of My Work: <span class="serif-accent">Client Testimonials</span>
-        </h2>
+      <div class="section-header-center">
+        <span class="eyebrow">WALL OF IMPACT</span>
+        <h2 class="section-headline">The Impact of My Work: <span class="editorial-accent">Client Testimonials</span></h2>
       </div>
 
       <div class="testimonials-grid-v2">
@@ -2396,7 +2275,7 @@
             <div class="t-avatar-v2">A</div>
             <div class="t-user-meta">
               <h5>Ahmed Mansour</h5>
-              <span>Fintech & AI Product Lead</span>
+              <span>Fintech &amp; AI Product Lead</span>
             </div>
           </div>
         </div>
@@ -2413,7 +2292,7 @@
             </p>
           </div>
           <div class="t-user-row-v2">
-            <div class="t-avatar-v2" style="background: #e0f2fe; color: #0284c7;">M</div>
+            <div class="t-avatar-v2" style="background:#e0f2fe; color:#0284c7;">M</div>
             <div class="t-user-meta">
               <h5>Michael Davies</h5>
               <span>SaaS Engineering Director</span>
@@ -2433,7 +2312,7 @@
             </p>
           </div>
           <div class="t-user-row-v2">
-            <div class="t-avatar-v2" style="background: #dcfce7; color: #15803d;">S</div>
+            <div class="t-avatar-v2" style="background:#dcfce7; color:#15803d;">S</div>
             <div class="t-user-meta">
               <h5>Sara El-Sayed</h5>
               <span>Technical Project Manager</span>
@@ -2446,17 +2325,17 @@
     </div>
   </section>
 
-  <!-- SECTION 6: CONTACT FORM & CHANNELS (EXACT DESIGN MATCH) -->
+  <!-- SECTION 7: CONTACT MATRIX (Dual Column Lead Capture) -->
   <section class="contact-section-v2" id="contact">
     <div class="container">
       
       <div class="contact-layout-v2">
         
-        <!-- Left Column: Contact Info -->
-        <div class="contact-info-panel-v2">
-          <span class="eyebrow-minimal">- Contact Us</span>
+        <!-- Left Column: Direct Channels -->
+        <div>
+          <span class="eyebrow">DIRECT CONTACT</span>
           <h2 class="display-headline" style="font-size: clamp(32px, 4vw, 44px); line-height: 1.15; margin-bottom: 12px;">
-            Let's Talk for <span class="serif-accent">Your Next Projects</span>
+            Let's Talk for <span class="editorial-accent">Your Next Projects</span>
           </h2>
           <p class="contact-intro-v2">
             Have a project in mind, an opportunity, or need a high-impact full-stack and AI developer? Fill out the form or reach out directly.
@@ -2507,7 +2386,7 @@
 
         <!-- Right Column: Interactive Form -->
         <div class="contact-form-card-v2">
-          <form id="portfolioContactForm" class="contact-form-v2">
+          <form id="portfolioContactForm">
             <div class="form-grid-2-v2">
               <div class="form-group-v2">
                 <label class="form-label-v2">Your Name *</label>
@@ -2531,7 +2410,7 @@
                   <option value="AI Web Application">AI Web Application</option>
                   <option value="Full-Stack Web App">Full-Stack Web App</option>
                   <option value="Progressive Web App (PWA)">Progressive Web App (PWA)</option>
-                  <option value="Backend API & Architecture">Backend API & Architecture</option>
+                  <option value="Backend API &amp; Architecture">Backend API &amp; Architecture</option>
                   <option value="Other">Other Collaboration</option>
                 </select>
               </div>
@@ -2569,7 +2448,7 @@
               <textarea id="contactMessage" class="form-control-v2" placeholder="Enter here.." required></textarea>
             </div>
 
-            <div class="form-submit-row-v2">
+            <div style="display:flex; align-items:center; margin-top:10px;">
               <button type="submit" class="btn-submit-pill-v2">
                 <span>Submit</span>
                 <span class="submit-arrow-circle-v2">➔</span>
@@ -2583,12 +2462,12 @@
     </div>
   </section>
 
-<!-- SITE FOOTER -->
+  <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
         <div>
-          <span>© <span id="currentYear"></span> <strong>Youssef Saber Ahmed</strong>. Built with Supahub aesthetic.</span>
+          <span>© <span id="currentYear"></span> <strong>Youssef Saber Ahmed</strong>. Executive Engineering Hub.</span>
         </div>
         <div class="footer-links">
           <a href="https://github.com/youssefsaberahmed14-ui" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
@@ -2612,15 +2491,13 @@
           <span class="traffic-dot traffic-amber"></span>
           <span class="traffic-dot traffic-green"></span>
         </div>
-        <div class="modal-url-display">
+        <div class="mac-url-pill" style="max-width: 600px;">
           <span>🔒</span>
           <span id="modalUrlDisplay">https://app.preview.local</span>
         </div>
         <button class="modal-close-btn" onclick="closeDemoModalDirect()" title="Close">✕</button>
       </div>
-      <div class="modal-content-area" id="modalContentArea">
-        <!-- Injected via JavaScript -->
-      </div>
+      <div id="modalContentArea" style="flex:1; overflow:hidden; background:#ffffff;"></div>
     </div>
   </div>
 
@@ -2628,195 +2505,23 @@
     // Current Year
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // Mobile Menu Toggle
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navMenu = document.getElementById('navMenu');
-    mobileToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-    });
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => navMenu.classList.remove('open'));
-    });
-
-    // Contact Form Handler -> WhatsApp
-    const form = document.getElementById('portfolioContactForm');
-    form.addEventListener('submit', (e) => {
+    // Contact form WhatsApp submission
+    document.getElementById('portfolioContactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = document.getElementById('contactName').value.trim();
       const email = document.getElementById('contactEmail').value.trim();
       const phone = document.getElementById('contactPhone').value.trim();
-      const type = document.getElementById('contactType').value;
-      const message = document.getElementById('contactMessage').value.trim();
+      const type = document.getElementById('contactType').value || 'Not specified';
+      const budget = document.getElementById('contactBudget').value || 'Not specified';
+      const country = document.getElementById('contactCountry').value || 'Not specified';
+      const msg = document.getElementById('contactMessage').value.trim();
 
-      const text = `Hello Youssef!%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Project Type:* ${type}%0A%0A*Message:*%0A${message}`;
+      const text = `*New Portfolio Inquiry*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Interest:* ${encodeURIComponent(type)}%0A*Budget:* ${encodeURIComponent(budget)}%0A*Country:* ${encodeURIComponent(country)}%0A*Message:* ${encodeURIComponent(msg)}`;
+      
       window.open(`https://wa.me/201029619067?text=${text}`, '_blank');
     });
 
-    // App Interactive Previews
-    const demoModal = document.getElementById('demoModal');
-    const modalUrlDisplay = document.getElementById('modalUrlDisplay');
-    const modalContentArea = document.getElementById('modalContentArea');
-
-    const appDemos = {
-      lecturebuddy: {
-        url: 'https://lecture-buddy.vercel.app',
-        html: `
-          <div style="font-family:'Tajawal',sans-serif; direction:rtl; max-width:850px; margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d8e0ea; padding-bottom:16px; margin-bottom:24px;">
-              <div style="display:flex; align-items:center; gap:12px;">
-                <span style="font-size:28px;">✨</span>
-                <div>
-                  <h2 style="font-size:24px; color:#862fe7; font-weight:800; margin-bottom:4px;">Lecture Buddy | الذكاء الاصطناعي وجدولك الجامعي</h2>
-                  <p style="color:#6b7589; font-size:14px;">استخراج ذكي لبيانات الجدول من الصور عبر Google Gemini مع إشعارات Web Push حية</p>
-                </div>
-              </div>
-              <span style="background:#ebdafd; color:#862fe7; padding:6px 14px; border-radius:9999px; font-weight:700; font-size:13px;">Gemini Vision Active</span>
-            </div>
-
-            <!-- Upload Zone -->
-            <div style="background:linear-gradient(135deg, rgba(134,47,231,0.06), rgba(173,109,244,0.08)); border:2px dashed #ad6df4; border-radius:16px; padding:32px; text-align:center; margin-bottom:24px;">
-              <span style="font-size:36px; display:block; margin-bottom:8px;">📷</span>
-              <h4 style="font-size:18px; color:#111827; font-weight:700; margin-bottom:6px;">ارفع أو اسحب صورة جدولك الجامعي هنا</h4>
-              <p style="color:#6b7589; font-size:14px; margin-bottom:16px;">يقوم محرك Gemini AI بقراءة المواد والمواعيد والقاعات تلقائياً</p>
-              <button style="background:#862fe7; color:#fff; border:none; padding:10px 24px; border-radius:12px; font-weight:700; cursor:pointer;">اختيار صورة الجدول</button>
-            </div>
-
-            <!-- Classes Preview -->
-            <div style="background:#ffffff; border:1px solid #d8e0ea; border-radius:16px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.03);">
-              <h4 style="font-size:17px; color:#111827; font-weight:700; margin-bottom:16px;">المحاضرات المستخرجة والمجدولة</h4>
-              <div style="display:flex; flex-direction:column; gap:12px;">
-                <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:#f1f5f9; border-radius:10px; border-right:4px solid #862fe7;">
-                  <div>
-                    <h5 style="font-size:15px; color:#111827; margin-bottom:4px;">نظم قواعد البيانات المتقدمة (Database Systems)</h5>
-                    <span style="color:#6b7589; font-size:13px;">الأحد • 09:00 ص إلى 11:00 ص • قاعة 302 مبنى ب</span>
-                  </div>
-                  <span style="background:#d6fcf4; color:#0c6953; font-weight:700; font-size:13px; padding:4px 12px; border-radius:9999px;">تذكير مفعل 🔔</span>
-                </div>
-                <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:#f1f5f9; border-radius:10px; border-right:4px solid #ad6df4;">
-                  <div>
-                    <h5 style="font-size:15px; color:#111827; margin-bottom:4px;">تطوير تطبيقات الويب المتقدمة (Full-Stack Engineering)</h5>
-                    <span style="color:#6b7589; font-size:13px;">الإثنين • 11:30 ص إلى 01:30 م • معمل البرمجيات</span>
-                  </div>
-                  <span style="background:#d6fcf4; color:#0c6953; font-weight:700; font-size:13px; padding:4px 12px; border-radius:9999px;">تذكير مفعل 🔔</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        `
-      },
-      cashflow: {
-        url: 'https://cashflow.pwa/dashboard',
-        html: `
-          <div style="font-family:'Tajawal',sans-serif; direction:rtl; max-width:850px; margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d8e0ea; padding-bottom:16px; margin-bottom:24px;">
-              <h2 style="font-size:24px; color:#10b981; font-weight:800;">💵 CashFlow — متتبع المصاريف الذكي (PWA)</h2>
-              <span style="background:#d6fcf4; color:#0c6953; padding:6px 14px; border-radius:9999px; font-weight:700; font-size:13px;">PWA Standalone</span>
-            </div>
-            <div style="background:linear-gradient(135deg, #10b981, #065f46); color:#fff; border-radius:24px; padding:32px; margin-bottom:24px; box-shadow:0 15px 35px rgba(16,185,129,0.2);">
-              <span style="opacity:0.9; font-size:14px;">إجمالي الرصيد المتاح لجميع الحسابات</span>
-              <h1 style="font-size:42px; font-weight:800; font-family:var(--font-mono); margin:8px 0;">EGP 28,450.00</h1>
-            </div>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
-              <div style="background:#f1f5f9; border-radius:16px; padding:20px;">
-                <span style="color:#6b7589; font-size:14px;">واردات الشهر</span>
-                <h3 style="color:#10b981; font-size:24px; font-weight:800; margin-top:4px;">+EGP 34,000</h3>
-              </div>
-              <div style="background:#f1f5f9; border-radius:16px; padding:20px;">
-                <span style="color:#6b7589; font-size:14px;">مصاريف الشهر</span>
-                <h3 style="color:#ef4444; font-size:24px; font-weight:800; margin-top:4px;">-EGP 5,550</h3>
-              </div>
-            </div>
-          </div>
-        `
-      },
-      bookvault: {
-        url: 'https://bookvault.io/explore',
-        html: `
-          <div style="max-width:850px; margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d8e0ea; padding-bottom:16px; margin-bottom:24px;">
-              <h2 style="font-size:24px; color:#862fe7; font-weight:800;">📚 BookVault — Google Books Search Platform</h2>
-              <span style="background:#ebdafd; color:#862fe7; padding:6px 14px; border-radius:9999px; font-weight:700; font-size:13px;">Express & REST API</span>
-            </div>
-            <div style="background:#f1f5f9; border-radius:12px; padding:14px 20px; display:flex; align-items:center; gap:12px; margin-bottom:24px;">
-              <span>🔍</span>
-              <input type="text" value="Clean Code Architecture & Python Patterns" readonly style="background:transparent; border:none; width:100%; font-size:15px; outline:none;" />
-            </div>
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px;">
-              <div style="background:#fff; border:1px solid #d8e0ea; border-radius:16px; padding:20px;">
-                <div style="height:100px; background:#862fe7; color:#fff; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:700; margin-bottom:12px;">Clean Code</div>
-                <h4 style="font-size:15px; font-weight:700; margin-bottom:4px;">Clean Code Handbook</h4>
-                <p style="color:#6b7589; font-size:13px;">Robert C. Martin • 464 pages</p>
-              </div>
-              <div style="background:#fff; border:1px solid #d8e0ea; border-radius:16px; padding:20px;">
-                <div style="height:100px; background:#ad6df4; color:#fff; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:700; margin-bottom:12px;">Fluent Python</div>
-                <h4 style="font-size:15px; font-weight:700; margin-bottom:4px;">Fluent Python 2nd Ed.</h4>
-                <p style="color:#6b7589; font-size:13px;">Luciano Ramalho • 1014 pages</p>
-              </div>
-            </div>
-          </div>
-        `
-      },
-      eventplan: {
-        url: 'https://eventplan-pro.app/admin',
-        html: `
-          <div style="max-width:850px; margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d8e0ea; padding-bottom:16px; margin-bottom:24px;">
-              <h2 style="font-size:24px; color:#111827; font-weight:800;">🎟️ EventPlan Pro — Django Architecture</h2>
-              <span style="background:#111827; color:#fff; padding:6px 14px; border-radius:9999px; font-weight:700; font-size:13px;">Django 5.x</span>
-            </div>
-            <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;">
-              <div style="background:#f1f5f9; border-radius:16px; padding:20px;">
-                <span style="color:#6b7589; font-size:13px;">Active Events</span>
-                <h3 style="font-size:24px; font-weight:800; color:#862fe7;">14 Events</h3>
-              </div>
-              <div style="background:#f1f5f9; border-radius:16px; padding:20px;">
-                <span style="color:#6b7589; font-size:13px;">Confirmed Guests</span>
-                <h3 style="font-size:24px; font-weight:800; color:#111827;">1,280 Guests</h3>
-              </div>
-              <div style="background:#f1f5f9; border-radius:16px; padding:20px;">
-                <span style="color:#6b7589; font-size:13px;">Venues Managed</span>
-                <h3 style="font-size:24px; font-weight:800; color:#0c6953;">8 Venues</h3>
-              </div>
-            </div>
-          </div>
-        `
-      },
-      youka: {
-        url: 'https://youka-flory.store/shop',
-        html: `
-          <div style="font-family:'Tajawal',sans-serif; direction:rtl; max-width:850px; margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d8e0ea; padding-bottom:16px; margin-bottom:24px;">
-              <h2 style="font-size:24px; color:#e22ba4; font-weight:800;">🌸 Youka_Flory | بوكيهات ورد فاخرة</h2>
-              <span style="background:#ff5fe4; color:#fff; padding:6px 14px; border-radius:9999px; font-weight:700; font-size:13px;">🛍️ السلة (2)</span>
-            </div>
-            <div style="background:#f1f5f9; border-radius:16px; padding:24px; text-align:center;">
-              <h3 style="color:#111827; font-size:20px; font-weight:800; margin-bottom:8px;">تنسيقات ورد طبيعي راقية وتوصيل فوري</h3>
-              <p style="color:#6b7589; font-size:14px;">بوكيهات مناسبات وهدايا وتغليف فاخر وبطاقات إهداء</p>
-            </div>
-          </div>
-        `
-      },
-      cisco: {
-        url: 'https://cisco-lab.dev/simulator',
-        html: `
-          <div style="font-family:var(--font-mono); max-width:850px; margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d8e0ea; padding-bottom:16px; margin-bottom:24px;">
-              <h2 style="font-size:20px; color:#111827; font-weight:700;">📟 Cisco Packet Tracer Simulator</h2>
-              <span style="background:#d6fcf4; color:#0c6953; padding:6px 14px; border-radius:9999px; font-weight:700; font-size:12px;">Terminal Ready</span>
-            </div>
-            <div style="background:#090d16; color:#3fb950; border-radius:16px; padding:24px; font-size:14px; line-height:1.8;">
-              <div style="color:#8b949e;">Router# configure terminal</div>
-              <div style="color:#8b949e;">Router(config)# interface GigabitEthernet0/0</div>
-              <div>Router(config-if)# ip address 192.168.1.1 255.255.255.0</div>
-              <div>Router(config-if)# no shutdown</div>
-              <div style="color:#58a6ff; font-weight:700;">%LINK-5-CHANGED: Interface GigabitEthernet0/0, state changed to up</div>
-            </div>
-          </div>
-        `
-      }
-    };
-
-        // Live Demo URLs
+    // Modal Live Preview Functions
     const projectUrls = {
       lecturebuddy: 'https://lecture-ai-planner.vercel.app',
       classroom: 'https://classroom-app-beta.vercel.app',
@@ -2833,13 +2538,10 @@
       const urlDisplay = document.getElementById('modalUrlDisplay');
       const contentArea = document.getElementById('modalContentArea');
       
-      urlDisplay.innerHTML = `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline;">${url}</a> <span style="margin-left:8px; font-weight:600; color:var(--color-accent-hover);">[Open Full ↗]</span>`;
+      urlDisplay.innerHTML = `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline;">${url}</a> <span style="margin-left:8px; font-weight:600; color:var(--color-accent-amber-dark);">[Open Full ↗]</span>`;
       
-      contentArea.style.padding = '0';
       contentArea.innerHTML = `
-        <div style="height:100%; display:flex; flex-direction:column;">
-          <iframe src="${url}" style="width:100%; flex:1; border:none; min-height:500px;" allow="camera; microphone; fullscreen; clipboard-read; clipboard-write;" loading="lazy"></iframe>
-        </div>
+        <iframe src="${url}" style="width:100%; height:100%; border:none;" allow="camera; microphone; fullscreen; clipboard-read; clipboard-write;" loading="lazy"></iframe>
       `;
 
       const modal = document.getElementById('demoModal');
@@ -2848,21 +2550,22 @@
     }
 
     function closeDemoModal(e) {
-      if (e.target === demoModal) {
+      if (e.target.id === 'demoModal') {
         closeDemoModalDirect();
       }
     }
 
     function closeDemoModalDirect() {
-      demoModal.classList.remove('active');
-      document.body.style.overflow = 'auto';
+      const modal = document.getElementById('demoModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      document.getElementById('modalContentArea').innerHTML = '';
     }
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && demoModal.classList.contains('active')) {
-        closeDemoModalDirect();
-      }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeDemoModalDirect();
     });
   </script>
+
 </body>
 </html>
