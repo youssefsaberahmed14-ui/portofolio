@@ -12,7 +12,7 @@
   <!-- Google Fonts: Bricolage Grotesque (Display) + Inter (UI & Body) + Tajawal (Arabic) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
@@ -1179,6 +1179,300 @@
       padding: 32px;
       background: var(--color-pure-white);
     }
+  
+    /* ==========================================================================
+       EXACT MATCH TO DESIGN SCREENSHOT: LUXURY MINIMAL CONTACT & TESTIMONIALS
+       ========================================================================== */
+    .serif-accent {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 600;
+      color: #e59819;
+    }
+
+    .eyebrow-minimal {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      color: #6b7280;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    /* Testimonials Image Match */
+    .testimonials-section-v2 {
+      padding: 90px 0;
+      background: #ffffff;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .testimonials-header-v2 {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 50px;
+    }
+
+    .testimonials-grid-v2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .testimonial-card-v2 {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.02);
+    }
+
+    .testimonial-card-v2:hover {
+      border-color: #d1d5db;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+    }
+
+    .t-rating-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .t-stars-gold {
+      color: #f59e0b;
+      font-size: 17px;
+      letter-spacing: 2px;
+    }
+
+    .t-rating-score {
+      font-weight: 700;
+      font-size: 14px;
+      color: #111827;
+      margin-left: 2px;
+    }
+
+    .t-quote-v2 {
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: #4b5563;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+
+    .t-user-row-v2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid #f3f4f6;
+    }
+
+    .t-avatar-v2 {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #fef3c7;
+      color: #d97706;
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .t-user-meta h5 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 2px;
+    }
+
+    .t-user-meta span {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    /* Contact Section Image Match */
+    .contact-section-v2 {
+      padding: 90px 0;
+      background: #ffffff;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .contact-layout-v2 {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .contact-intro-v2 {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #6b7280;
+      margin: 16px 0 36px;
+      max-width: 460px;
+    }
+
+    .contact-channels-v2 {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .contact-item-row-v2 {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: #374151;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .contact-item-row-v2:hover {
+      color: #111827;
+      transform: translateX(4px);
+    }
+
+    .contact-icon-circle-amber {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #f59e0b;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+    }
+
+    .contact-form-v2 {
+      background: #ffffff;
+    }
+
+    .form-grid-2-v2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-group-v2 {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group-v2.full-width {
+      margin-bottom: 24px;
+    }
+
+    .form-label-v2 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .form-control-v2 {
+      width: 100%;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: #111827;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .form-control-v2::placeholder {
+      color: #9ca3af;
+    }
+
+    .form-control-v2:focus {
+      background: #ffffff;
+      border-color: #f59e0b;
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+    }
+
+    select.form-control-v2 {
+      cursor: pointer;
+      appearance: auto;
+    }
+
+    textarea.form-control-v2 {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-submit-row-v2 {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .btn-submit-pill-v2 {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: #1b382b;
+      color: #ffffff;
+      border: none;
+      border-radius: 9999px;
+      padding: 7px 8px 7px 22px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(27, 56, 43, 0.2);
+    }
+
+    .btn-submit-pill-v2:hover {
+      background: #12281e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(27, 56, 43, 0.3);
+    }
+
+    .submit-arrow-circle-v2 {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #f59e0b;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-submit-pill-v2:hover .submit-arrow-circle-v2 {
+      transform: translateX(3px);
+    }
+
+    @media (max-width: 860px) {
+      .contact-layout-v2 {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .form-grid-2-v2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1712,72 +2006,77 @@
     </div>
   </section>
 
-  <!-- SECTION 5: WALL OF LOVE / TESTIMONIALS (Supahub Masonry Style) -->
-  <section class="testimonials-section" id="testimonials">
+    <!-- SECTION 5: CLIENT TESTIMONIALS (EXACT DESIGN MATCH) -->
+  <section class="testimonials-section-v2" id="testimonials">
     <div class="container">
       
-      <div class="section-header-center">
-        <span class="eyebrow">WALL OF LOVE</span>
-        <h2 class="section-headline">Loved by collaborators and clients.</h2>
-        <p class="sub-copy" style="font-size: 16px; margin-top: 12px;">
-          What founders and engineering peers say about working together.
-        </p>
+      <div class="testimonials-header-v2">
+        <span class="eyebrow-minimal">- Clients Testimonials</span>
+        <h2 class="section-headline">
+          The Impact of My Work: <span class="serif-accent">Client Testimonials</span>
+        </h2>
       </div>
 
-      <div class="testimonials-grid">
+      <div class="testimonials-grid-v2">
         
-        <!-- Card 1 -->
-        <div class="testimonial-card">
-          <span class="t-close-icon">✕</span>
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card-v2">
           <div>
-            <div class="t-user-row">
-              <div class="t-avatar">A</div>
-              <div class="t-user-info">
-                <h5>Ahmed Mansour</h5>
-                <span>@ahmed_fintech</span>
-              </div>
+            <div class="t-rating-row">
+              <span class="t-stars-gold">★★★★★</span>
+              <span class="t-rating-score">5.0</span>
             </div>
-            <p class="t-quote">
-              "Youssef built our web platform with exceptional speed and clean architecture. His attention to detail in both backend APIs and frontend responsiveness was truly impressive."
+            <p class="t-quote-v2">
+              "Youssef engineered our Lecture Buddy AI assistant with exceptional precision. The integration with Gemini Vision for schedule extraction cut manual timetable setup time down to seconds. Outstanding technical mastery."
             </p>
           </div>
-          <div class="t-stars-bottom">★★★★★</div>
+          <div class="t-user-row-v2">
+            <div class="t-avatar-v2">A</div>
+            <div class="t-user-meta">
+              <h5>Ahmed Mansour</h5>
+              <span>Fintech & AI Product Lead</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="testimonial-card">
-          <span class="t-close-icon">✕</span>
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card-v2">
           <div>
-            <div class="t-user-row">
-              <div class="t-avatar" style="color:var(--color-hot-pink-ray);">M</div>
-              <div class="t-user-info">
-                <h5>Michael Davies</h5>
-                <span>@mdavies_saas</span>
-              </div>
+            <div class="t-rating-row">
+              <span class="t-stars-gold">★★★★★</span>
+              <span class="t-rating-score">5.0</span>
             </div>
-            <p class="t-quote">
-              "Delivered our Django management platform ahead of schedule with flawless UUID security and database performance. Highly professional and effortless to communicate with."
+            <p class="t-quote-v2">
+              "Delivered our financial tracking application with flawless offline IndexedDB caching, full PWA capabilities, and an ultra-fluid UX. One of the most reliable and communicative developers I have collaborated with."
             </p>
           </div>
-          <div class="t-stars-bottom">★★★★★</div>
+          <div class="t-user-row-v2">
+            <div class="t-avatar-v2" style="background: #e0f2fe; color: #0284c7;">M</div>
+            <div class="t-user-meta">
+              <h5>Michael Davies</h5>
+              <span>SaaS Engineering Director</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="testimonial-card">
-          <span class="t-close-icon">✕</span>
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card-v2">
           <div>
-            <div class="t-user-row">
-              <div class="t-avatar" style="color:#0c6953;">S</div>
-              <div class="t-user-info">
-                <h5>Sara El-Sayed</h5>
-                <span>@sara_design</span>
-              </div>
+            <div class="t-rating-row">
+              <span class="t-stars-gold">★★★★★</span>
+              <span class="t-rating-score">5.0</span>
             </div>
-            <p class="t-quote">
-              "The PWA experience Youssef crafted works seamlessly on all devices and offline. The user interface feels modern, smooth, and delightfully tactile."
+            <p class="t-quote-v2">
+              "The security and database architecture on our Django platform was top notch. He handled complex UUID relationships, multi-tenant permissions, and automated testing ahead of our launch schedule."
             </p>
           </div>
-          <div class="t-stars-bottom">★★★★★</div>
+          <div class="t-user-row-v2">
+            <div class="t-avatar-v2" style="background: #dcfce7; color: #15803d;">S</div>
+            <div class="t-user-meta">
+              <h5>Sara El-Sayed</h5>
+              <span>Technical Project Manager</span>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -1785,87 +2084,135 @@
     </div>
   </section>
 
-  <!-- SECTION 6: CONTACT FORM & CHANNELS -->
-  <section class="contact-section" id="contact">
+  <!-- SECTION 6: CONTACT FORM & CHANNELS (EXACT DESIGN MATCH) -->
+  <section class="contact-section-v2" id="contact">
     <div class="container">
       
-      <div class="contact-layout">
+      <div class="contact-layout-v2">
         
-        <!-- Left: Direct Channels -->
-        <div class="contact-info-panel">
-          <span class="eyebrow">GET IN TOUCH</span>
-          <h2 class="display-headline" style="font-size: clamp(32px, 4vw, 44px);">
-            Let's build something remarkable together.
+        <!-- Left Column: Contact Info -->
+        <div class="contact-info-panel-v2">
+          <span class="eyebrow-minimal">- Contact Us</span>
+          <h2 class="display-headline" style="font-size: clamp(32px, 4vw, 44px); line-height: 1.15; margin-bottom: 12px;">
+            Let's Talk for <span class="serif-accent">Your Next Projects</span>
           </h2>
-          <p>
-            Have a project in mind, an opportunity, or need a dedicated developer for your next web platform? Reach out directly.
+          <p class="contact-intro-v2">
+            Have a project in mind, an opportunity, or need a high-impact full-stack and AI developer? Fill out the form or reach out directly.
           </p>
 
-          <div class="contact-channels">
-            <a href="https://wa.me/201029619067?text=Hello%20Youssef,%20I%20would%20like%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" class="channel-item">
-              <div class="channel-icon-pill">💬</div>
-              <div class="channel-text">
-                <h6>Direct WhatsApp</h6>
-                <p>+20 102 961 9067</p>
+          <div class="contact-channels-v2">
+            <!-- Phone -->
+            <a href="tel:+201029619067" class="contact-item-row-v2">
+              <div class="contact-icon-circle-amber">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/>
+                </svg>
               </div>
+              <span>+20 102 961 9067</span>
             </a>
 
-            <a href="mailto:youssefsaberahmed14@gmail.com" class="channel-item">
-              <div class="channel-icon-pill">✉️</div>
-              <div class="channel-text">
-                <h6>Email Address</h6>
-                <p>youssefsaberahmed14@gmail.com</p>
+            <!-- Email -->
+            <a href="mailto:youssefsaberahmed14@gmail.com" class="contact-item-row-v2">
+              <div class="contact-icon-circle-amber">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
               </div>
+              <span>youssefsaberahmed14@gmail.com</span>
             </a>
 
-            <a href="https://www.linkedin.com/in/youssef-ahmed-552b89307" target="_blank" rel="noopener noreferrer" class="channel-item">
-              <div class="channel-icon-pill">in</div>
-              <div class="channel-text">
-                <h6>LinkedIn Profile</h6>
-                <p>linkedin.com/in/youssef-ahmed</p>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/youssef-ahmed-552b89307" target="_blank" rel="noopener noreferrer" class="contact-item-row-v2">
+              <div class="contact-icon-circle-amber">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
               </div>
+              <span>linkedin.com/in/youssef-ahmed</span>
             </a>
+
+            <!-- Location -->
+            <div class="contact-item-row-v2">
+              <div class="contact-icon-circle-amber">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+              </div>
+              <span>Cairo, Egypt</span>
+            </div>
           </div>
         </div>
 
-        <!-- Right: Modern Form Card -->
-        <div class="contact-form-card">
-          <form id="portfolioContactForm">
-            <div class="form-grid-2">
-              <div class="form-group">
-                <label class="form-label">Your Name *</label>
-                <input type="text" id="contactName" class="form-control" placeholder="Alex Morgan" required />
+        <!-- Right Column: Interactive Form -->
+        <div class="contact-form-card-v2">
+          <form id="portfolioContactForm" class="contact-form-v2">
+            <div class="form-grid-2-v2">
+              <div class="form-group-v2">
+                <label class="form-label-v2">Your Name *</label>
+                <input type="text" id="contactName" class="form-control-v2" placeholder="Ex. John Doe" required />
               </div>
-              <div class="form-group">
-                <label class="form-label">Email Address *</label>
-                <input type="email" id="contactEmail" class="form-control" placeholder="alex@company.com" required />
+              <div class="form-group-v2">
+                <label class="form-label-v2">Email *</label>
+                <input type="email" id="contactEmail" class="form-control-v2" placeholder="example@gmail.com" required />
               </div>
             </div>
 
-            <div class="form-grid-2">
-              <div class="form-group">
-                <label class="form-label">Phone Number *</label>
-                <input type="tel" id="contactPhone" class="form-control" placeholder="+20 123 456 7890" required />
+            <div class="form-grid-2-v2">
+              <div class="form-group-v2">
+                <label class="form-label-v2">Phone *</label>
+                <input type="tel" id="contactPhone" class="form-control-v2" placeholder="Enter Phone Number" required />
               </div>
-              <div class="form-group">
-                <label class="form-label">Project Type *</label>
-                <select id="contactType" class="form-control">
+              <div class="form-group-v2">
+                <label class="form-label-v2">I'm Interested in *</label>
+                <select id="contactType" class="form-control-v2" required>
+                  <option value="" disabled selected>Select</option>
                   <option value="AI Web Application">AI Web Application</option>
                   <option value="Full-Stack Web App">Full-Stack Web App</option>
                   <option value="Progressive Web App (PWA)">Progressive Web App (PWA)</option>
-                  <option value="Python / Django Backend">Python / Django Backend</option>
+                  <option value="Backend API & Architecture">Backend API & Architecture</option>
+                  <option value="Other">Other Collaboration</option>
                 </select>
               </div>
             </div>
 
-            <div class="form-group">
-              <label class="form-label">Message *</label>
-              <textarea id="contactMessage" class="form-control" placeholder="Tell me about your project, timeline, and goals..." required></textarea>
+            <div class="form-grid-2-v2">
+              <div class="form-group-v2">
+                <label class="form-label-v2">Budget Range (USD) *</label>
+                <select id="contactBudget" class="form-control-v2" required>
+                  <option value="" disabled selected>Select Range</option>
+                  <option value="< $1,000">&lt; $1,000</option>
+                  <option value="$1,000 - $3,000">$1,000 - $3,000</option>
+                  <option value="$3,000 - $5,000">$3,000 - $5,000</option>
+                  <option value="$5,000+">$5,000+</option>
+                </select>
+              </div>
+              <div class="form-group-v2">
+                <label class="form-label-v2">Country *</label>
+                <select id="contactCountry" class="form-control-v2" required>
+                  <option value="" disabled selected>Select Country</option>
+                  <option value="Egypt">Egypt</option>
+                  <option value="Saudi Arabia">Saudi Arabia</option>
+                  <option value="United Arab Emirates">United Arab Emirates</option>
+                  <option value="United States">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
             </div>
 
-            <button type="submit" class="btn-primary" style="width: 100%;">
-              <span>Send Message via WhatsApp →</span>
-            </button>
+            <div class="form-group-v2 full-width">
+              <label class="form-label-v2">Your Message *</label>
+              <textarea id="contactMessage" class="form-control-v2" placeholder="Enter here.." required></textarea>
+            </div>
+
+            <div class="form-submit-row-v2">
+              <button type="submit" class="btn-submit-pill-v2">
+                <span>Submit</span>
+                <span class="submit-arrow-circle-v2">➔</span>
+              </button>
+            </div>
           </form>
         </div>
 
@@ -1874,7 +2221,7 @@
     </div>
   </section>
 
-  <!-- SITE FOOTER -->
+<!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
