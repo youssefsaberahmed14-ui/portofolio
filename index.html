@@ -1607,9 +1607,7 @@
             An intelligent schedule scanner built with <strong>Google Gemini AI Vision</strong>. Converts timetable screenshots directly into actionable calendars with automated <strong>Web Push reminders</strong> one hour before lectures.
           </p>
           <div>
-            <button class="btn-dark" onclick="openDemoModal('lecturebuddy')">
-              <span>Explore Lecture Buddy →</span>
-            </button>
+            <a href="https://lecture-ai-planner.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;"><span>Explore Lecture Buddy ↗</span></a>
           </div>
         </div>
 
@@ -1644,19 +1642,19 @@
     </div>
   </section>
 
-  <!-- SECTION 3: PROJECTS SHOWCASE (Product Preview Cards with macOS Traffic-Lights) -->
+    <!-- SECTION 3: PROJECTS SHOWCASE (Live Deployed Vercel Projects) -->
   <section class="projects-section" id="projects">
     <div class="container">
       
-      <!-- Atmospheric Orb behind product cards -->
+      <!-- Atmospheric Orbs behind product cards -->
       <div class="orb-backdrop orb-violet" style="top: 15%; left: 30%;"></div>
       <div class="orb-backdrop orb-pink" style="bottom: 10%; right: 15%;"></div>
 
       <div class="section-header-center">
-        <span class="eyebrow">PRODUCT SHOWCASE</span>
-        <h2 class="section-headline">Real-world applications, engineered end-to-end.</h2>
+        <span class="eyebrow">LIVE DEPLOYED PROJECTS</span>
+        <h2 class="section-headline">Real-world applications, live on Vercel.</h2>
         <p class="sub-copy" style="font-size: 16px; margin-top: 12px;">
-          Live interactive web systems featuring browser mockups and instant modal previews.
+          Click any project card or "Open Live App" to navigate directly to the fully deployed, interactive web application.
         </p>
       </div>
 
@@ -1672,10 +1670,10 @@
             </div>
             <div class="mac-url-pill">
               <span>🔒</span>
-              <span>lecture-buddy.vercel.app</span>
+              <span>lecture-ai-planner.vercel.app</span>
             </div>
           </div>
-          <div class="card-mockup-viewport" onclick="openDemoModal('lecturebuddy')">
+          <div class="card-mockup-viewport" onclick="window.open('https://lecture-ai-planner.vercel.app', '_blank')" title="Click to open live site">
             <div class="mini-screen ms-ai">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#c4b5fd; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
                 <span>✨ Lecture Buddy AI</span>
@@ -1694,12 +1692,12 @@
               </div>
             </div>
             <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">See Live Demo →</span>
+              <span class="hover-badge-btn">Open Live App ↗</span>
             </div>
           </div>
           <div class="card-body-content">
             <h3 class="card-title">Lecture Buddy — AI Timetable & Reminders</h3>
-            <p class="card-desc">AI web app extracting class schedules from images using Google Gemini with background Web Push alerts before lectures.</p>
+            <p class="card-desc">AI schedule scanner powered by Google Gemini Vision. Extracts courses, timings, and rooms from photos with automated Web Push reminders.</p>
             <div class="card-tags-list">
               <span class="tag-chip violet">Gemini AI</span>
               <span class="tag-chip">Node.js</span>
@@ -1707,15 +1705,15 @@
               <span class="tag-chip">PWA</span>
             </div>
             <div class="card-footer-action">
-              <button class="btn-card-preview" onclick="openDemoModal('lecturebuddy')">
-                <span>Open Preview</span>
+              <a href="https://lecture-ai-planner.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
+                <span>Open Live App</span>
                 <span>↗</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- 2. CashFlow PWA -->
+        <!-- 2. Classroom App -->
         <div class="product-preview-card">
           <div class="card-top-mac">
             <div class="traffic-lights">
@@ -1725,45 +1723,47 @@
             </div>
             <div class="mac-url-pill">
               <span>🔒</span>
-              <span>cashflow.pwa/dashboard</span>
+              <span>classroom-app-beta.vercel.app</span>
             </div>
           </div>
-          <div class="card-mockup-viewport" onclick="openDemoModal('cashflow')">
-            <div class="mini-screen ms-cash">
-              <div style="display:flex; justify-content:space-between; font-size:12px; color:#a7f3d0; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:4px;">
-                <span>💵 CashFlow Tracker</span>
-                <span>PWA Standalone</span>
+          <div class="card-mockup-viewport" onclick="window.open('https://classroom-app-beta.vercel.app', '_blank')" title="Click to open live site">
+            <div class="mini-screen ms-classroom" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:#38bdf8; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:4px;">
+                <span>🎓 منصة الفصول التعليمية</span>
+                <span style="background:#0284c7; color:#fff; padding:1px 6px; border-radius:4px; font-size:10px;">LMS Portal</span>
               </div>
-              <div style="background:linear-gradient(135deg, rgba(16,185,129,0.2), rgba(6,78,59,0.3)); border-radius:8px; padding:10px;">
-                <span style="font-size:11px; opacity:0.8;">الرصيد الكلي المتاح</span>
-                <h4 style="font-size:20px; font-weight:800; color:#fff; font-family:var(--font-mono);">EGP 28,450.00</h4>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:8px;">
+                <div style="background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.2); border-radius:6px; padding:8px;">
+                  <span style="font-size:10px; color:#94a3b8;">الفصل الدراسي</span>
+                  <div style="font-size:12px; font-weight:700; color:#fff;">هندسة البرمجيات</div>
+                </div>
+                <div style="background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.2); border-radius:6px; padding:8px;">
+                  <span style="font-size:10px; color:#94a3b8;">الواجبات</span>
+                  <div style="font-size:12px; font-weight:700; color:#34d399;">3 مكتملة ✓</div>
+                </div>
               </div>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:auto;">
-                <div style="background:rgba(255,255,255,0.04); padding:6px; border-radius:4px; font-size:11px;">
-                  <span>واردات:</span> <b style="color:#10b981;">+34,000</b>
-                </div>
-                <div style="background:rgba(255,255,255,0.04); padding:6px; border-radius:4px; font-size:11px;">
-                  <span>مصاريف:</span> <b style="color:#f43f5e;">-5,550</b>
-                </div>
+              <div style="background:rgba(255,255,255,0.05); padding:6px 8px; border-radius:4px; font-size:11px; margin-top:auto; color:#cbd5e1;">
+                📌 جدول المحاضرات والملفات الدراسية المشتركة
               </div>
             </div>
             <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">See Live Demo →</span>
+              <span class="hover-badge-btn">Open Live App ↗</span>
             </div>
           </div>
           <div class="card-body-content">
-            <h3 class="card-title">CashFlow — Expense & Budget Tracker</h3>
-            <p class="card-desc">Progressive Web Application (PWA) with offline LocalStorage support, multi-account finances, and fluid transaction logging.</p>
+            <h3 class="card-title">Classroom App — Educational Learning Portal</h3>
+            <p class="card-desc">Interactive virtual classroom platform with course dashboards, student assignment trackers, real-time materials, and responsive interface.</p>
             <div class="card-tags-list">
-              <span class="tag-chip violet">PWA</span>
-              <span class="tag-chip">JavaScript ES6</span>
-              <span class="tag-chip">LocalStorage</span>
+              <span class="tag-chip violet">Educational LMS</span>
+              <span class="tag-chip">React</span>
+              <span class="tag-chip">Vercel</span>
+              <span class="tag-chip">REST API</span>
             </div>
             <div class="card-footer-action">
-              <button class="btn-card-preview" onclick="openDemoModal('cashflow')">
-                <span>Open Preview</span>
+              <a href="https://classroom-app-beta.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
+                <span>Open Live App</span>
                 <span>↗</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -1778,46 +1778,47 @@
             </div>
             <div class="mac-url-pill">
               <span>🔒</span>
-              <span>bookvault.io/explore</span>
+              <span>book-vault-sepia-eta.vercel.app</span>
             </div>
           </div>
-          <div class="card-mockup-viewport" onclick="openDemoModal('bookvault')">
+          <div class="card-mockup-viewport" onclick="window.open('https://book-vault-sepia-eta.vercel.app', '_blank')" title="Click to open live site">
             <div class="mini-screen ms-books">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#818cf8;">
                 <b>📚 BookVault</b>
-                <span>Express API</span>
+                <span>Google Books API</span>
               </div>
-              <div style="background:rgba(255,255,255,0.08); border-radius:4px; padding:4px 8px; font-size:11px; color:#94a3b8;">
-                🔍 Search 40M+ titles...
+              <div style="background:rgba(255,255,255,0.08); border-radius:4px; padding:6px 10px; font-size:11px; color:#94a3b8; display:flex; align-items:center; gap:6px;">
+                <span>🔍</span><span>Search 40M+ book titles...</span>
               </div>
               <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; margin-top:auto;">
-                <div style="background:#4338ca; border-radius:4px; padding:8px; text-align:center; font-size:10px; font-weight:700;">Clean Code</div>
-                <div style="background:#0284c7; border-radius:4px; padding:8px; text-align:center; font-size:10px; font-weight:700;">Python Pro</div>
-                <div style="background:#059669; border-radius:4px; padding:8px; text-align:center; font-size:10px; font-weight:700;">System Design</div>
+                <div style="background:#4338ca; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:700;">Clean Code</div>
+                <div style="background:#0284c7; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:700;">Python Pro</div>
+                <div style="background:#059669; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:700;">System Design</div>
               </div>
             </div>
             <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">See Live Demo →</span>
+              <span class="hover-badge-btn">Open Live App ↗</span>
             </div>
           </div>
           <div class="card-body-content">
-            <h3 class="card-title">BookVault — Google Books Search Platform</h3>
-            <p class="card-desc">Book discovery engine integrated with Google Books API and Express backend with real-time query parsing and cover modals.</p>
+            <h3 class="card-title">BookVault — Digital Library & Discovery Engine</h3>
+            <p class="card-desc">Modern book exploration platform querying Google Books API with responsive book previews, rating badges, and categorized reading shelves.</p>
             <div class="card-tags-list">
               <span class="tag-chip violet">Express.js</span>
               <span class="tag-chip">Node.js</span>
               <span class="tag-chip">Google API</span>
+              <span class="tag-chip">Vercel</span>
             </div>
             <div class="card-footer-action">
-              <button class="btn-card-preview" onclick="openDemoModal('bookvault')">
-                <span>Open Preview</span>
+              <a href="https://book-vault-sepia-eta.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
+                <span>Open Live App</span>
                 <span>↗</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- 4. EventPlan Pro -->
+        <!-- 4. Currency Converter -->
         <div class="product-preview-card">
           <div class="card-top-mac">
             <div class="traffic-lights">
@@ -1827,94 +1828,51 @@
             </div>
             <div class="mac-url-pill">
               <span>🔒</span>
-              <span>eventplan-pro.app/admin</span>
+              <span>currency-converter-amber-beta.vercel.app</span>
             </div>
           </div>
-          <div class="card-mockup-viewport" onclick="openDemoModal('eventplan')">
-            <div class="mini-screen ms-django">
-              <div style="display:flex; justify-content:space-between; font-size:12px; color:#c084fc;">
-                <b>🎟️ EventPlan Pro</b>
-                <span>Django SaaS</span>
+          <div class="card-mockup-viewport" onclick="window.open('https://currency-converter-amber-beta.vercel.app', '_blank')" title="Click to open live site">
+            <div class="mini-screen ms-cash">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:#a7f3d0; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:4px;">
+                <span>💱 Currency Converter</span>
+                <span style="color:#34d399;">● Live Rates</span>
               </div>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:8px;">
-                <div style="background:rgba(255,255,255,0.06); padding:8px; border-radius:6px; font-size:11px;">
-                  <span>Active Events</span><br><b style="color:#c084fc; font-size:14px;">14 Events</b>
-                </div>
-                <div style="background:rgba(255,255,255,0.06); padding:8px; border-radius:6px; font-size:11px;">
-                  <span>Bookings</span><br><b style="color:#38bdf8; font-size:14px;">1,280 Guests</b>
-                </div>
-              </div>
-            </div>
-            <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">See Live Demo →</span>
-            </div>
-          </div>
-          <div class="card-body-content">
-            <h3 class="card-title">EventPlan Pro — Django Architecture</h3>
-            <p class="card-desc">Full-featured event planning platform with UUID security, relational schedule models, and database management.</p>
-            <div class="card-tags-list">
-              <span class="tag-chip violet">Python</span>
-              <span class="tag-chip">Django</span>
-              <span class="tag-chip">Relational DB</span>
-            </div>
-            <div class="card-footer-action">
-              <button class="btn-card-preview" onclick="openDemoModal('eventplan')">
-                <span>Open Preview</span>
-                <span>↗</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Youka_Flory -->
-        <div class="product-preview-card">
-          <div class="card-top-mac">
-            <div class="traffic-lights">
-              <span class="traffic-dot traffic-red"></span>
-              <span class="traffic-dot traffic-amber"></span>
-              <span class="traffic-dot traffic-green"></span>
-            </div>
-            <div class="mac-url-pill">
-              <span>🔒</span>
-              <span>youka-flory.store/shop</span>
-            </div>
-          </div>
-          <div class="card-mockup-viewport" onclick="openDemoModal('youka')">
-            <div class="mini-screen ms-youka">
-              <div style="display:flex; justify-content:space-between; font-size:12px; color:#f472b6;">
-                <span>🌸 Youka_Flory</span>
-                <span>🛍️ سلة (2)</span>
-              </div>
-              <div style="background:rgba(219,39,119,0.2); border-radius:6px; padding:6px; font-size:11px; color:#fbcfe8;">
-                بوكيهات ورد طبيعي وتنسيقات هدايا فاخرة
+              <div style="background:linear-gradient(135deg, rgba(16,185,129,0.2), rgba(6,78,59,0.3)); border-radius:8px; padding:10px;">
+                <span style="font-size:11px; opacity:0.8;">1 USD to EGP Rate</span>
+                <h4 style="font-size:20px; font-weight:800; color:#fff; font-family:var(--font-mono);">49.32 EGP</h4>
               </div>
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:auto;">
-                <div style="background:rgba(255,255,255,0.05); padding:6px; border-radius:4px; font-size:11px;">🌹 جوري ملكي</div>
-                <div style="background:rgba(255,255,255,0.05); padding:6px; border-radius:4px; font-size:11px;">🌷 توليب هولندي</div>
+                <div style="background:rgba(255,255,255,0.04); padding:6px; border-radius:4px; font-size:11px;">
+                  <span>EUR / USD:</span> <b style="color:#10b981;">1.084</b>
+                </div>
+                <div style="background:rgba(255,255,255,0.04); padding:6px; border-radius:4px; font-size:11px;">
+                  <span>SAR / EGP:</span> <b style="color:#10b981;">13.14</b>
+                </div>
               </div>
             </div>
             <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">See Live Demo →</span>
+              <span class="hover-badge-btn">Open Live App ↗</span>
             </div>
           </div>
           <div class="card-body-content">
-            <h3 class="card-title">Youka_Flory — Floral Boutique Store</h3>
-            <p class="card-desc">Boutique e-commerce store with cart interactions, Express.js backend APIs, and modern responsive visual design.</p>
+            <h3 class="card-title">Currency Converter — Real-Time Exchange Engine</h3>
+            <p class="card-desc">Real-time currency exchange rates application with instant conversions, multi-currency comparisons, and interactive rates calculator.</p>
             <div class="card-tags-list">
-              <span class="tag-chip violet">E-Commerce</span>
-              <span class="tag-chip">Node.js</span>
-              <span class="tag-chip">CORS API</span>
+              <span class="tag-chip violet">JavaScript ES6</span>
+              <span class="tag-chip">Finance API</span>
+              <span class="tag-chip">Vercel</span>
+              <span class="tag-chip">Live Rates</span>
             </div>
             <div class="card-footer-action">
-              <button class="btn-card-preview" onclick="openDemoModal('youka')">
-                <span>Open Preview</span>
+              <a href="https://currency-converter-amber-beta.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
+                <span>Open Live App</span>
                 <span>↗</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- 6. Cisco Simulator -->
+        <!-- 5. Zoom Free WebRTC -->
         <div class="product-preview-card">
           <div class="card-top-mac">
             <div class="traffic-lights">
@@ -1924,38 +1882,200 @@
             </div>
             <div class="mac-url-pill">
               <span>🔒</span>
-              <span>cisco-lab.dev/simulator</span>
+              <span>zoom-clone.vercel.app</span>
             </div>
           </div>
-          <div class="card-mockup-viewport" onclick="openDemoModal('cisco')">
-            <div class="mini-screen ms-cisco">
-              <div style="display:flex; justify-content:space-between; font-size:11px; color:#58a6ff;">
-                <span>📟 Packet Tracer Lab</span>
-                <span style="color:#3fb950;">● Connected</span>
+          <div class="card-mockup-viewport" onclick="window.open('https://youssefsaberahmed14-ui-zoom-clone.vercel.app', '_blank')" title="Click to open live site">
+            <div class="mini-screen" style="background:#0f172a; border-radius:8px; padding:12px; display:flex; flex-direction:column; height:100%;">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:#38bdf8; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:4px;">
+                <span>📹 Zoom Free Meeting</span>
+                <span style="background:#22c55e; color:#fff; padding:1px 6px; border-radius:4px; font-size:10px;">HD 1080p</span>
               </div>
-              <div style="background:#000; border-radius:4px; padding:8px; font-size:10px; color:#3fb950; line-height:1.5;">
-                Router# configure terminal<br>
-                Router(config)# interface Gi0/0<br>
-                <span style="color:#58a6ff;">%LINK-5-CHANGED: Gi0/0 state UP</span>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin:8px 0; flex:1;">
+                <div style="background:#1e293b; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#94a3b8; font-size:11px;">
+                  👤 Youssef (Host)
+                </div>
+                <div style="background:#1e293b; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#94a3b8; font-size:11px;">
+                  👤 Participant 2
+                </div>
+              </div>
+              <div style="display:flex; justify-content:center; gap:8px; background:rgba(255,255,255,0.05); padding:6px; border-radius:6px;">
+                <span style="font-size:11px; background:#ef4444; color:#fff; padding:2px 8px; border-radius:4px;">End Call</span>
+                <span style="font-size:11px; background:#334155; color:#fff; padding:2px 8px; border-radius:4px;">Mute</span>
+                <span style="font-size:11px; background:#334155; color:#fff; padding:2px 8px; border-radius:4px;">Share</span>
               </div>
             </div>
             <div class="mockup-hover-layer">
-              <span class="hover-badge-btn">See Live Demo →</span>
+              <span class="hover-badge-btn">Open Live App ↗</span>
             </div>
           </div>
           <div class="card-body-content">
-            <h3 class="card-title">Interactive Cisco Network Terminal</h3>
-            <p class="card-desc">Interactive terminal simulator replicating Cisco IOS CLI syntax and router diagnostics with real-time feedback.</p>
+            <h3 class="card-title">Zoom Free — Real-Time Video Conference</h3>
+            <p class="card-desc">High-performance video conferencing application supporting meeting rooms, screen sharing, camera controls, and session recording.</p>
             <div class="card-tags-list">
-              <span class="tag-chip violet">CLI Terminal</span>
-              <span class="tag-chip">Simulator</span>
-              <span class="tag-chip">Networking</span>
+              <span class="tag-chip violet">WebRTC</span>
+              <span class="tag-chip">Video Streaming</span>
+              <span class="tag-chip">Socket.io</span>
+              <span class="tag-chip">Vercel</span>
             </div>
             <div class="card-footer-action">
-              <button class="btn-card-preview" onclick="openDemoModal('cisco')">
-                <span>Open Preview</span>
+              <a href="https://youssefsaberahmed14-ui-zoom-clone.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
+                <span>Open Live App</span>
                 <span>↗</span>
-              </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Weatherly -->
+        <div class="product-preview-card">
+          <div class="card-top-mac">
+            <div class="traffic-lights">
+              <span class="traffic-dot traffic-red"></span>
+              <span class="traffic-dot traffic-amber"></span>
+              <span class="traffic-dot traffic-green"></span>
+            </div>
+            <div class="mac-url-pill">
+              <span>🔒</span>
+              <span>weather-website-gray-ten.vercel.app</span>
+            </div>
+          </div>
+          <div class="card-mockup-viewport" onclick="window.open('https://weather-website-gray-ten.vercel.app', '_blank')" title="Click to open live site">
+            <div class="mini-screen" style="background:linear-gradient(135deg, #0284c7 0%, #0369a1 100%); border-radius:8px; padding:12px; display:flex; flex-direction:column; height:100%;">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:#e0f2fe; border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:4px;">
+                <span>🌤️ Weatherly Dashboard</span>
+                <span>Cairo, EG</span>
+              </div>
+              <div style="display:flex; align-items:center; justify-content:space-between; margin:auto 0;">
+                <div>
+                  <div style="font-size:28px; font-weight:800; color:#fff;">26°C</div>
+                  <div style="font-size:11px; color:#bae6fd;">Clear Sky & Sunny</div>
+                </div>
+                <div style="font-size:32px;">☀️</div>
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; background:rgba(255,255,255,0.1); padding:6px; border-radius:6px; font-size:10px; color:#e0f2fe;">
+                <span>💨 Wind: 14 km/h</span>
+                <span>💧 Humidity: 45%</span>
+              </div>
+            </div>
+            <div class="mockup-hover-layer">
+              <span class="hover-badge-btn">Open Live App ↗</span>
+            </div>
+          </div>
+          <div class="card-body-content">
+            <h3 class="card-title">Weatherly — Global Weather & Live Forecast</h3>
+            <p class="card-desc">Clean meteorological dashboard displaying real-time global temperatures, hourly forecasts, atmospheric conditions, and city search.</p>
+            <div class="card-tags-list">
+              <span class="tag-chip violet">Weather API</span>
+              <span class="tag-chip">Geolocation</span>
+              <span class="tag-chip">Vercel</span>
+              <span class="tag-chip">UI/UX</span>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://weather-website-gray-ten.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
+                <span>Open Live App</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Nour Academy -->
+        <div class="product-preview-card">
+          <div class="card-top-mac">
+            <div class="traffic-lights">
+              <span class="traffic-dot traffic-red"></span>
+              <span class="traffic-dot traffic-amber"></span>
+              <span class="traffic-dot traffic-green"></span>
+            </div>
+            <div class="mac-url-pill">
+              <span>🔒</span>
+              <span>study-ashen-six.vercel.app</span>
+            </div>
+          </div>
+          <div class="card-mockup-viewport" onclick="window.open('https://study-ashen-six.vercel.app', '_blank')" title="Click to open live site">
+            <div class="mini-screen" style="background:linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border-radius:8px; padding:12px; display:flex; flex-direction:column; height:100%;">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:#c7d2fe; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
+                <span>📖 أكاديمية النور التعليمية</span>
+                <span style="background:#4f46e5; color:#fff; padding:1px 6px; border-radius:4px; font-size:10px;">E-Learning</span>
+              </div>
+              <div style="background:rgba(255,255,255,0.06); border-radius:6px; padding:8px; margin:8px 0;">
+                <div style="font-size:11px; color:#a5b4fc; font-weight:600;">مسار تعلم البرمجة والذكاء الاصطناعي</div>
+                <div style="background:rgba(255,255,255,0.15); height:5px; border-radius:99px; margin-top:6px; overflow:hidden;">
+                  <div style="background:#22c55e; width:75%; height:100%;"></div>
+                </div>
+              </div>
+              <div style="font-size:10px; color:#e0e7ff; margin-top:auto;">
+                ✓ 24 درس تفاعلي • اختبارات تقييمية
+              </div>
+            </div>
+            <div class="mockup-hover-layer">
+              <span class="hover-badge-btn">Open Live App ↗</span>
+            </div>
+          </div>
+          <div class="card-body-content">
+            <h3 class="card-title">Nour Academy — Digital Learning Platform</h3>
+            <p class="card-desc">Modern e-learning academy portal with lesson browsing, curriculum navigation, student progress bars, and high responsiveness.</p>
+            <div class="card-tags-list">
+              <span class="tag-chip violet">E-Learning</span>
+              <span class="tag-chip">Interactive UI</span>
+              <span class="tag-chip">Vercel</span>
+              <span class="tag-chip">Arabic UI</span>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://study-ashen-six.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
+                <span>Open Live App</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Siham Furniture -->
+        <div class="product-preview-card">
+          <div class="card-top-mac">
+            <div class="traffic-lights">
+              <span class="traffic-dot traffic-red"></span>
+              <span class="traffic-dot traffic-amber"></span>
+              <span class="traffic-dot traffic-green"></span>
+            </div>
+            <div class="mac-url-pill">
+              <span>🔒</span>
+              <span>siham-furniture-landing.vercel.app</span>
+            </div>
+          </div>
+          <div class="card-mockup-viewport" onclick="window.open('https://siham-furniture-landing.vercel.app', '_blank')" title="Click to open live site">
+            <div class="mini-screen ms-youka">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:#fbcfe8; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
+                <span>🛋️ شركة سهام للأثاث</span>
+                <span style="background:#db2777; color:#fff; padding:1px 6px; border-radius:4px; font-size:10px;">Landing Page</span>
+              </div>
+              <div style="background:rgba(219,39,119,0.25); border-radius:6px; padding:8px; margin:8px 0; font-size:11px; color:#fdf2f8;">
+                فحص فوري وتسعير عادل بأعلى الأسعار بالرياض
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.08); padding:6px 8px; border-radius:4px; margin-top:auto; font-size:11px; color:#22c55e;">
+                <span>تواصل واتساب مباشر</span>
+                <span>💬 ➔</span>
+              </div>
+            </div>
+            <div class="mockup-hover-layer">
+              <span class="hover-badge-btn">Open Live App ↗</span>
+            </div>
+          </div>
+          <div class="card-body-content">
+            <h3 class="card-title">Siham Furniture — Commercial Landing Page</h3>
+            <p class="card-desc">Commercial landing page built for high conversion, instant WhatsApp customer consultation funnels, fast load times, and SEO.</p>
+            <div class="card-tags-list">
+              <span class="tag-chip violet">Landing Page</span>
+              <span class="tag-chip">Conversion Rate</span>
+              <span class="tag-chip">Mobile First</span>
+              <span class="tag-chip">Vercel</span>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://siham-furniture-landing.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-preview">
+                <span>Open Live App</span>
+                <span>↗</span>
+              </a>
             </div>
           </div>
         </div>
@@ -2454,12 +2574,34 @@
       }
     };
 
+        // Live Demo URLs
+    const projectUrls = {
+      lecturebuddy: 'https://lecture-ai-planner.vercel.app',
+      classroom: 'https://classroom-app-beta.vercel.app',
+      bookvault: 'https://book-vault-sepia-eta.vercel.app',
+      currency: 'https://currency-converter-amber-beta.vercel.app',
+      zoom: 'https://youssefsaberahmed14-ui-zoom-clone.vercel.app',
+      weather: 'https://weather-website-gray-ten.vercel.app',
+      study: 'https://study-ashen-six.vercel.app',
+      siham: 'https://siham-furniture-landing.vercel.app'
+    };
+
     function openDemoModal(key) {
-      const demo = appDemos[key];
-      if (!demo) return;
-      modalUrlDisplay.textContent = demo.url;
-      modalContentArea.innerHTML = demo.html;
-      demoModal.classList.add('active');
+      const url = projectUrls[key] || 'https://lecture-ai-planner.vercel.app';
+      const urlDisplay = document.getElementById('modalUrlDisplay');
+      const contentArea = document.getElementById('modalContentArea');
+      
+      urlDisplay.innerHTML = `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline;">${url}</a> <span style="margin-left:8px; font-weight:600; color:var(--color-voltage-violet);">[Open Full ↗]</span>`;
+      
+      contentArea.style.padding = '0';
+      contentArea.innerHTML = `
+        <div style="height:100%; display:flex; flex-direction:column;">
+          <iframe src="${url}" style="width:100%; flex:1; border:none; min-height:500px;" allow="camera; microphone; fullscreen; clipboard-read; clipboard-write;" loading="lazy"></iframe>
+        </div>
+      `;
+
+      const modal = document.getElementById('demoModal');
+      modal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
 
