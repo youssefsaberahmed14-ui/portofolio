@@ -3,171 +3,272 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Youssef Saber Ahmed — Full-Stack & Frontend Software Developer</title>
-  <meta name="description" content="Portfolio of Youssef Saber Ahmed — Full-Stack Developer crafting high-performance web systems, PWAs, and digital experiences." />
+  <title>Youssef Saber Ahmed — Full-Stack & AI Software Developer</title>
+  <meta name="description" content="Portfolio of Youssef Saber Ahmed — Full-Stack & AI Developer building scalable web applications, Gemini AI integrations, and responsive PWAs." />
   
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Bricolage Grotesque (Display) + Inter (UI & Body) + Tajawal (Arabic) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* CSS RESET & VARIABLES */
+    /* ==========================================================================
+       SUPAHUB DESIGN SYSTEM TOKENS
+       ========================================================================== */
+    :root {
+      /* Colors */
+      --color-voltage-violet: #862fe7;
+      --color-ultra-violet: #5f259e;
+      --color-lavender-mist: #ad6df4;
+      --color-orchid-wash: #bd8ff0;
+      --color-magenta-spark: #ff5fe4;
+      --color-hot-pink-ray: #e22ba4;
+      --color-amber-pulse: #dc5f05;
+      --color-midnight-ink: #111827;
+      --color-graphite: #3f4654;
+      --color-slate: #6b7589;
+      --color-pure-white: #ffffff;
+      --color-fog: #f1f5f9;
+      --color-mist: #d8e0ea;
+      --color-mint-wash: #d6fcf4;
+      --color-lavender-field: #ebdafd;
+      --color-gold-star: #f59e0b;
+
+      /* Typography Families */
+      --font-display: 'Bricolage Grotesque', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-arabic: 'Tajawal', sans-serif;
+
+      /* Radii */
+      --radius-nav: 12px;
+      --radius-buttons: 12px;
+      --radius-images: 16px;
+      --radius-cards: 24px;
+      --radius-featured-card: 40px;
+      --radius-pills: 9999px;
+
+      /* Shadows */
+      --shadow-subtle: rgba(11, 61, 121, 0.16) 0px 0px 0px 1px inset;
+      --shadow-card-soft: 0 20px 40px rgba(134, 47, 231, 0.08);
+      --shadow-float-mockup: 0 25px 60px rgba(17, 24, 39, 0.09);
+
+      /* Layout */
+      --page-max-width: 1200px;
+      --section-gap: 80px;
+    }
+
+    /* CSS Reset */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    :root {
-      /* Brand Color Palette Inspired by Reference Image */
-      --forest-dark: #143522;
-      --forest-base: #1b3d29;
-      --forest-card: #1f452f;
-      --forest-card-border: rgba(255, 255, 255, 0.12);
-      
-      --amber: #e5a93c;
-      --amber-hover: #d99a2b;
-      --amber-light: #fef8ee;
-      --amber-glow: rgba(229, 169, 60, 0.35);
-
-      --bg-light: #ffffff;
-      --bg-cream: #fbfbfa;
-      --bg-alt: #f6f7f5;
-      
-      --text-main: #18221b;
-      --text-muted: #5e6d62;
-      --text-dim: #8b998f;
-      
-      --border-light: #e5e9e2;
-      --input-bg: #f4f5f7;
-
-      --font-body: 'Plus Jakarta Sans', sans-serif;
-      --font-italic: 'Playfair Display', serif;
-      --font-mono: 'JetBrains Mono', monospace;
-      --font-arabic: 'Tajawal', sans-serif;
-    }
-
     body {
-      background-color: var(--bg-cream);
-      color: var(--text-main);
+      background-color: var(--color-pure-white);
+      color: var(--color-midnight-ink);
       font-family: var(--font-body);
-      line-height: 1.6;
+      font-size: 16px;
+      line-height: 1.75;
       overflow-x: hidden;
       min-height: 100vh;
-      position: relative;
+      -webkit-font-smoothing: antialiased;
     }
 
     ::selection {
-      background: var(--amber);
-      color: #000;
+      background: var(--color-lavender-field);
+      color: var(--color-ultra-violet);
     }
 
-    /* GLOBAL TYPOGRAPHY ACCENTS */
-    .section-label {
-      display: inline-block;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--amber);
-      text-transform: capitalize;
-      letter-spacing: 0.03em;
-      margin-bottom: 0.75rem;
-    }
-
-    .section-title {
-      font-size: clamp(2.1rem, 3.8vw, 3.2rem);
-      font-weight: 800;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
+    a {
       color: inherit;
-    }
-
-    .accent-italic {
-      font-family: var(--font-italic);
-      font-style: italic;
-      font-weight: 700;
-      color: var(--amber);
+      text-decoration: none;
     }
 
     /* CONTAINER */
     .container {
-      max-width: 1200px;
+      max-width: var(--page-max-width);
       margin: 0 auto;
       padding: 0 1.5rem;
+      position: relative;
     }
 
-    /* PILL BUTTONS WITH ARROW (Signature Reference Style) */
-    .btn-pill {
+    /* TYPOGRAPHY HELPERS */
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-voltage-violet);
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow.dark {
+      color: var(--color-midnight-ink);
+    }
+
+    .display-headline {
+      font-family: var(--font-display);
+      font-size: clamp(38px, 5.2vw, 56px);
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      color: var(--color-midnight-ink);
+    }
+
+    .section-headline {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.8vw, 36px);
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      color: var(--color-midnight-ink);
+    }
+
+    .sub-copy {
+      font-family: var(--font-body);
+      font-size: 18px;
+      color: var(--color-slate);
+      line-height: 1.65;
+    }
+
+    /* BUTTONS */
+    .btn-primary {
       display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
-      background: #111827;
-      color: #ffffff;
-      padding: 0.55rem 0.6rem 0.55rem 1.4rem;
-      border-radius: 9999px;
-      font-size: 0.9rem;
+      justify-content: center;
+      gap: 8px;
+      background: var(--color-voltage-violet);
+      color: var(--color-pure-white);
+      border-radius: var(--radius-buttons);
+      padding: 16px 24px;
+      font-family: var(--font-body);
+      font-size: 16px;
       font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
       border: none;
-      transition: all 0.25s ease;
+      cursor: pointer;
+      box-shadow: var(--shadow-subtle);
+      transition: all 0.2s ease;
       white-space: nowrap;
     }
 
-    .btn-pill .btn-circle-arrow {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--amber);
-      color: #111827;
-      display: flex;
+    .btn-primary:hover {
+      background: var(--color-ultra-violet);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(134, 47, 231, 0.25);
+    }
+
+    .btn-dark {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.9rem;
-      font-weight: 800;
-      transition: transform 0.25s ease;
+      gap: 8px;
+      background: var(--color-midnight-ink);
+      color: var(--color-pure-white);
+      border-radius: var(--radius-buttons);
+      padding: 16px 24px;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
     }
 
-    .btn-pill:hover {
+    .btn-dark:hover {
       background: #000000;
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 25px rgba(17, 24, 39, 0.2);
     }
 
-    .btn-pill:hover .btn-circle-arrow {
-      transform: translateX(3px);
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--color-midnight-ink);
+      border: 1px solid var(--color-midnight-ink);
+      border-radius: var(--radius-buttons);
+      padding: 16px 24px;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
     }
 
-    /* Light variant */
-    .btn-pill-amber {
-      background: var(--amber);
-      color: #18221b;
+    .btn-ghost:hover {
+      background: var(--color-fog);
+      transform: translateY(-2px);
     }
 
-    .btn-pill-amber .btn-circle-arrow {
-      background: #18221b;
-      color: #ffffff;
+    .btn-nav-compact {
+      background: var(--color-voltage-violet);
+      color: var(--color-pure-white);
+      border-radius: var(--radius-buttons);
+      padding: 10px 20px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      box-shadow: var(--shadow-subtle);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .btn-pill-amber:hover {
-      background: var(--amber-hover);
+    .btn-nav-compact:hover {
+      background: var(--color-ultra-violet);
     }
 
-    /* NAVIGATION BAR */
+    /* DECORATIVE GRADIENT ORBS (Supahub Signature Atmosphere) */
+    .orb-backdrop {
+      position: absolute;
+      border-radius: var(--radius-pills);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .orb-violet {
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(134, 47, 231, 0.32) 0%, rgba(173, 109, 244, 0.15) 45%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    .orb-pink {
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(255, 95, 228, 0.26) 0%, rgba(226, 43, 164, 0.12) 50%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    .orb-amber {
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(220, 95, 5, 0.22) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    /* NAVIGATION */
     nav.navbar {
       position: sticky;
       top: 0;
       left: 0;
       right: 0;
-      background: rgba(251, 251, 250, 0.95);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-light);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--color-mist);
       z-index: 1000;
-      padding: 1.1rem 0;
-      transition: all 0.3s ease;
+      padding: 16px 0;
     }
 
     .nav-inner {
@@ -177,146 +278,228 @@
     }
 
     .nav-brand {
-      font-size: 1.45rem;
-      font-weight: 800;
-      text-decoration: none;
-      color: var(--text-main);
       display: flex;
       align-items: center;
-      letter-spacing: -0.03em;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--color-midnight-ink);
     }
 
-    .nav-brand span {
-      color: var(--amber);
+    .sparkle-icon {
+      color: var(--color-voltage-violet);
+      font-size: 20px;
     }
 
-    .nav-links {
+    .nav-menu {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 24px;
       list-style: none;
     }
 
     .nav-link {
-      text-decoration: none;
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      font-weight: 600;
-      transition: color 0.2s ease;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--color-midnight-ink);
+      padding: 6px 8px;
+      transition: color 0.15s ease;
     }
 
-    .nav-link:hover {
-      color: var(--text-main);
+    .nav-link:hover, .nav-link.active {
+      color: var(--color-voltage-violet);
     }
 
-    .mobile-menu-btn {
+    .mobile-toggle {
       display: none;
       background: transparent;
       border: none;
-      font-size: 1.6rem;
-      color: var(--text-main);
+      font-size: 24px;
+      color: var(--color-midnight-ink);
       cursor: pointer;
     }
 
     @media (max-width: 860px) {
-      .mobile-menu-btn { display: block; }
-      .nav-links {
+      .mobile-toggle { display: block; }
+      .nav-menu {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: #ffffff;
-        border-bottom: 1px solid var(--border-light);
-        padding: 1.5rem;
+        background: var(--color-pure-white);
+        border-bottom: 1px solid var(--color-mist);
+        padding: 24px;
         flex-direction: column;
-        gap: 1.25rem;
-        box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+        gap: 16px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.06);
       }
-      .nav-links.open { display: flex; }
-      .nav-action-btn { display: none; }
+      .nav-menu.open { display: flex; }
+      .nav-right-cta { display: none; }
     }
 
     /* HERO SECTION */
     section.hero-section {
-      padding: 5.5rem 0 4.5rem;
-      background: var(--bg-cream);
+      padding: 80px 0 64px;
+      background: var(--color-pure-white);
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero-grid {
+    .hero-layout {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 4rem;
+      gap: 48px;
       align-items: center;
+      position: relative;
+      z-index: 2;
     }
 
-    .hero-availability-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: #edf5ef;
-      border: 1px solid #c8decb;
-      padding: 0.4rem 1rem;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--forest-base);
-      margin-bottom: 1.5rem;
+    .hero-content {
+      max-width: 680px;
     }
 
-    .pulse-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #10b981;
-      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+    .hero-content .display-headline {
+      margin-bottom: 24px;
     }
 
-    h1.hero-headline {
-      font-size: clamp(2.5rem, 5vw, 4.2rem);
-      font-weight: 800;
-      line-height: 1.12;
-      letter-spacing: -0.03em;
-      color: var(--text-main);
-      margin-bottom: 1.5rem;
+    .hero-content .sub-copy {
+      margin-bottom: 32px;
+      font-size: 18px;
     }
 
-    .hero-description {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 2.25rem;
-      max-width: 580px;
-    }
-
-    .hero-cta-row {
+    .hero-buttons-row {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 1.25rem;
-      margin-bottom: 3rem;
+      gap: 16px;
+      margin-bottom: 40px;
     }
 
-    /* HERO PROFILE VISUAL */
-    .hero-visual-wrap {
+    /* AVATAR STACK & SOCIAL PROOF */
+    .social-proof-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .avatar-stack {
+      display: flex;
+      align-items: center;
+    }
+
+    .avatar-item {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-pills);
+      border: 2px solid var(--color-pure-white);
+      margin-right: -12px;
+      background: var(--color-fog);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--color-graphite);
+      overflow: hidden;
+    }
+
+    .avatar-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .social-proof-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .stars-row {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      color: var(--color-gold-star);
+      font-size: 14px;
+    }
+
+    .proof-label {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-midnight-ink);
+    }
+
+    /* HERO FLOATING PRODUCT PREVIEW CARD */
+    .hero-visual-card {
       position: relative;
       display: flex;
       justify-content: center;
     }
 
-    .hero-image-card {
+    .floating-mockup-window {
       width: 100%;
-      max-width: 380px;
-      aspect-ratio: 1/1.18;
-      border-radius: 28px;
+      max-width: 400px;
+      background: var(--color-pure-white);
+      border-radius: var(--radius-images);
+      border: 1px solid var(--color-mist);
+      box-shadow: var(--shadow-float-mockup);
       overflow: hidden;
-      border: 1px solid var(--border-light);
-      background: #fff;
-      box-shadow: 0 25px 60px rgba(22, 56, 38, 0.12);
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .floating-mockup-window:hover {
+      transform: translateY(-4px);
+    }
+
+    .mac-window-bar {
+      height: 40px;
+      background: #fafbfc;
+      border-bottom: 1px solid var(--color-mist);
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      gap: 8px;
+    }
+
+    .traffic-lights {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .traffic-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .traffic-red { background: #ff5f57; }
+    .traffic-amber { background: #febc20; }
+    .traffic-green { background: #28c840; }
+
+    .window-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-voltage-violet);
+      margin: 0 auto;
+    }
+
+    .mockup-inner-photo {
+      width: 100%;
+      aspect-ratio: 1/1.1;
+      overflow: hidden;
+      background: var(--color-fog);
       position: relative;
     }
 
-    .hero-image-card img {
+    .mockup-inner-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -324,622 +507,561 @@
       display: block;
     }
 
-    .hero-floating-badge {
+    .floating-chip {
       position: absolute;
-      bottom: -15px;
-      right: -15px;
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: 18px;
-      padding: 1rem 1.4rem;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      bottom: -16px;
+      right: -16px;
+      background: var(--color-pure-white);
+      border: 1px solid var(--color-mist);
+      border-radius: var(--radius-cards);
+      padding: 12px 18px;
       display: flex;
       align-items: center;
-      gap: 0.85rem;
+      gap: 12px;
+      box-shadow: 0 15px 35px rgba(17, 24, 39, 0.08);
+      z-index: 3;
     }
 
-    .badge-icon-box {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: var(--amber-light);
-      color: var(--amber);
+    .chip-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-pills);
+      background: var(--color-mint-wash);
+      color: #0c6953;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
-      border: 1px solid rgba(229, 169, 60, 0.3);
-    }
-
-    .badge-text-box h4 {
-      font-size: 0.92rem;
+      font-size: 16px;
       font-weight: 800;
-      color: var(--text-main);
     }
 
-    .badge-text-box p {
-      font-size: 0.75rem;
-      color: var(--text-muted);
+    .chip-info h5 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-midnight-ink);
+    }
+
+    .chip-info p {
+      font-size: 12px;
+      color: var(--color-slate);
     }
 
     @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 3.5rem; }
-      .hero-visual-wrap { order: -1; }
-      .hero-floating-badge { right: 10px; bottom: -10px; }
+      .hero-layout { grid-template-columns: 1fr; gap: 48px; }
+      .hero-visual-card { order: -1; }
+      .floating-chip { right: 8px; bottom: -12px; }
     }
 
-    /* SECTION 1: EDUCATION & EXPERIENCE (Top of User Image) */
-    section.experience-section {
-      padding: 5rem 0;
-      background: var(--bg-alt);
-      border-top: 1px solid var(--border-light);
-      border-bottom: 1px solid var(--border-light);
+    /* SECTION 2: LAVENDER FEATURE SECTION (Supahub Signature Band Pattern) */
+    section.lavender-feature-band {
+      background: var(--color-lavender-field);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
     }
 
-    .cards-row {
+    .lavender-split {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.5rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
     }
 
-    .exp-card {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: 18px;
-      padding: 1.85rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-      transition: all 0.25s ease;
+    .lavender-card-highlight {
+      background: var(--color-pure-white);
+      border-radius: var(--radius-cards);
+      padding: 32px;
+      box-shadow: 0 20px 40px rgba(134, 47, 231, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      position: relative;
     }
 
-    .exp-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-      border-color: #cbd5e1;
+    .mint-pill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-mint-wash);
+      color: #0c6953;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: var(--radius-pills);
+      margin-bottom: 16px;
     }
 
-    .exp-date {
-      font-size: 0.8rem;
-      font-family: var(--font-mono);
-      font-weight: 600;
-      color: var(--text-dim);
-      margin-bottom: 0.4rem;
+    .impact-number-pill {
+      background: #1f2534;
+      color: #ffffff;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: var(--radius-pills);
+      padding: 2px 10px;
     }
 
-    .exp-institution {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: var(--text-main);
-      margin-bottom: 0.35rem;
+    @media (max-width: 860px) {
+      .lavender-split { grid-template-columns: 1fr; gap: 36px; }
     }
 
-    .exp-role {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* SECTION 2: PROJECTS & WEB APPS (Browser Viewport Mockups) */
+    /* SECTION 3: PROJECTS SHOWCASE (Product Preview Cards with macOS Traffic-Lights) */
     section.projects-section {
-      padding: 6.5rem 0;
-      background: var(--bg-cream);
+      padding: 80px 0;
+      background: var(--color-pure-white);
+      position: relative;
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 56px;
     }
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 2.25rem;
-      margin-top: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+      position: relative;
+      z-index: 2;
     }
 
-    .project-card {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: 20px;
+    .product-preview-card {
+      background: var(--color-pure-white);
+      border: 1px solid var(--color-mist);
+      border-radius: var(--radius-cards);
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 30px rgba(17, 24, 39, 0.04);
+      transition: all 0.25s ease;
+      position: relative;
     }
 
-    .project-card:hover {
+    .product-preview-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 20px 45px rgba(22, 56, 38, 0.1);
-      border-color: rgba(229, 169, 60, 0.5);
+      box-shadow: 0 20px 45px rgba(134, 47, 231, 0.12);
+      border-color: var(--color-lavender-mist);
     }
 
-    /* BROWSER WINDOW MOCKUP */
-    .browser-frame {
-      width: 100%;
-      height: 250px;
-      background: #0f131a;
-      border-bottom: 1px solid var(--border-light);
+    .card-top-mac {
+      height: 38px;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--color-mist);
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      padding: 0 16px;
+      justify-content: space-between;
+    }
+
+    .mac-url-pill {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--color-slate);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 10px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .card-mockup-viewport {
+      height: 220px;
+      background: #090d16;
       position: relative;
       overflow: hidden;
       cursor: pointer;
     }
 
-    .browser-top-bar {
-      height: 38px;
-      background: #171c26;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-      display: flex;
-      align-items: center;
-      padding: 0 0.85rem;
-      gap: 0.75rem;
-      z-index: 5;
-    }
-
-    .browser-dots {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .browser-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
-    .dot-red { background: #ff5f56; }
-    .dot-yellow { background: #ffbd2e; }
-    .dot-green { background: #27c93f; }
-
-    .browser-url-bar {
-      flex: 1;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 6px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      padding: 0 0.65rem;
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: #94a3b8;
-      gap: 0.45rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .browser-url-bar span.lock {
-      color: var(--amber);
-      font-size: 0.7rem;
-    }
-
-    .browser-viewport {
-      flex: 1;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      background: #090c12;
-      transition: transform 0.4s ease;
-    }
-
-    .project-card:hover .browser-viewport {
-      transform: scale(1.02);
-    }
-
-    .browser-hover-pill {
+    .mockup-hover-layer {
       position: absolute;
       inset: 0;
-      background: rgba(18, 30, 23, 0.75);
-      backdrop-filter: blur(4px);
+      background: rgba(134, 47, 231, 0.75);
+      backdrop-filter: blur(3px);
       display: flex;
       align-items: center;
       justify-content: center;
       opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: 10;
+      transition: opacity 0.2s ease;
+      z-index: 5;
     }
 
-    .project-card:hover .browser-hover-pill {
+    .product-preview-card:hover .mockup-hover-layer {
       opacity: 1;
     }
 
-    .hover-pill-content {
-      background: var(--amber);
-      color: #18221b;
-      font-size: 0.85rem;
+    .hover-badge-btn {
+      background: var(--color-pure-white);
+      color: var(--color-midnight-ink);
+      font-size: 14px;
       font-weight: 700;
-      padding: 0.6rem 1.3rem;
-      border-radius: 9999px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      padding: 10px 20px;
+      border-radius: var(--radius-pills);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
 
-    /* MOCK APP VIEWPORT STYLES */
-    .mock-lecture-ai {
-      height: 100%;
-      padding: 0.85rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.55rem;
-      background: #090c14;
-      font-family: var(--font-arabic), sans-serif;
-      direction: rtl;
-    }
-    .ai-topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.75rem;
-      border-bottom: 1px solid rgba(139, 92, 246, 0.25);
-      padding-bottom: 0.35rem;
-    }
-    .ai-logo {
-      color: #c4b5fd;
-      font-weight: 800;
-      font-size: 0.8rem;
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-    .ai-badge {
-      background: linear-gradient(135deg, #7c3aed, #4f46e5);
-      color: #fff;
-      font-size: 0.62rem;
-      padding: 0.15rem 0.5rem;
-      border-radius: 999px;
-      font-weight: 700;
-    }
-    .ai-upload-box {
-      background: rgba(139, 92, 246, 0.1);
-      border: 1px dashed rgba(139, 92, 246, 0.45);
-      border-radius: 8px;
-      padding: 0.45rem;
-      text-align: center;
-      font-size: 0.65rem;
-      color: #ddd6fe;
-    }
-    .ai-cards-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.45rem;
-      margin-top: auto;
-    }
-    .ai-lecture-card {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 6px;
-      padding: 0.35rem 0.5rem;
-      font-size: 0.62rem;
-    }
-    .ai-time-pill {
-      color: var(--amber);
-      font-weight: 700;
-      font-size: 0.58rem;
-      font-family: var(--font-mono);
-    }
-
-    .mock-pwa-cashflow {
-      height: 100%;
-      padding: 0.85rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      background: #0b0e14;
-      font-family: var(--font-arabic), sans-serif;
-      direction: rtl;
-    }
-    .cf-topbar { display: flex; justify-content: space-between; font-size: 0.75rem; color: #94a3b8; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 0.4rem; }
-    .cf-card { background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(6, 78, 59, 0.3)); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 10px; padding: 0.75rem; }
-    .cf-bal { font-size: 1.3rem; font-weight: 800; color: #fff; font-family: var(--font-mono); }
-    .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
-    .cf-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 0.4rem 0.6rem; font-size: 0.72rem; }
-
-    .mock-books { height: 100%; padding: 0.85rem 1rem; display: flex; flex-direction: column; gap: 0.65rem; background: #0f111a; }
-    .bv-top { display: flex; justify-content: space-between; align-items: center; }
-    .bv-search { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 0.3rem 0.6rem; font-size: 0.68rem; color: #94a3b8; }
-    .bv-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.55rem; flex: 1; }
-    .bv-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 0.45rem; text-align: center; }
-    .bv-cover { width: 100%; height: 52px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem; }
-
-    .mock-django { height: 100%; padding: 0.85rem 1rem; display: flex; flex-direction: column; gap: 0.6rem; background: #14111d; }
-    .ep-nav { display: flex; justify-content: space-between; font-size: 0.75rem; color: #94a3b8; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 0.4rem; }
-    .ep-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
-    .ep-box { background: rgba(192, 132, 252, 0.08); border: 1px solid rgba(192, 132, 252, 0.2); border-radius: 8px; padding: 0.5rem 0.6rem; }
-    .ep-box span { font-size: 0.65rem; color: #94a3b8; display: block; }
-    .ep-box b { font-size: 1rem; color: #e9d5ff; font-weight: 800; }
-
-    .mock-youka { height: 100%; padding: 0.85rem 1rem; display: flex; flex-direction: column; gap: 0.55rem; background: #1a0f14; font-family: var(--font-arabic), sans-serif; direction: rtl; }
-    .yk-nav { display: flex; justify-content: space-between; font-size: 0.75rem; border-bottom: 1px solid rgba(244, 114, 182, 0.15); padding-bottom: 0.4rem; }
-    .yk-banner { background: linear-gradient(135deg, rgba(219, 39, 119, 0.2), rgba(157, 23, 77, 0.4)); border: 1px solid rgba(244, 114, 182, 0.3); border-radius: 8px; padding: 0.5rem; font-size: 0.72rem; color: #fbcfe8; }
-    .yk-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: auto; }
-    .yk-c { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 0.45rem; display: flex; align-items: center; gap: 0.45rem; }
-
-    .mock-cisco { height: 100%; padding: 0.75rem 0.85rem; display: flex; flex-direction: column; gap: 0.4rem; background: #0a0d13; font-family: var(--font-mono); }
-    .cisco-bar { display: flex; justify-content: space-between; font-size: 0.68rem; color: #58a6ff; border-bottom: 1px solid rgba(88, 166, 255, 0.2); padding-bottom: 0.3rem; }
-    .cisco-term { flex: 1; background: #05070a; border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 0.5rem; font-size: 0.65rem; color: #3fb950; display: flex; flex-direction: column; justify-content: space-around; }
-
-    .mock-sch { height: 100%; padding: 0.75rem 0.85rem; display: flex; flex-direction: column; gap: 0.45rem; background: #0f121a; font-family: var(--font-arabic), sans-serif; direction: rtl; }
-    .sch-top { display: flex; justify-content: space-between; font-size: 0.7rem; color: #93c5fd; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 0.35rem; }
-    .sch-grid { display: flex; flex-direction: column; gap: 0.35rem; flex: 1; justify-content: space-around; }
-    .sch-r { display: grid; grid-template-columns: 45px 1fr 1fr; gap: 0.35rem; align-items: center; font-size: 0.65rem; }
-    .sch-d { color: #94a3b8; font-weight: 600; text-align: center; }
-    .sch-b { border-radius: 6px; padding: 0.3rem 0.45rem; font-weight: 600; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-    .b-lec { background: rgba(239, 68, 68, 0.2); color: #fca5a5; }
-    .b-lab { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; }
-    .b-sec { background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
-
-    .project-body {
-      padding: 1.75rem;
+    .card-body-content {
+      padding: 24px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
 
-    .project-title {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--text-main);
-      margin-bottom: 0.65rem;
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-midnight-ink);
+      margin-bottom: 8px;
+      line-height: 1.3;
     }
 
-    .project-desc {
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      line-height: 1.65;
-      margin-bottom: 1.5rem;
+    .card-desc {
+      font-size: 14px;
+      color: var(--color-slate);
+      line-height: 1.6;
+      margin-bottom: 20px;
       flex-grow: 1;
     }
 
-    .project-tags {
+    .card-tags-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-bottom: 1.5rem;
+      gap: 8px;
+      margin-bottom: 20px;
     }
 
-    .project-tag {
-      font-size: 0.75rem;
-      font-family: var(--font-mono);
-      background: #f1f4f0;
-      color: var(--forest-base);
-      padding: 0.25rem 0.65rem;
+    .tag-chip {
+      font-size: 12px;
+      font-family: var(--font-body);
+      font-weight: 500;
+      background: var(--color-fog);
+      color: var(--color-graphite);
+      padding: 4px 10px;
       border-radius: 6px;
+    }
+
+    .tag-chip.violet {
+      background: #f4ecfd;
+      color: var(--color-voltage-violet);
       font-weight: 600;
     }
 
-    .project-action-btn {
+    .card-footer-action {
+      border-top: 1px solid var(--color-mist);
+      padding-top: 16px;
+      margin-top: auto;
+    }
+
+    .btn-card-preview {
       width: 100%;
-      padding: 0.75rem 1.25rem;
-      background: #18221b;
-      color: #ffffff;
+      padding: 12px;
+      background: var(--color-fog);
+      color: var(--color-midnight-ink);
       border: none;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      font-weight: 700;
+      border-radius: var(--radius-buttons);
+      font-size: 14px;
+      font-weight: 600;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
+      gap: 6px;
       transition: all 0.2s ease;
     }
 
-    .project-action-btn:hover {
-      background: var(--amber);
-      color: #18221b;
+    .btn-card-preview:hover {
+      background: var(--color-voltage-violet);
+      color: var(--color-pure-white);
     }
 
-
-    /* SECTION 4: CONTACT US (Exact Recreation of Lower White Block) */
-    section.contact-section {
-      padding: 6.5rem 0;
-      background: #ffffff;
-      border-bottom: 1px solid var(--border-light);
-    }
-
-    .contact-grid-wrap {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 4.5rem;
-      align-items: start;
-    }
-
-    .contact-info-side p.contact-desc {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      margin: 1rem 0 2.5rem;
-      line-height: 1.7;
-    }
-
-    .contact-details-list {
+    /* MINI PREVIEW INTERNAL SCREENS */
+    .mini-screen {
+      padding: 16px;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      gap: 1.4rem;
+      gap: 10px;
+      color: #fff;
+    }
+    .ms-ai { background: #0c0b1a; font-family: var(--font-arabic), sans-serif; direction: rtl; }
+    .ms-cash { background: #081210; font-family: var(--font-arabic), sans-serif; direction: rtl; }
+    .ms-books { background: #0c0e18; }
+    .ms-django { background: #120e1e; }
+    .ms-youka { background: #170d14; font-family: var(--font-arabic), sans-serif; direction: rtl; }
+    .ms-cisco { background: #060910; font-family: var(--font-mono); }
+    .ms-sch { background: #0d121c; font-family: var(--font-arabic), sans-serif; direction: rtl; }
+
+    /* SECTION 4: EDUCATION & JOURNEY (Fog Background) */
+    section.journey-section {
+      padding: 80px 0;
+      background: var(--color-fog);
     }
 
-    .contact-row-item {
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .journey-card {
+      background: var(--color-pure-white);
+      border: 1px solid var(--color-mist);
+      border-radius: var(--radius-cards);
+      padding: 32px 24px;
+      transition: transform 0.2s ease;
+    }
+
+    .journey-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .journey-period {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-voltage-violet);
+      margin-bottom: 8px;
+    }
+
+    .journey-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-midnight-ink);
+      margin-bottom: 6px;
+    }
+
+    .journey-org {
+      font-size: 14px;
+      color: var(--color-slate);
+      margin-bottom: 12px;
+    }
+
+    .journey-desc {
+      font-size: 14px;
+      color: var(--color-graphite);
+      line-height: 1.6;
+    }
+
+    /* SECTION 5: WALL OF LOVE / TESTIMONIALS (Supahub Masonry Style) */
+    section.testimonials-section {
+      padding: 80px 0;
+      background: var(--color-pure-white);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .testimonial-card {
+      background: var(--color-pure-white);
+      border: 1px solid var(--color-mist);
+      border-radius: var(--radius-cards);
+      padding: 24px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+
+    .testimonial-card:hover {
+      border-color: var(--color-lavender-mist);
+      box-shadow: var(--shadow-card-soft);
+    }
+
+    .t-close-icon {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      color: var(--color-mist);
+      font-size: 16px;
+      cursor: default;
+    }
+
+    .t-user-row {
       display: flex;
       align-items: center;
-      gap: 1.1rem;
-      text-decoration: none;
-      color: var(--text-main);
-      transition: transform 0.2s;
+      gap: 12px;
+      margin-bottom: 16px;
     }
 
-    .contact-row-item:hover {
-      transform: translateX(4px);
-    }
-
-    .contact-orange-badge {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      background: var(--amber);
-      color: #ffffff;
+    .t-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-pills);
+      background: var(--color-fog);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-      box-shadow: 0 4px 12px var(--amber-glow);
+      font-weight: 700;
+      color: var(--color-voltage-violet);
+      font-size: 16px;
     }
 
-    .contact-item-value {
-      font-size: 1.05rem;
+    .t-user-info h5 {
+      font-size: 16px;
       font-weight: 600;
-      color: var(--text-main);
+      color: var(--color-midnight-ink);
     }
 
-    /* FORM (Exact Recreation with 2-Column Inputs) */
-    .contact-form-side {
+    .t-user-info span {
+      font-size: 14px;
+      color: var(--color-slate);
+    }
+
+    .t-quote {
+      font-size: 15px;
+      color: var(--color-midnight-ink);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .t-stars-bottom {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      color: var(--color-gold-star);
+      font-size: 14px;
+    }
+
+    /* SECTION 6: CONTACT FORM & CHANNELS */
+    section.contact-section {
+      padding: 80px 0;
+      background: var(--color-fog);
+      border-top: 1px solid var(--color-mist);
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .contact-info-panel p {
+      color: var(--color-slate);
+      font-size: 16px;
+      margin: 16px 0 32px;
+      line-height: 1.7;
+    }
+
+    .contact-channels {
       display: flex;
       flex-direction: column;
-      gap: 1.25rem;
+      gap: 16px;
     }
 
-    .form-two-cols {
+    .channel-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--color-pure-white);
+      border: 1px solid var(--color-mist);
+      border-radius: 16px;
+      padding: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .channel-item:hover {
+      border-color: var(--color-voltage-violet);
+      transform: translateX(4px);
+    }
+
+    .channel-icon-pill {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-pills);
+      background: #f4ecfd;
+      color: var(--color-voltage-violet);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .channel-text h6 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-slate);
+    }
+
+    .channel-text p {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-midnight-ink);
+      margin: 0;
+    }
+
+    /* CONTACT FORM */
+    .contact-form-card {
+      background: var(--color-pure-white);
+      border: 1px solid var(--color-mist);
+      border-radius: var(--radius-cards);
+      padding: 36px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+
+    .form-grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
+      gap: 16px;
+      margin-bottom: 16px;
     }
 
-    .form-field-group {
+    .form-group {
       display: flex;
       flex-direction: column;
-      gap: 0.45rem;
+      gap: 6px;
+      margin-bottom: 16px;
     }
 
-    .form-field-label {
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--text-main);
+    .form-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-midnight-ink);
     }
 
-    .form-input-control {
-      width: 100%;
-      background: var(--input-bg);
-      border: 1px solid transparent;
+    .form-control {
+      background: #ffffff;
+      border: 1px solid var(--color-mist);
       border-radius: 10px;
-      padding: 0.85rem 1.1rem;
-      font-family: inherit;
-      font-size: 0.95rem;
-      color: var(--text-main);
+      padding: 14px 16px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--color-midnight-ink);
       outline: none;
       transition: all 0.2s ease;
     }
 
-    .form-input-control:focus {
-      background: #ffffff;
-      border-color: var(--amber);
-      box-shadow: 0 0 0 3px rgba(229, 169, 60, 0.2);
+    .form-control:focus {
+      border-color: var(--color-voltage-violet);
+      box-shadow: 0 0 0 3px rgba(134, 47, 231, 0.15);
     }
 
-    textarea.form-input-control {
+    textarea.form-control {
       min-height: 120px;
       resize: vertical;
     }
 
-    @media (max-width: 800px) {
-      .contact-grid-wrap { grid-template-columns: 1fr; gap: 3rem; }
-      .form-two-cols { grid-template-columns: 1fr; }
-    }
-
-    /* SECTION 5: CLIENT TESTIMONIALS (Bottom of Screenshot) */
-    section.testimonials-section {
-      padding: 6.5rem 0;
-      background: var(--bg-alt);
-    }
-
-    .testimonials-header {
-      text-align: center;
-      max-width: 650px;
-      margin: 0 auto 3.5rem;
-    }
-
-    .testimonials-slider {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-
-    .testimonial-card {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: 20px;
-      padding: 2.25rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-      transition: all 0.25s ease;
-    }
-
-    .testimonial-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
-    }
-
-    .testimonial-stars-row {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .star-icons {
-      color: var(--amber);
-      font-size: 1.1rem;
-      letter-spacing: 2px;
-    }
-
-    .star-score {
-      font-size: 0.9rem;
-      font-weight: 800;
-      color: var(--text-main);
-    }
-
-    .testimonial-quote {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      border-top: 1px solid var(--border-light);
-      padding-top: 1.25rem;
-    }
-
-    .author-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #edf5ef;
-      color: var(--forest-base);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1rem;
-    }
-
-    .author-info h5 {
-      font-size: 0.95rem;
-      font-weight: 800;
-      color: var(--text-main);
-    }
-
-    .author-info p {
-      font-size: 0.8rem;
-      color: var(--text-dim);
+    @media (max-width: 860px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 36px; }
+      .form-grid-2 { grid-template-columns: 1fr; }
     }
 
     /* FOOTER */
     footer.site-footer {
-      background: #143522;
-      color: #ffffff;
-      padding: 3rem 0;
+      background: var(--color-pure-white);
+      border-top: 1px solid var(--color-mist);
+      padding: 32px 0;
     }
 
     .footer-inner {
@@ -947,137 +1069,153 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 1.5rem;
-      font-size: 0.9rem;
-      color: #9bb0a2;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--color-slate);
     }
 
     .footer-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 20px;
     }
 
-    .footer-links a {
-      color: #ffffff;
-      text-decoration: none;
-      transition: color 0.2s;
+    .footer-link {
+      color: var(--color-graphite);
+      font-weight: 500;
+      transition: color 0.15s ease;
     }
 
-    .footer-links a:hover {
-      color: var(--amber);
+    .footer-link:hover {
+      color: var(--color-voltage-violet);
     }
 
-    /* LIVE BROWSER MODAL */
-    .browser-modal-backdrop {
+    /* INTERACTIVE MODAL (macOS Style Preview Window) */
+    .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(18, 30, 23, 0.85);
+      background: rgba(17, 24, 39, 0.6);
       backdrop-filter: blur(8px);
       z-index: 10000;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1.5rem;
+      padding: 20px;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.25s ease;
     }
 
-    .browser-modal-backdrop.active {
+    .modal-backdrop.active {
       opacity: 1;
       pointer-events: auto;
     }
 
-    .browser-modal-window {
+    .modal-window {
       width: 100%;
-      max-width: 950px;
-      height: 80vh;
-      background: #ffffff;
-      border-radius: 18px;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+      max-width: 960px;
+      height: 82vh;
+      background: var(--color-pure-white);
+      border-radius: var(--radius-cards);
+      border: 1px solid var(--color-mist);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      transform: scale(0.95);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: scale(0.96);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .browser-modal-backdrop.active .browser-modal-window {
+    .modal-backdrop.active .modal-window {
       transform: scale(1);
     }
 
-    .modal-chrome {
-      background: #171c26;
-      padding: 0.75rem 1.25rem;
+    .modal-top-bar {
+      height: 48px;
+      background: #fafbfc;
+      border-bottom: 1px solid var(--color-mist);
       display: flex;
       align-items: center;
-      gap: 1rem;
+      padding: 0 16px;
+      gap: 12px;
     }
 
     .modal-url-display {
       flex: 1;
-      background: rgba(255, 255, 255, 0.08);
+      background: var(--color-fog);
+      border: 1px solid var(--color-mist);
       border-radius: 8px;
-      padding: 0.35rem 0.85rem;
+      padding: 4px 12px;
       font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: #94a3b8;
+      font-size: 12px;
+      color: var(--color-slate);
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .modal-close-button {
-      background: transparent;
+    .modal-close-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: var(--radius-pills);
       border: none;
-      color: #ffffff;
-      font-size: 1.2rem;
-      cursor: pointer;
-      width: 32px;
-      height: 32px;
+      background: var(--color-fog);
+      color: var(--color-slate);
+      font-size: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.15s ease;
     }
 
-    .modal-close-button:hover {
-      background: rgba(255, 255, 255, 0.15);
+    .modal-close-btn:hover {
+      background: #fee2e2;
+      color: #ef4444;
     }
 
-    .modal-viewport-body {
+    .modal-content-area {
       flex: 1;
       overflow-y: auto;
-      background: #fbfbfa;
-      padding: 2rem;
+      padding: 32px;
+      background: var(--color-pure-white);
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- TOP NAVIGATION BAR -->
   <nav class="navbar" id="navbar">
     <div class="container">
       <div class="nav-inner">
+        
+        <!-- Logo -->
         <a href="#" class="nav-brand">
-          Youssef<span>.</span>
+          <span class="sparkle-icon">✦</span>
+          <span>Youssef</span>
         </a>
 
-        <ul class="nav-links" id="navLinks">
+        <!-- Center Links -->
+        <ul class="nav-menu" id="navMenu">
           <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#featured" class="nav-link">Featured AI</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#journey" class="nav-link">Journey</a></li>
+          <li><a href="#testimonials" class="nav-link">Wall of Love</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
 
-        <div class="nav-action-btn">
-          <a href="#contact" class="btn-pill">
+        <!-- Right CTA Button -->
+        <div class="nav-right-cta">
+          <a href="#contact" class="btn-nav-compact">
             <span>Let's Talk</span>
-            <div class="btn-circle-arrow">➔</div>
+            <span>→</span>
           </a>
         </div>
 
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
           ☰
         </button>
+
       </div>
     </div>
   </nav>
@@ -1085,744 +1223,772 @@
   <!-- HERO SECTION -->
   <section class="hero-section" id="about">
     <div class="container">
-      <div class="hero-grid">
+      
+      <!-- Atmospheric Gradient Orbs -->
+      <div class="orb-backdrop orb-violet" style="top: -60px; right: 10%;"></div>
+      <div class="orb-backdrop orb-pink" style="bottom: -80px; left: 5%;"></div>
+      <div class="orb-backdrop orb-amber" style="top: 20%; right: 45%;"></div>
+
+      <div class="hero-layout">
         
-        <div>
-          <div class="hero-availability-tag">
-            <span class="pulse-dot"></span>
-            <span>Available for Hire & Next Projects</span>
-          </div>
-
-          <h1 class="hero-headline">
-            I'm Youssef Saber,<br>
-            Crafting <span class="accent-italic">High-Performance</span> Web Systems.
+        <!-- Left: Text Stack -->
+        <div class="hero-content">
+          <span class="eyebrow">FULL-STACK & AI SOFTWARE ENGINEER</span>
+          <h1 class="display-headline">
+            Engineering scalable web apps with violet confidence.
           </h1>
-
-          <p class="hero-description">
-            Full-Stack Software Developer specializing in modern JavaScript, Python/Django architectures, Progressive Web Apps (PWAs), and scalable digital experiences.
+          <p class="sub-copy">
+            Hi, I'm <strong>Youssef Saber Ahmed</strong>. I build high-performance web systems, Gemini AI integrations, and Progressive Web Apps (PWAs) that turn complex challenges into seamless experiences.
           </p>
 
-          <div class="hero-cta-row">
-            <a href="#projects" class="btn-pill btn-pill-amber">
-              <span>Explore Projects</span>
-              <div class="btn-circle-arrow">➔</div>
+          <div class="hero-buttons-row">
+            <a href="#projects" class="btn-primary">
+              <span>✦ Explore Projects</span>
             </a>
-            <a href="#contact" class="btn-pill">
+            <a href="#contact" class="btn-ghost">
               <span>Get in Touch</span>
-              <div class="btn-circle-arrow">➔</div>
             </a>
           </div>
 
-          <div style="display:flex; align-items:center; gap:2rem; font-size:0.9rem; color:var(--text-muted); font-weight:600;">
-            <span>📍 Cairo, Egypt</span>
-            <span>•</span>
-            <span>⚡ Full-Stack & PWA</span>
-            <span>•</span>
-            <span>🚀 100% Modern Stack</span>
+          <!-- Social Proof Avatar Stack -->
+          <div class="social-proof-wrap">
+            <div class="avatar-stack">
+              <div class="avatar-item"><img src="portfolio.jpeg" alt="Youssef" /></div>
+              <div class="avatar-item" style="background:#ad6df4; color:#fff;">A</div>
+              <div class="avatar-item" style="background:#862fe7; color:#fff;">M</div>
+              <div class="avatar-item" style="background:#111827; color:#fff;">S</div>
+            </div>
+            <div class="social-proof-text">
+              <div class="stars-row">★★★★★</div>
+              <span class="proof-label">Trusted for Full-Stack & AI Systems</span>
+            </div>
           </div>
+
         </div>
 
-        <div class="hero-visual-wrap">
-          <div class="hero-image-card">
-            <img src="portfolio.jpeg" alt="Youssef Saber Ahmed" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534972195531-a756b1129f63?auto=format&fit=crop&w=800&q=80';" />
+        <!-- Right: Floating UI Mockup Card -->
+        <div class="hero-visual-card">
+          <div class="floating-mockup-window">
+            <div class="mac-window-bar">
+              <div class="traffic-lights">
+                <span class="traffic-dot traffic-red"></span>
+                <span class="traffic-dot traffic-amber"></span>
+                <span class="traffic-dot traffic-green"></span>
+              </div>
+              <span class="window-title">PORTFOLIO PORTAL</span>
+            </div>
+            <div class="mockup-inner-photo">
+              <img src="portfolio.jpeg" alt="Youssef Saber Ahmed" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534972195531-a756b1129f63?auto=format&fit=crop&w=800&q=80';" />
+            </div>
           </div>
 
-          <div class="hero-floating-badge">
-            <div class="badge-icon-box">💻</div>
-            <div class="badge-text-box">
-              <h4>Full-Stack Engineer</h4>
-              <p>Python • Django • Node • JS</p>
+          <!-- Floating Chip Badge -->
+          <div class="floating-chip">
+            <div class="chip-badge">⚡</div>
+            <div class="chip-info">
+              <h5>Full-Stack & AI</h5>
+              <p>Node • Python • PWA • React</p>
             </div>
           </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
-  <!-- SECTION 1: EDUCATION & WORK JOURNEY (Top Cards in Reference Image) -->
-  <section class="experience-section" id="experience">
+  <!-- SECTION 2: LAVENDER FEATURE SECTION (Supahub Signature Band Pattern) -->
+  <section class="lavender-feature-band" id="featured">
     <div class="container">
-      <span class="section-label">- My Journey</span>
-      <h2 class="section-title">Education & <span class="accent-italic">Work Journey</span></h2>
-
-      <div class="cards-row">
-        <!-- Card 1 -->
-        <div class="exp-card">
-          <div class="exp-date">2024 — Present</div>
-          <h3 class="exp-institution">Independent Developer</h3>
-          <p class="exp-role">Full-Stack Web Systems & Progressive Web Apps (PWAs)</p>
+      
+      <div class="lavender-split">
+        
+        <!-- Left: Feature Details -->
+        <div>
+          <span class="eyebrow dark">FLAGSHIP AI PROJECT</span>
+          <h2 class="display-headline" style="font-size: clamp(32px, 4.2vw, 48px); margin-bottom: 20px;">
+            Lecture Buddy: Your AI University Timetable.
+          </h2>
+          <p class="sub-copy" style="color: var(--color-graphite); margin-bottom: 32px;">
+            An intelligent schedule scanner built with <strong>Google Gemini AI Vision</strong>. Converts timetable screenshots directly into actionable calendars with automated <strong>Web Push reminders</strong> one hour before lectures.
+          </p>
+          <div>
+            <button class="btn-dark" onclick="openDemoModal('lecturebuddy')">
+              <span>Explore Lecture Buddy →</span>
+            </button>
+          </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="exp-card">
-          <div class="exp-date">2023 — 2024</div>
-          <h3 class="exp-institution">Frontend & API Specialist</h3>
-          <p class="exp-role">Interactive Web Applications & Modern UI Engineering</p>
+        <!-- Right: Highlighted Feature Card -->
+        <div class="lavender-card-highlight">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+            <span class="mint-pill-tag">✨ Gemini 2.5 Active</span>
+            <span class="impact-number-pill">100% PWA</span>
+          </div>
+
+          <h3 style="font-family:var(--font-display); font-size:22px; font-weight:600; margin-bottom:8px;">
+            Instant Image-to-Schedule Engine
+          </h3>
+          <p style="font-size:14px; color:var(--color-slate); line-height:1.6; margin-bottom:20px;">
+            Upload any college timetable photo. The Gemini multi-modal API parses course codes, professors, venues, and timestamps into structured JSON, deployed seamlessly on Vercel.
+          </p>
+
+          <div style="background:var(--color-fog); border-radius:12px; padding:16px; display:flex; flex-direction:column; gap:8px;">
+            <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600;">
+              <span>Database Systems (Lecture)</span>
+              <span style="color:var(--color-voltage-violet);">09:00 AM</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600;">
+              <span>Artificial Intelligence (Lab)</span>
+              <span style="color:var(--color-voltage-violet);">11:30 AM</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="exp-card">
-          <div class="exp-date">2020 — 2024</div>
-          <h3 class="exp-institution">Computer Science</h3>
-          <p class="exp-role">Software Architecture & Relational Database Engineering</p>
-        </div>
       </div>
+
     </div>
   </section>
 
-  <!-- SECTION 2: FEATURED PROJECTS & LIVE BROWSER PREVIEWS -->
+  <!-- SECTION 3: PROJECTS SHOWCASE (Product Preview Cards with macOS Traffic-Lights) -->
   <section class="projects-section" id="projects">
     <div class="container">
-      <div style="text-align: center; max-width: 650px; margin: 0 auto;">
-        <span class="section-label">- Portfolio Showcase</span>
-        <h2 class="section-title">Selected Works: <span class="accent-italic">Live Web Applications</span></h2>
-        <p style="color:var(--text-muted); margin-top:0.75rem; font-size:1.05rem;">
-          Real web platforms and applications presented inside interactive browser viewports.
+      
+      <!-- Atmospheric Orb behind product cards -->
+      <div class="orb-backdrop orb-violet" style="top: 15%; left: 30%;"></div>
+      <div class="orb-backdrop orb-pink" style="bottom: 10%; right: 15%;"></div>
+
+      <div class="section-header-center">
+        <span class="eyebrow">PRODUCT SHOWCASE</span>
+        <h2 class="section-headline">Real-world applications, engineered end-to-end.</h2>
+        <p class="sub-copy" style="font-size: 16px; margin-top: 12px;">
+          Live interactive web systems featuring browser mockups and instant modal previews.
         </p>
       </div>
 
       <div class="projects-grid">
 
-        <!-- 1. Lecture Buddy (AI Timetable & Reminder System - Latest Project) -->
-        <div class="project-card" style="border: 1.5px solid rgba(124, 58, 237, 0.4); box-shadow: 0 12px 35px rgba(124, 58, 237, 0.1);">
-          <div class="browser-frame" onclick="openDemoModal('lecturebuddy')">
-            <div class="browser-top-bar">
-              <div class="browser-dots">
-                <span class="browser-dot dot-red"></span>
-                <span class="browser-dot dot-yellow"></span>
-                <span class="browser-dot dot-green"></span>
-              </div>
-              <div class="browser-url-bar">
-                <span class="lock">🔒</span>
-                <span>https://lecture-buddy.vercel.app</span>
-              </div>
-              <span style="font-size:0.65rem; background:rgba(124, 58, 237, 0.2); color:#c4b5fd; border:1px solid rgba(124, 58, 237, 0.4); padding:0.15rem 0.55rem; border-radius:4px; font-weight:700;">✨ Gemini AI</span>
+        <!-- 1. Lecture Buddy AI -->
+        <div class="product-preview-card">
+          <div class="card-top-mac">
+            <div class="traffic-lights">
+              <span class="traffic-dot traffic-red"></span>
+              <span class="traffic-dot traffic-amber"></span>
+              <span class="traffic-dot traffic-green"></span>
             </div>
-            <div class="browser-viewport">
-              <div class="mock-lecture-ai">
-                <div class="ai-topbar">
-                  <span class="ai-logo">✨ Lecture Buddy AI</span>
-                  <span class="ai-badge">Google Gemini Vision</span>
-                </div>
-                <div class="ai-upload-box">
-                  <span>📸 اسحب صورة جدولك لتحليله تلقائياً بالذكاء الاصطناعي</span>
-                </div>
-                <div class="ai-cards-row">
-                  <div class="ai-lecture-card">
-                    <span class="ai-time-pill">⏰ 09:00 AM • قاعة 302</span>
-                    <div style="color:#fff; font-weight:700; margin-top:2px;">نظم قواعد البيانات</div>
-                    <span style="color:#34d399; font-size:0.58rem;">تذكير مفعل ✓</span>
-                  </div>
-                  <div class="ai-lecture-card">
-                    <span class="ai-time-pill">⏰ 11:30 AM • معمل CS</span>
-                    <div style="color:#fff; font-weight:700; margin-top:2px;">ذكاء اصطناعي AI</div>
-                    <span style="color:#34d399; font-size:0.58rem;">تذكير مفعل ✓</span>
-                  </div>
-                </div>
-              </div>
-              <div class="browser-hover-pill">
-                <div class="hover-pill-content">🌐 معاينة في المتصفح ➔</div>
-              </div>
+            <div class="mac-url-pill">
+              <span>🔒</span>
+              <span>lecture-buddy.vercel.app</span>
             </div>
           </div>
-          <div class="project-body">
-            <div style="margin-bottom:0.5rem;">
-              <span style="font-size:0.75rem; font-weight:800; color:#7c3aed; background:#f5f3ff; border:1px solid #ddd6fe; padding:0.25rem 0.65rem; border-radius:6px;">✨ LATEST AI PROJECT</span>
+          <div class="card-mockup-viewport" onclick="openDemoModal('lecturebuddy')">
+            <div class="mini-screen ms-ai">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:#c4b5fd; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
+                <span>✨ Lecture Buddy AI</span>
+                <span style="background:#7c3aed; padding:1px 6px; border-radius:4px;">Gemini Vision</span>
+              </div>
+              <div style="background:rgba(255,255,255,0.06); border:1px dashed #7c3aed; border-radius:6px; padding:12px; text-align:center; font-size:12px;">
+                اسحب صورة جدولك لتحليله بالذكاء الاصطناعي
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:auto;">
+                <div style="background:rgba(255,255,255,0.05); padding:6px; border-radius:4px; font-size:11px;">
+                  <b style="color:#a78bfa;">قواعد بيانات</b><br><span style="color:#34d399;">تذكير مفعل ✓</span>
+                </div>
+                <div style="background:rgba(255,255,255,0.05); padding:6px; border-radius:4px; font-size:11px;">
+                  <b style="color:#a78bfa;">ذكاء اصطناعي</b><br><span style="color:#34d399;">تذكير مفعل ✓</span>
+                </div>
+              </div>
             </div>
-            <h3 class="project-title">Lecture Buddy — AI Timetable & Reminders</h3>
-            <p class="project-desc">تطبيق ذكاء اصطناعي لتحويل صور الجداول الجامعية إلى جدول تفاعلي منظم عبر Google Gemini AI، مع إشعارات Web Push قبل المحاضرات بساعة وتخزين سحابي PWA.</p>
-            <div class="project-tags">
-              <span class="project-tag" style="background:#f5f3ff; color:#7c3aed;">Google Gemini AI</span>
-              <span class="project-tag">Node.js / Express</span>
-              <span class="project-tag">Web Push API</span>
-              <span class="project-tag">PWA & Vercel</span>
+            <div class="mockup-hover-layer">
+              <span class="hover-badge-btn">See Live Demo →</span>
             </div>
-            <button class="project-action-btn" onclick="openDemoModal('lecturebuddy')">
-              <span>Open Live Preview</span>
-              <span>↗</span>
-            </button>
+          </div>
+          <div class="card-body-content">
+            <h3 class="card-title">Lecture Buddy — AI Timetable & Reminders</h3>
+            <p class="card-desc">AI web app extracting class schedules from images using Google Gemini with background Web Push alerts before lectures.</p>
+            <div class="card-tags-list">
+              <span class="tag-chip violet">Gemini AI</span>
+              <span class="tag-chip">Node.js</span>
+              <span class="tag-chip">Web Push API</span>
+              <span class="tag-chip">PWA</span>
+            </div>
+            <div class="card-footer-action">
+              <button class="btn-card-preview" onclick="openDemoModal('lecturebuddy')">
+                <span>Open Preview</span>
+                <span>↗</span>
+              </button>
+            </div>
           </div>
         </div>
 
         <!-- 2. CashFlow PWA -->
-        <div class="project-card">
-          <div class="browser-frame" onclick="openDemoModal('cashflow')">
-            <div class="browser-top-bar">
-              <div class="browser-dots">
-                <span class="browser-dot dot-red"></span>
-                <span class="browser-dot dot-yellow"></span>
-                <span class="browser-dot dot-green"></span>
-              </div>
-              <div class="browser-url-bar">
-                <span class="lock">🔒</span>
-                <span>https://cashflow.pwa/dashboard</span>
-              </div>
+        <div class="product-preview-card">
+          <div class="card-top-mac">
+            <div class="traffic-lights">
+              <span class="traffic-dot traffic-red"></span>
+              <span class="traffic-dot traffic-amber"></span>
+              <span class="traffic-dot traffic-green"></span>
             </div>
-            <div class="browser-viewport">
-              <div class="mock-pwa-cashflow">
-                <div class="cf-topbar">
-                  <span style="color:#10b981; font-weight:700;">💵 CashFlow Tracker</span>
-                  <span>الرصيد الكلي</span>
-                </div>
-                <div class="cf-card">
-                  <span style="font-size:0.7rem; color:#a7f3d0;">إجمالي المدخرات والأموال</span>
-                  <div class="cf-bal">EGP 28,450.00</div>
-                </div>
-                <div class="cf-row">
-                  <div class="cf-box"><span>واردات</span><b style="color:#10b981;">+34,000</b></div>
-                  <div class="cf-box"><span>مصاريف</span><b style="color:#f43f5e;">-5,550</b></div>
-                </div>
-              </div>
-              <div class="browser-hover-pill">
-                <div class="hover-pill-content">🌐 معاينة في المتصفح ➔</div>
-              </div>
+            <div class="mac-url-pill">
+              <span>🔒</span>
+              <span>cashflow.pwa/dashboard</span>
             </div>
           </div>
-          <div class="project-body">
-            <h3 class="project-title">CashFlow — Expense Tracker (PWA)</h3>
-            <p class="project-desc">Progressive Web Application (PWA) with offline LocalStorage support, multi-account finances, and sleek financial dashboard.</p>
-            <div class="project-tags">
-              <span class="project-tag">JavaScript ES6</span>
-              <span class="project-tag">PWA</span>
-              <span class="project-tag">LocalStorage</span>
-            </div>
-            <button class="project-action-btn" onclick="openDemoModal('cashflow')">
-              <span>Open Live Preview</span>
-              <span>↗</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- 2. BookVault -->
-        <div class="project-card">
-          <div class="browser-frame" onclick="openDemoModal('bookvault')">
-            <div class="browser-top-bar">
-              <div class="browser-dots">
-                <span class="browser-dot dot-red"></span>
-                <span class="browser-dot dot-yellow"></span>
-                <span class="browser-dot dot-green"></span>
+          <div class="card-mockup-viewport" onclick="openDemoModal('cashflow')">
+            <div class="mini-screen ms-cash">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:#a7f3d0; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:4px;">
+                <span>💵 CashFlow Tracker</span>
+                <span>PWA Standalone</span>
               </div>
-              <div class="browser-url-bar">
-                <span class="lock">🔒</span>
-                <span>https://bookvault.io/explore</span>
+              <div style="background:linear-gradient(135deg, rgba(16,185,129,0.2), rgba(6,78,59,0.3)); border-radius:8px; padding:10px;">
+                <span style="font-size:11px; opacity:0.8;">الرصيد الكلي المتاح</span>
+                <h4 style="font-size:20px; font-weight:800; color:#fff; font-family:var(--font-mono);">EGP 28,450.00</h4>
               </div>
-            </div>
-            <div class="browser-viewport">
-              <div class="mock-books">
-                <div class="bv-top">
-                  <span style="color:#818cf8; font-weight:800; font-size:0.8rem;">📚 BookVault</span>
-                  <div class="bv-search">🔍 Search 40M+ books...</div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:auto;">
+                <div style="background:rgba(255,255,255,0.04); padding:6px; border-radius:4px; font-size:11px;">
+                  <span>واردات:</span> <b style="color:#10b981;">+34,000</b>
                 </div>
-                <div class="bv-items">
-                  <div class="bv-card">
-                    <div class="bv-cover" style="background:#4338ca;">Clean Code</div>
-                    <span style="font-size:0.6rem; color:#fff;">Robert Martin</span>
-                  </div>
-                  <div class="bv-card">
-                    <div class="bv-cover" style="background:#0284c7;">Python Pro</div>
-                    <span style="font-size:0.6rem; color:#fff;">Fluent Python</span>
-                  </div>
-                  <div class="bv-card">
-                    <div class="bv-cover" style="background:#059669;">System Design</div>
-                    <span style="font-size:0.6rem; color:#fff;">Scalability</span>
-                  </div>
+                <div style="background:rgba(255,255,255,0.04); padding:6px; border-radius:4px; font-size:11px;">
+                  <span>مصاريف:</span> <b style="color:#f43f5e;">-5,550</b>
                 </div>
               </div>
-              <div class="browser-hover-pill">
-                <div class="hover-pill-content">🌐 معاينة في المتصفح ➔</div>
-              </div>
+            </div>
+            <div class="mockup-hover-layer">
+              <span class="hover-badge-btn">See Live Demo →</span>
             </div>
           </div>
-          <div class="project-body">
-            <h3 class="project-title">BookVault — Google Books Engine</h3>
-            <p class="project-desc">Dynamic book search engine integrated with Google Books API and Express.js backend with real-time query handling.</p>
-            <div class="project-tags">
-              <span class="project-tag">Node.js</span>
-              <span class="project-tag">Express</span>
-              <span class="project-tag">Google Books API</span>
+          <div class="card-body-content">
+            <h3 class="card-title">CashFlow — Expense & Budget Tracker</h3>
+            <p class="card-desc">Progressive Web Application (PWA) with offline LocalStorage support, multi-account finances, and fluid transaction logging.</p>
+            <div class="card-tags-list">
+              <span class="tag-chip violet">PWA</span>
+              <span class="tag-chip">JavaScript ES6</span>
+              <span class="tag-chip">LocalStorage</span>
             </div>
-            <button class="project-action-btn" onclick="openDemoModal('bookvault')">
-              <span>Open Live Preview</span>
-              <span>↗</span>
-            </button>
+            <div class="card-footer-action">
+              <button class="btn-card-preview" onclick="openDemoModal('cashflow')">
+                <span>Open Preview</span>
+                <span>↗</span>
+              </button>
+            </div>
           </div>
         </div>
 
-        <!-- 3. EventPlan Pro -->
-        <div class="project-card">
-          <div class="browser-frame" onclick="openDemoModal('eventplan')">
-            <div class="browser-top-bar">
-              <div class="browser-dots">
-                <span class="browser-dot dot-red"></span>
-                <span class="browser-dot dot-yellow"></span>
-                <span class="browser-dot dot-green"></span>
-              </div>
-              <div class="browser-url-bar">
-                <span class="lock">🔒</span>
-                <span>https://eventplan-pro.app/admin</span>
-              </div>
+        <!-- 3. BookVault -->
+        <div class="product-preview-card">
+          <div class="card-top-mac">
+            <div class="traffic-lights">
+              <span class="traffic-dot traffic-red"></span>
+              <span class="traffic-dot traffic-amber"></span>
+              <span class="traffic-dot traffic-green"></span>
             </div>
-            <div class="browser-viewport">
-              <div class="mock-django">
-                <div class="ep-nav">
-                  <span style="color:#c084fc; font-weight:800;">🎟️ EventPlan Pro</span>
-                  <span>Admin</span>
-                </div>
-                <div class="ep-stats">
-                  <div class="ep-box"><span>Events</span><b>14 Active</b></div>
-                  <div class="ep-box"><span>Attendees</span><b>1,280 Total</b></div>
-                </div>
-              </div>
-              <div class="browser-hover-pill">
-                <div class="hover-pill-content">🌐 معاينة في المتصفح ➔</div>
-              </div>
+            <div class="mac-url-pill">
+              <span>🔒</span>
+              <span>bookvault.io/explore</span>
             </div>
           </div>
-          <div class="project-body">
-            <h3 class="project-title">EventPlan Pro — Django Architecture</h3>
-            <p class="project-desc">Full-featured event planning platform with UUID security, relational database models, and scheduling logistics.</p>
-            <div class="project-tags">
-              <span class="project-tag">Python</span>
-              <span class="project-tag">Django</span>
-              <span class="project-tag">Relational DB</span>
-            </div>
-            <button class="project-action-btn" onclick="openDemoModal('eventplan')">
-              <span>Open Live Preview</span>
-              <span>↗</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- 4. Youka_Flory -->
-        <div class="project-card">
-          <div class="browser-frame" onclick="openDemoModal('youka')">
-            <div class="browser-top-bar">
-              <div class="browser-dots">
-                <span class="browser-dot dot-red"></span>
-                <span class="browser-dot dot-yellow"></span>
-                <span class="browser-dot dot-green"></span>
+          <div class="card-mockup-viewport" onclick="openDemoModal('bookvault')">
+            <div class="mini-screen ms-books">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:#818cf8;">
+                <b>📚 BookVault</b>
+                <span>Express API</span>
               </div>
-              <div class="browser-url-bar">
-                <span class="lock">🔒</span>
-                <span>https://youka-flory.store/shop</span>
+              <div style="background:rgba(255,255,255,0.08); border-radius:4px; padding:4px 8px; font-size:11px; color:#94a3b8;">
+                🔍 Search 40M+ titles...
+              </div>
+              <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; margin-top:auto;">
+                <div style="background:#4338ca; border-radius:4px; padding:8px; text-align:center; font-size:10px; font-weight:700;">Clean Code</div>
+                <div style="background:#0284c7; border-radius:4px; padding:8px; text-align:center; font-size:10px; font-weight:700;">Python Pro</div>
+                <div style="background:#059669; border-radius:4px; padding:8px; text-align:center; font-size:10px; font-weight:700;">System Design</div>
               </div>
             </div>
-            <div class="browser-viewport">
-              <div class="mock-youka">
-                <div class="yk-nav">
-                  <span style="color:#f472b6; font-weight:800;">🌸 Youka_Flory</span>
-                  <span>🛍️ سلة (2)</span>
-                </div>
-                <div class="yk-banner">بوكيهات ورد طبيعي فاخرة وهدايا راقية</div>
-                <div class="yk-row">
-                  <div class="yk-c"><span>🌹</span><div><h5 style="color:#fff; font-size:0.65rem;">جوري أحمر</h5><span style="color:#f472b6; font-size:0.6rem;">EGP 480</span></div></div>
-                  <div class="yk-c"><span>🌷</span><div><h5 style="color:#fff; font-size:0.65rem;">توليب هولندي</h5><span style="color:#f472b6; font-size:0.6rem;">EGP 590</span></div></div>
-                </div>
-              </div>
-              <div class="browser-hover-pill">
-                <div class="hover-pill-content">🌐 معاينة في المتصفح ➔</div>
-              </div>
+            <div class="mockup-hover-layer">
+              <span class="hover-badge-btn">See Live Demo →</span>
             </div>
           </div>
-          <div class="project-body">
-            <h3 class="project-title">Youka_Flory — Floral Boutique</h3>
-            <p class="project-desc">Boutique e-commerce store with interactive cart management, express backend APIs, and elegant aesthetic.</p>
-            <div class="project-tags">
-              <span class="project-tag">Express.js</span>
-              <span class="project-tag">Node.js</span>
-              <span class="project-tag">E-Commerce</span>
+          <div class="card-body-content">
+            <h3 class="card-title">BookVault — Google Books Search Platform</h3>
+            <p class="card-desc">Book discovery engine integrated with Google Books API and Express backend with real-time query parsing and cover modals.</p>
+            <div class="card-tags-list">
+              <span class="tag-chip violet">Express.js</span>
+              <span class="tag-chip">Node.js</span>
+              <span class="tag-chip">Google API</span>
             </div>
-            <button class="project-action-btn" onclick="openDemoModal('youka')">
-              <span>Open Live Preview</span>
-              <span>↗</span>
-            </button>
+            <div class="card-footer-action">
+              <button class="btn-card-preview" onclick="openDemoModal('bookvault')">
+                <span>Open Preview</span>
+                <span>↗</span>
+              </button>
+            </div>
           </div>
         </div>
 
-        <!-- 5. Cisco Lab Simulator -->
-        <div class="project-card">
-          <div class="browser-frame" onclick="openDemoModal('cisco')">
-            <div class="browser-top-bar">
-              <div class="browser-dots">
-                <span class="browser-dot dot-red"></span>
-                <span class="browser-dot dot-yellow"></span>
-                <span class="browser-dot dot-green"></span>
-              </div>
-              <div class="browser-url-bar">
-                <span class="lock">🔒</span>
-                <span>https://cisco-lab.dev/simulator</span>
-              </div>
+        <!-- 4. EventPlan Pro -->
+        <div class="product-preview-card">
+          <div class="card-top-mac">
+            <div class="traffic-lights">
+              <span class="traffic-dot traffic-red"></span>
+              <span class="traffic-dot traffic-amber"></span>
+              <span class="traffic-dot traffic-green"></span>
             </div>
-            <div class="browser-viewport">
-              <div class="mock-cisco">
-                <div class="cisco-bar"><span>📟 Packet Tracer Lab</span><span style="color:#3fb950">Connected</span></div>
-                <div class="cisco-term">
-                  <div>Router# configure terminal</div>
-                  <div>Router(config)# interface Gi0/0</div>
-                  <div style="color:#39d353;">✓ GigabitEthernet0/0 is UP</div>
-                </div>
-              </div>
-              <div class="browser-hover-pill">
-                <div class="hover-pill-content">🌐 معاينة في المتصفح ➔</div>
-              </div>
+            <div class="mac-url-pill">
+              <span>🔒</span>
+              <span>eventplan-pro.app/admin</span>
             </div>
           </div>
-          <div class="project-body">
-            <h3 class="project-title">Cisco Network CLI Simulator</h3>
-            <p class="project-desc">Interactive networking terminal simulator replicating Cisco IOS commands and router interface diagnostic tests.</p>
-            <div class="project-tags">
-              <span class="project-tag">HTML5 Terminal</span>
-              <span class="project-tag">Networking CLI</span>
-              <span class="project-tag">Simulator</span>
+          <div class="card-mockup-viewport" onclick="openDemoModal('eventplan')">
+            <div class="mini-screen ms-django">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:#c084fc;">
+                <b>🎟️ EventPlan Pro</b>
+                <span>Django SaaS</span>
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:8px;">
+                <div style="background:rgba(255,255,255,0.06); padding:8px; border-radius:6px; font-size:11px;">
+                  <span>Active Events</span><br><b style="color:#c084fc; font-size:14px;">14 Events</b>
+                </div>
+                <div style="background:rgba(255,255,255,0.06); padding:8px; border-radius:6px; font-size:11px;">
+                  <span>Bookings</span><br><b style="color:#38bdf8; font-size:14px;">1,280 Guests</b>
+                </div>
+              </div>
             </div>
-            <button class="project-action-btn" onclick="openDemoModal('cisco')">
-              <span>Open Live Preview</span>
-              <span>↗</span>
-            </button>
+            <div class="mockup-hover-layer">
+              <span class="hover-badge-btn">See Live Demo →</span>
+            </div>
+          </div>
+          <div class="card-body-content">
+            <h3 class="card-title">EventPlan Pro — Django Architecture</h3>
+            <p class="card-desc">Full-featured event planning platform with UUID security, relational schedule models, and database management.</p>
+            <div class="card-tags-list">
+              <span class="tag-chip violet">Python</span>
+              <span class="tag-chip">Django</span>
+              <span class="tag-chip">Relational DB</span>
+            </div>
+            <div class="card-footer-action">
+              <button class="btn-card-preview" onclick="openDemoModal('eventplan')">
+                <span>Open Preview</span>
+                <span>↗</span>
+              </button>
+            </div>
           </div>
         </div>
 
-        <!-- 6. Smart Schedule -->
-        <div class="project-card">
-          <div class="browser-frame" onclick="openDemoModal('schedule')">
-            <div class="browser-top-bar">
-              <div class="browser-dots">
-                <span class="browser-dot dot-red"></span>
-                <span class="browser-dot dot-yellow"></span>
-                <span class="browser-dot dot-green"></span>
-              </div>
-              <div class="browser-url-bar">
-                <span class="lock">🔒</span>
-                <span>https://schedule-smart.edu/timetable</span>
-              </div>
+        <!-- 5. Youka_Flory -->
+        <div class="product-preview-card">
+          <div class="card-top-mac">
+            <div class="traffic-lights">
+              <span class="traffic-dot traffic-red"></span>
+              <span class="traffic-dot traffic-amber"></span>
+              <span class="traffic-dot traffic-green"></span>
             </div>
-            <div class="browser-viewport">
-              <div class="mock-sch">
-                <div class="sch-top"><span>📅 جدول المحاضرات</span><span>🌙 ليلي</span></div>
-                <div class="sch-grid">
-                  <div class="sch-r"><div class="sch-d">الأحد</div><div class="sch-b b-lec">Software Eng</div><div class="sch-b b-lab">Database Lab</div></div>
-                  <div class="sch-r"><div class="sch-d">الإثنين</div><div class="sch-b b-sec">Web Tech</div><div class="sch-b b-lec">Algorithms</div></div>
-                </div>
-              </div>
-              <div class="browser-hover-pill">
-                <div class="hover-pill-content">🌐 معاينة في المتصفح ➔</div>
-              </div>
+            <div class="mac-url-pill">
+              <span>🔒</span>
+              <span>youka-flory.store/shop</span>
             </div>
           </div>
-          <div class="project-body">
-            <h3 class="project-title">Smart College Schedule System</h3>
-            <p class="project-desc">Responsive timetable architecture with color-coded lecture/lab badges and mobile-friendly data grids.</p>
-            <div class="project-tags">
-              <span class="project-tag">CSS Grid</span>
-              <span class="project-tag">Responsive UI</span>
-              <span class="project-tag">Data Table</span>
+          <div class="card-mockup-viewport" onclick="openDemoModal('youka')">
+            <div class="mini-screen ms-youka">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:#f472b6;">
+                <span>🌸 Youka_Flory</span>
+                <span>🛍️ سلة (2)</span>
+              </div>
+              <div style="background:rgba(219,39,119,0.2); border-radius:6px; padding:6px; font-size:11px; color:#fbcfe8;">
+                بوكيهات ورد طبيعي وتنسيقات هدايا فاخرة
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:auto;">
+                <div style="background:rgba(255,255,255,0.05); padding:6px; border-radius:4px; font-size:11px;">🌹 جوري ملكي</div>
+                <div style="background:rgba(255,255,255,0.05); padding:6px; border-radius:4px; font-size:11px;">🌷 توليب هولندي</div>
+              </div>
             </div>
-            <button class="project-action-btn" onclick="openDemoModal('schedule')">
-              <span>Open Live Preview</span>
-              <span>↗</span>
-            </button>
+            <div class="mockup-hover-layer">
+              <span class="hover-badge-btn">See Live Demo →</span>
+            </div>
+          </div>
+          <div class="card-body-content">
+            <h3 class="card-title">Youka_Flory — Floral Boutique Store</h3>
+            <p class="card-desc">Boutique e-commerce store with cart interactions, Express.js backend APIs, and modern responsive visual design.</p>
+            <div class="card-tags-list">
+              <span class="tag-chip violet">E-Commerce</span>
+              <span class="tag-chip">Node.js</span>
+              <span class="tag-chip">CORS API</span>
+            </div>
+            <div class="card-footer-action">
+              <button class="btn-card-preview" onclick="openDemoModal('youka')">
+                <span>Open Preview</span>
+                <span>↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Cisco Simulator -->
+        <div class="product-preview-card">
+          <div class="card-top-mac">
+            <div class="traffic-lights">
+              <span class="traffic-dot traffic-red"></span>
+              <span class="traffic-dot traffic-amber"></span>
+              <span class="traffic-dot traffic-green"></span>
+            </div>
+            <div class="mac-url-pill">
+              <span>🔒</span>
+              <span>cisco-lab.dev/simulator</span>
+            </div>
+          </div>
+          <div class="card-mockup-viewport" onclick="openDemoModal('cisco')">
+            <div class="mini-screen ms-cisco">
+              <div style="display:flex; justify-content:space-between; font-size:11px; color:#58a6ff;">
+                <span>📟 Packet Tracer Lab</span>
+                <span style="color:#3fb950;">● Connected</span>
+              </div>
+              <div style="background:#000; border-radius:4px; padding:8px; font-size:10px; color:#3fb950; line-height:1.5;">
+                Router# configure terminal<br>
+                Router(config)# interface Gi0/0<br>
+                <span style="color:#58a6ff;">%LINK-5-CHANGED: Gi0/0 state UP</span>
+              </div>
+            </div>
+            <div class="mockup-hover-layer">
+              <span class="hover-badge-btn">See Live Demo →</span>
+            </div>
+          </div>
+          <div class="card-body-content">
+            <h3 class="card-title">Interactive Cisco Network Terminal</h3>
+            <p class="card-desc">Interactive terminal simulator replicating Cisco IOS CLI syntax and router diagnostics with real-time feedback.</p>
+            <div class="card-tags-list">
+              <span class="tag-chip violet">CLI Terminal</span>
+              <span class="tag-chip">Simulator</span>
+              <span class="tag-chip">Networking</span>
+            </div>
+            <div class="card-footer-action">
+              <button class="btn-card-preview" onclick="openDemoModal('cisco')">
+                <span>Open Preview</span>
+                <span>↗</span>
+              </button>
+            </div>
           </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
+  <!-- SECTION 4: EDUCATION & JOURNEY (Fog Background) -->
+  <section class="journey-section" id="journey">
+    <div class="container">
+      
+      <span class="eyebrow">CAREER & EDUCATION</span>
+      <h2 class="section-headline">Experience & Learning Journey</h2>
 
-  <!-- SECTION 4: CONTACT US (Exact Recreation of Lower White Block) -->
+      <div class="journey-grid">
+        
+        <div class="journey-card">
+          <div class="journey-period">2024 — PRESENT</div>
+          <h3 class="journey-title">Independent Full-Stack Developer</h3>
+          <div class="journey-org">Remote · Cairo, Egypt</div>
+          <p class="journey-desc">
+            Architecting modern web applications, Gemini AI-powered workflows, and Progressive Web Apps (PWAs) with Node.js, Python, and modern JavaScript.
+          </p>
+        </div>
+
+        <div class="journey-card">
+          <div class="journey-period">2023 — 2024</div>
+          <h3 class="journey-title">Frontend & API Specialist</h3>
+          <div class="journey-org">Project Accelerators</div>
+          <p class="journey-desc">
+            Engineered multiple responsive production web systems, API consumers, and UI architectures focusing on performance and accessibility.
+          </p>
+        </div>
+
+        <div class="journey-card">
+          <div class="journey-period">2020 — 2024</div>
+          <h3 class="journey-title">Computer Science Foundations</h3>
+          <div class="journey-org">Higher Education & Specializations</div>
+          <p class="journey-desc">
+            Deep dive into relational database modeling, algorithms, software design patterns, and full-stack software architecture.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: WALL OF LOVE / TESTIMONIALS (Supahub Masonry Style) -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      
+      <div class="section-header-center">
+        <span class="eyebrow">WALL OF LOVE</span>
+        <h2 class="section-headline">Loved by collaborators and clients.</h2>
+        <p class="sub-copy" style="font-size: 16px; margin-top: 12px;">
+          What founders and engineering peers say about working together.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <span class="t-close-icon">✕</span>
+          <div>
+            <div class="t-user-row">
+              <div class="t-avatar">A</div>
+              <div class="t-user-info">
+                <h5>Ahmed Mansour</h5>
+                <span>@ahmed_fintech</span>
+              </div>
+            </div>
+            <p class="t-quote">
+              "Youssef built our web platform with exceptional speed and clean architecture. His attention to detail in both backend APIs and frontend responsiveness was truly impressive."
+            </p>
+          </div>
+          <div class="t-stars-bottom">★★★★★</div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <span class="t-close-icon">✕</span>
+          <div>
+            <div class="t-user-row">
+              <div class="t-avatar" style="color:var(--color-hot-pink-ray);">M</div>
+              <div class="t-user-info">
+                <h5>Michael Davies</h5>
+                <span>@mdavies_saas</span>
+              </div>
+            </div>
+            <p class="t-quote">
+              "Delivered our Django management platform ahead of schedule with flawless UUID security and database performance. Highly professional and effortless to communicate with."
+            </p>
+          </div>
+          <div class="t-stars-bottom">★★★★★</div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <span class="t-close-icon">✕</span>
+          <div>
+            <div class="t-user-row">
+              <div class="t-avatar" style="color:#0c6953;">S</div>
+              <div class="t-user-info">
+                <h5>Sara El-Sayed</h5>
+                <span>@sara_design</span>
+              </div>
+            </div>
+            <p class="t-quote">
+              "The PWA experience Youssef crafted works seamlessly on all devices and offline. The user interface feels modern, smooth, and delightfully tactile."
+            </p>
+          </div>
+          <div class="t-stars-bottom">★★★★★</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 6: CONTACT FORM & CHANNELS -->
   <section class="contact-section" id="contact">
     <div class="container">
-      <div class="contact-grid-wrap">
-
-        <!-- Left Details Column with Golden Circle Badges -->
-        <div class="contact-info-side">
-          <span class="section-label">- Contact Us</span>
-          <h2 class="section-title">Let's Talk for <span class="accent-italic">Your Next Projects</span></h2>
-          <p class="contact-desc">
-            Have an exciting idea or need an experienced developer to bring your web project to life? Let's connect and discuss how I can help.
+      
+      <div class="contact-layout">
+        
+        <!-- Left: Direct Channels -->
+        <div class="contact-info-panel">
+          <span class="eyebrow">GET IN TOUCH</span>
+          <h2 class="display-headline" style="font-size: clamp(32px, 4vw, 44px);">
+            Let's build something remarkable together.
+          </h2>
+          <p>
+            Have a project in mind, an opportunity, or need a dedicated developer for your next web platform? Reach out directly.
           </p>
 
-          <div class="contact-details-list">
-            <a href="https://wa.me/201029619067?text=Hello%20Youssef,%20I%20would%20like%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" class="contact-row-item">
-              <div class="contact-orange-badge">📞</div>
-              <span class="contact-item-value">+20 102 961 9067</span>
+          <div class="contact-channels">
+            <a href="https://wa.me/201029619067?text=Hello%20Youssef,%20I%20would%20like%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" class="channel-item">
+              <div class="channel-icon-pill">💬</div>
+              <div class="channel-text">
+                <h6>Direct WhatsApp</h6>
+                <p>+20 102 961 9067</p>
+              </div>
             </a>
 
-            <a href="mailto:youssefsaberahmed14@gmail.com" class="contact-row-item">
-              <div class="contact-orange-badge">✉️</div>
-              <span class="contact-item-value">youssefsaberahmed14@gmail.com</span>
+            <a href="mailto:youssefsaberahmed14@gmail.com" class="channel-item">
+              <div class="channel-icon-pill">✉️</div>
+              <div class="channel-text">
+                <h6>Email Address</h6>
+                <p>youssefsaberahmed14@gmail.com</p>
+              </div>
             </a>
 
-            <a href="https://www.linkedin.com/in/youssef-ahmed-552b89307" target="_blank" rel="noopener noreferrer" class="contact-row-item">
-              <div class="contact-orange-badge">in</div>
-              <span class="contact-item-value">linkedin.com/in/youssef-ahmed</span>
+            <a href="https://www.linkedin.com/in/youssef-ahmed-552b89307" target="_blank" rel="noopener noreferrer" class="channel-item">
+              <div class="channel-icon-pill">in</div>
+              <div class="channel-text">
+                <h6>LinkedIn Profile</h6>
+                <p>linkedin.com/in/youssef-ahmed</p>
+              </div>
             </a>
-
-            <div class="contact-row-item">
-              <div class="contact-orange-badge">📍</div>
-              <span class="contact-item-value">Cairo, Egypt</span>
-            </div>
           </div>
         </div>
 
-        <!-- Right Form Column with 2-Columns Layout & Submit Button -->
-        <div>
-          <form class="contact-form-side" id="projectContactForm">
-            <div class="form-two-cols">
-              <div class="form-field-group">
-                <label class="form-field-label">Your Name *</label>
-                <input type="text" id="formName" class="form-input-control" placeholder="Ex. John Doe" required />
+        <!-- Right: Modern Form Card -->
+        <div class="contact-form-card">
+          <form id="portfolioContactForm">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Your Name *</label>
+                <input type="text" id="contactName" class="form-control" placeholder="Alex Morgan" required />
               </div>
-              <div class="form-field-group">
-                <label class="form-field-label">Email *</label>
-                <input type="email" id="formEmail" class="form-input-control" placeholder="example@gmail.com" required />
+              <div class="form-group">
+                <label class="form-label">Email Address *</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="alex@company.com" required />
               </div>
             </div>
 
-            <div class="form-two-cols">
-              <div class="form-field-group">
-                <label class="form-field-label">Phone *</label>
-                <input type="tel" id="formPhone" class="form-input-control" placeholder="Enter Phone Number" required />
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Phone Number *</label>
+                <input type="tel" id="contactPhone" class="form-control" placeholder="+20 123 456 7890" required />
               </div>
-              <div class="form-field-group">
-                <label class="form-field-label">I'm Interested in *</label>
-                <select id="formInterest" class="form-input-control">
-                  <option value="Full-Stack Web App">Full-Stack Web Application</option>
-                  <option value="Frontend & PWA">Frontend & Progressive Web App (PWA)</option>
-                  <option value="Django Backend & APIs">Python / Django Backend & APIs</option>
-                  <option value="E-Commerce Store">E-Commerce Web Store</option>
+              <div class="form-group">
+                <label class="form-label">Project Type *</label>
+                <select id="contactType" class="form-control">
+                  <option value="AI Web Application">AI Web Application</option>
+                  <option value="Full-Stack Web App">Full-Stack Web App</option>
+                  <option value="Progressive Web App (PWA)">Progressive Web App (PWA)</option>
+                  <option value="Python / Django Backend">Python / Django Backend</option>
                 </select>
               </div>
             </div>
 
-            <div class="form-two-cols">
-              <div class="form-field-group">
-                <label class="form-field-label">Budget Range (USD) *</label>
-                <select id="formBudget" class="form-input-control">
-                  <option value="$1,000 - $3,000">$1,000 - $3,000</option>
-                  <option value="$3,000 - $6,000">$3,000 - $6,000</option>
-                  <option value="$6,000 - $10,000">$6,000 - $10,000</option>
-                  <option value="$10,000+">$10,000+</option>
-                </select>
-              </div>
-              <div class="form-field-group">
-                <label class="form-field-label">Country *</label>
-                <select id="formCountry" class="form-input-control">
-                  <option value="Egypt">Egypt</option>
-                  <option value="Saudi Arabia">Saudi Arabia</option>
-                  <option value="UAE">United Arab Emirates</option>
-                  <option value="United States">United States</option>
-                  <option value="Germany">Germany</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Other">Other Country</option>
-                </select>
-              </div>
+            <div class="form-group">
+              <label class="form-label">Message *</label>
+              <textarea id="contactMessage" class="form-control" placeholder="Tell me about your project, timeline, and goals..." required></textarea>
             </div>
 
-            <div class="form-field-group">
-              <label class="form-field-label">Your Message *</label>
-              <textarea id="formMessage" class="form-input-control" placeholder="Enter details about your project, timeline, and goals..." required></textarea>
-            </div>
-
-            <div>
-              <button type="submit" class="btn-pill">
-                <span>Submit</span>
-                <div class="btn-circle-arrow">➔</div>
-              </button>
-            </div>
+            <button type="submit" class="btn-primary" style="width: 100%;">
+              <span>Send Message via WhatsApp →</span>
+            </button>
           </form>
         </div>
 
       </div>
+
     </div>
   </section>
 
-  <!-- SECTION 5: CLIENT TESTIMONIALS (Bottom of Screenshot) -->
-  <section class="testimonials-section" id="testimonials">
-    <div class="container">
-      <div class="testimonials-header">
-        <span class="section-label">- Clients Testimonials</span>
-        <h2 class="section-title">The Impact of My Work: <span class="accent-italic">Client Testimonials</span></h2>
-      </div>
-
-      <div class="testimonials-slider">
-        <!-- Testimonial 1 -->
-        <div class="testimonial-card">
-          <div class="testimonial-stars-row">
-            <span class="star-icons">★★★★★</span>
-            <span class="star-score">5.0</span>
-          </div>
-          <p class="testimonial-quote">
-            "Youssef built our web app from scratch with exceptional speed and clean code. His attention to detail in both backend architecture and frontend responsiveness was truly impressive."
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">A</div>
-            <div class="author-info">
-              <h5>Ahmed Mansour</h5>
-              <p>Startup Founder, FinTech</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="testimonial-card">
-          <div class="testimonial-stars-row">
-            <span class="star-icons">★★★★★</span>
-            <span class="star-score">5.0</span>
-          </div>
-          <p class="testimonial-quote">
-            "Delivered our Django management platform ahead of schedule with flawless UUID security and database performance. Highly professional and easy to communicate with."
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">M</div>
-            <div class="author-info">
-              <h5>Michael Davies</h5>
-              <p>Product Lead, SaaS Solutions</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="testimonial-card">
-          <div class="testimonial-stars-row">
-            <span class="star-icons">★★★★★</span>
-            <span class="star-score">5.0</span>
-          </div>
-          <p class="testimonial-quote">
-            "The PWA experience Youssef crafted works seamlessly on all devices and offline. The user interface feels modern, smooth, and thoughtfully designed."
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">S</div>
-            <div class="author-info">
-              <h5>Sara El-Sayed</h5>
-              <p>Creative Director, Retail Brand</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
+  <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
         <div>
-          <span>© <span id="yearSpan"></span> <strong>Youssef Saber Ahmed</strong>. All rights reserved.</span>
+          <span>© <span id="currentYear"></span> <strong>Youssef Saber Ahmed</strong>. Built with Supahub aesthetic.</span>
         </div>
         <div class="footer-links">
-          <a href="https://www.linkedin.com/in/youssef-ahmed-552b89307" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://wa.me/201029619067" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <a href="mailto:youssefsaberahmed14@gmail.com">Email</a>
+          <a href="https://github.com/youssefsaberahmed14-ui" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/youssef-ahmed-552b89307" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+          <a href="https://wa.me/201029619067" target="_blank" rel="noopener noreferrer" class="footer-link">WhatsApp</a>
+          <a href="mailto:youssefsaberahmed14@gmail.com" class="footer-link">Email</a>
         </div>
         <div>
-          <span>Crafted with precision in Cairo, Egypt 🇪🇬</span>
+          <span>Cairo, Egypt 🇪🇬</span>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- LIVE BROWSER DEMO MODAL -->
-  <div class="browser-modal-backdrop" id="demoModal" onclick="closeDemoModal(event)">
-    <div class="browser-modal-window" onclick="event.stopPropagation()">
-      <div class="modal-chrome">
-        <div class="browser-dots">
-          <span class="browser-dot dot-red" onclick="closeDemoModalDirect()" style="cursor:pointer;"></span>
-          <span class="browser-dot dot-yellow"></span>
-          <span class="browser-dot dot-green"></span>
+  <!-- FULLSCREEN LIVE PREVIEW MODAL (macOS Style Window) -->
+  <div class="modal-backdrop" id="demoModal" onclick="closeDemoModal(event)">
+    <div class="modal-window" onclick="event.stopPropagation()">
+      <div class="modal-top-bar">
+        <div class="traffic-lights">
+          <span class="traffic-dot traffic-red" onclick="closeDemoModalDirect()" style="cursor:pointer;" title="Close"></span>
+          <span class="traffic-dot traffic-amber"></span>
+          <span class="traffic-dot traffic-green"></span>
         </div>
-        <div class="modal-url-display" id="modalUrlDisplay">
-          🔒 https://app.preview.local
+        <div class="modal-url-display">
+          <span>🔒</span>
+          <span id="modalUrlDisplay">https://app.preview.local</span>
         </div>
-        <button class="modal-close-button" onclick="closeDemoModalDirect()" title="Close">✕</button>
+        <button class="modal-close-btn" onclick="closeDemoModalDirect()" title="Close">✕</button>
       </div>
-      <div class="modal-viewport-body" id="modalViewportContent">
-        <!-- Rendered dynamically -->
+      <div class="modal-content-area" id="modalContentArea">
+        <!-- Injected via JavaScript -->
       </div>
     </div>
   </div>
 
   <script>
     // Current Year
-    document.getElementById('yearSpan').textContent = new Date().getFullYear();
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // Mobile Navbar
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navLinks = document.getElementById('navLinks');
-    mobileMenuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+    // Mobile Menu Toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    mobileToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
     });
     document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
+      link.addEventListener('click', () => navMenu.classList.remove('open'));
     });
 
-    // Form submission -> Direct WhatsApp message
-    const contactForm = document.getElementById('projectContactForm');
-    contactForm.addEventListener('submit', (e) => {
+    // Contact Form Handler -> WhatsApp
+    const form = document.getElementById('portfolioContactForm');
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('formName').value.trim();
-      const email = document.getElementById('formEmail').value.trim();
-      const phone = document.getElementById('formPhone').value.trim();
-      const interest = document.getElementById('formInterest').value;
-      const budget = document.getElementById('formBudget').value;
-      const country = document.getElementById('formCountry').value;
-      const message = document.getElementById('formMessage').value.trim();
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const phone = document.getElementById('contactPhone').value.trim();
+      const type = document.getElementById('contactType').value;
+      const message = document.getElementById('contactMessage').value.trim();
 
-      const text = `Hello Youssef!%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Interested In:* ${interest}%0A*Budget:* ${budget}%0A*Country:* ${country}%0A%0A*Message:*%0A${message}`;
+      const text = `Hello Youssef!%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Project Type:* ${type}%0A%0A*Message:*%0A${message}`;
       window.open(`https://wa.me/201029619067?text=${text}`, '_blank');
     });
 
-    // Modal Live Browser Views
+    // App Interactive Previews
     const demoModal = document.getElementById('demoModal');
     const modalUrlDisplay = document.getElementById('modalUrlDisplay');
-    const modalViewportContent = document.getElementById('modalViewportContent');
+    const modalContentArea = document.getElementById('modalContentArea');
 
     const appDemos = {
       lecturebuddy: {
         url: 'https://lecture-buddy.vercel.app',
         html: `
           <div style="font-family:'Tajawal',sans-serif; direction:rtl; max-width:850px; margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:1rem; margin-bottom:1.5rem;">
-              <div style="display:flex; align-items:center; gap:0.75rem;">
-                <span style="font-size:2rem;">✨</span>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d8e0ea; padding-bottom:16px; margin-bottom:24px;">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <span style="font-size:28px;">✨</span>
                 <div>
-                  <h2 style="font-size:1.6rem; color:#7c3aed; font-weight:800; margin-bottom:0.2rem;">Lecture Buddy | الذكاء الاصطناعي وجدولك الجامعي</h2>
-                  <p style="color:#64748b; font-size:0.9rem;">استخراج ذكي لبيانات الجدول من الصور عبر Google Gemini مع إشعارات وتنبيهات حية</p>
+                  <h2 style="font-size:24px; color:#862fe7; font-weight:800; margin-bottom:4px;">Lecture Buddy | الذكاء الاصطناعي وجدولك الجامعي</h2>
+                  <p style="color:#6b7589; font-size:14px;">استخراج ذكي لبيانات الجدول من الصور عبر Google Gemini مع إشعارات Web Push حية</p>
                 </div>
               </div>
-              <span style="background:#f5f3ff; color:#7c3aed; border:1px solid #ddd6fe; padding:0.35rem 0.9rem; border-radius:999px; font-weight:700; font-size:0.85rem;">Gemini Vision Active</span>
+              <span style="background:#ebdafd; color:#862fe7; padding:6px 14px; border-radius:9999px; font-weight:700; font-size:13px;">Gemini Vision Active</span>
             </div>
 
-            <!-- Upload Area -->
-            <div style="background:linear-gradient(135deg, rgba(124,58,237,0.06), rgba(79,70,229,0.08)); border:2px dashed #a78bfa; border-radius:16px; padding:2rem; text-align:center; margin-bottom:1.75rem;">
-              <span style="font-size:2.5rem; display:block; margin-bottom:0.5rem;">📷</span>
-              <h4 style="font-size:1.15rem; color:#4c1d95; font-weight:800; margin-bottom:0.35rem;">ارفع أو اسحب صورة جدولك الجامعي هنا</h4>
-              <p style="color:#64748b; font-size:0.88rem; margin-bottom:1rem;">يقوم محرك Gemini AI بقراءة الأعمدة والمقررات والمواعيد والقاعات تلقائياً</p>
-              <button style="background:#7c3aed; color:#fff; border:none; padding:0.6rem 1.5rem; border-radius:8px; font-weight:700; cursor:pointer;">اختيار صورة الجدول</button>
+            <!-- Upload Zone -->
+            <div style="background:linear-gradient(135deg, rgba(134,47,231,0.06), rgba(173,109,244,0.08)); border:2px dashed #ad6df4; border-radius:16px; padding:32px; text-align:center; margin-bottom:24px;">
+              <span style="font-size:36px; display:block; margin-bottom:8px;">📷</span>
+              <h4 style="font-size:18px; color:#111827; font-weight:700; margin-bottom:6px;">ارفع أو اسحب صورة جدولك الجامعي هنا</h4>
+              <p style="color:#6b7589; font-size:14px; margin-bottom:16px;">يقوم محرك Gemini AI بقراءة المواد والمواعيد والقاعات تلقائياً</p>
+              <button style="background:#862fe7; color:#fff; border:none; padding:10px 24px; border-radius:12px; font-weight:700; cursor:pointer;">اختيار صورة الجدول</button>
             </div>
 
-            <!-- Live Extracted Classes -->
-            <div style="background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:1.5rem; box-shadow:0 4px 15px rgba(0,0,0,0.02);">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-                <h4 style="font-size:1.1rem; color:#18221b; font-weight:800;">المحاضرات المستخرجة والمجدولة</h4>
-                <span style="color:#10b981; font-weight:700; font-size:0.85rem;">✓ تنبيهات Web Push مفعلة قبل ساعة</span>
-              </div>
-              <div style="display:flex; flex-direction:column; gap:0.75rem;">
-                <div style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 1rem; background:#f8fafc; border-radius:10px; border-right:4px solid #7c3aed;">
+            <!-- Classes Preview -->
+            <div style="background:#ffffff; border:1px solid #d8e0ea; border-radius:16px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.03);">
+              <h4 style="font-size:17px; color:#111827; font-weight:700; margin-bottom:16px;">المحاضرات المستخرجة والمجدولة</h4>
+              <div style="display:flex; flex-direction:column; gap:12px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:#f1f5f9; border-radius:10px; border-right:4px solid #862fe7;">
                   <div>
-                    <h5 style="font-size:1rem; color:#1e293b; margin-bottom:0.2rem;">نظم قواعد البيانات المتقدمة (Database Systems)</h5>
-                    <span style="color:#64748b; font-size:0.8rem;">الأحد • 09:00 ص إلى 11:00 ص • قاعة 302 مبنى ب</span>
+                    <h5 style="font-size:15px; color:#111827; margin-bottom:4px;">نظم قواعد البيانات المتقدمة (Database Systems)</h5>
+                    <span style="color:#6b7589; font-size:13px;">الأحد • 09:00 ص إلى 11:00 ص • قاعة 302 مبنى ب</span>
                   </div>
-                  <span style="background:#ecfdf5; color:#059669; font-weight:700; font-size:0.8rem; padding:0.3rem 0.75rem; border-radius:6px;">تذكير مفعل 🔔</span>
+                  <span style="background:#d6fcf4; color:#0c6953; font-weight:700; font-size:13px; padding:4px 12px; border-radius:9999px;">تذكير مفعل 🔔</span>
                 </div>
-
-                <div style="display:flex; justify-content:space-between; align-items:center; padding:0.85rem 1rem; background:#f8fafc; border-radius:10px; border-right:4px solid #3b82f6;">
+                <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:#f1f5f9; border-radius:10px; border-right:4px solid #ad6df4;">
                   <div>
-                    <h5 style="font-size:1rem; color:#1e293b; margin-bottom:0.2rem;">تطوير تطبيقات الويب المتقدمة (Full-Stack Engineering)</h5>
-                    <span style="color:#64748b; font-size:0.8rem;">الإثنين • 11:30 ص إلى 01:30 م • معمل البرمجيات الرئيسي</span>
+                    <h5 style="font-size:15px; color:#111827; margin-bottom:4px;">تطوير تطبيقات الويب المتقدمة (Full-Stack Engineering)</h5>
+                    <span style="color:#6b7589; font-size:13px;">الإثنين • 11:30 ص إلى 01:30 م • معمل البرمجيات</span>
                   </div>
-                  <span style="background:#ecfdf5; color:#059669; font-weight:700; font-size:0.8rem; padding:0.3rem 0.75rem; border-radius:6px;">تذكير مفعل 🔔</span>
+                  <span style="background:#d6fcf4; color:#0c6953; font-weight:700; font-size:13px; padding:4px 12px; border-radius:9999px;">تذكير مفعل 🔔</span>
                 </div>
               </div>
             </div>
@@ -1832,27 +1998,23 @@
       cashflow: {
         url: 'https://cashflow.pwa/dashboard',
         html: `
-          <div style="font-family:'Tajawal',sans-serif; direction:rtl; max-width:800px; margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:1rem; margin-bottom:1.5rem;">
-              <h2 style="font-size:1.6rem; color:#10b981; font-weight:800;">💵 CashFlow — متتبع المصاريف الذكي (PWA)</h2>
-              <span style="background:#edf5ef; color:#10b981; border:1px solid #10b981; padding:0.35rem 0.9rem; border-radius:999px; font-weight:700; font-size:0.85rem;">PWA Standalone</span>
+          <div style="font-family:'Tajawal',sans-serif; direction:rtl; max-width:850px; margin:0 auto;">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d8e0ea; padding-bottom:16px; margin-bottom:24px;">
+              <h2 style="font-size:24px; color:#10b981; font-weight:800;">💵 CashFlow — متتبع المصاريف الذكي (PWA)</h2>
+              <span style="background:#d6fcf4; color:#0c6953; padding:6px 14px; border-radius:9999px; font-weight:700; font-size:13px;">PWA Standalone</span>
             </div>
-            <div style="background:linear-gradient(135deg, #10b981, #065f46); color:#fff; border-radius:18px; padding:2rem; margin-bottom:1.5rem; box-shadow:0 15px 35px rgba(16,185,129,0.2);">
-              <span style="opacity:0.9; font-size:0.9rem;">إجمالي الرصيد المتاح لجميع الحسابات</span>
-              <h1 style="font-size:2.8rem; font-weight:800; font-family:'JetBrains Mono',monospace; margin:0.5rem 0;">EGP 28,450.00</h1>
-              <div style="display:flex; gap:1rem; margin-top:1rem;">
-                <button style="background:#fff; color:#065f46; border:none; padding:0.6rem 1.25rem; border-radius:8px; font-weight:700; cursor:pointer;">+ إضافة دخل جديد</button>
-                <button style="background:rgba(255,255,255,0.2); color:#fff; border:1px solid rgba(255,255,255,0.4); padding:0.6rem 1.25rem; border-radius:8px; font-weight:700; cursor:pointer;">- تسجيل مصروف</button>
-              </div>
+            <div style="background:linear-gradient(135deg, #10b981, #065f46); color:#fff; border-radius:24px; padding:32px; margin-bottom:24px; box-shadow:0 15px 35px rgba(16,185,129,0.2);">
+              <span style="opacity:0.9; font-size:14px;">إجمالي الرصيد المتاح لجميع الحسابات</span>
+              <h1 style="font-size:42px; font-weight:800; font-family:var(--font-mono); margin:8px 0;">EGP 28,450.00</h1>
             </div>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
-              <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:1.25rem;">
-                <span style="color:#64748b; font-size:0.85rem;">واردات الشهر</span>
-                <h3 style="color:#10b981; font-size:1.6rem; font-weight:800; margin-top:0.25rem;">+EGP 34,000</h3>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+              <div style="background:#f1f5f9; border-radius:16px; padding:20px;">
+                <span style="color:#6b7589; font-size:14px;">واردات الشهر</span>
+                <h3 style="color:#10b981; font-size:24px; font-weight:800; margin-top:4px;">+EGP 34,000</h3>
               </div>
-              <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:1.25rem;">
-                <span style="color:#64748b; font-size:0.85rem;">مصاريف الشهر</span>
-                <h3 style="color:#ef4444; font-size:1.6rem; font-weight:800; margin-top:0.25rem;">-EGP 5,550</h3>
+              <div style="background:#f1f5f9; border-radius:16px; padding:20px;">
+                <span style="color:#6b7589; font-size:14px;">مصاريف الشهر</span>
+                <h3 style="color:#ef4444; font-size:24px; font-weight:800; margin-top:4px;">-EGP 5,550</h3>
               </div>
             </div>
           </div>
@@ -1862,27 +2024,24 @@
         url: 'https://bookvault.io/explore',
         html: `
           <div style="max-width:850px; margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:1rem; margin-bottom:1.5rem;">
-              <h2 style="font-size:1.6rem; color:#4338ca; font-weight:800;">📚 BookVault — Google Books Search Platform</h2>
-              <span style="background:#eef2ff; color:#4338ca; padding:0.35rem 0.9rem; border-radius:999px; font-weight:700; font-size:0.85rem;">Express & API</span>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d8e0ea; padding-bottom:16px; margin-bottom:24px;">
+              <h2 style="font-size:24px; color:#862fe7; font-weight:800;">📚 BookVault — Google Books Search Platform</h2>
+              <span style="background:#ebdafd; color:#862fe7; padding:6px 14px; border-radius:9999px; font-weight:700; font-size:13px;">Express & REST API</span>
             </div>
-            <div style="background:#f1f5f9; border-radius:12px; padding:0.85rem 1.25rem; display:flex; align-items:center; gap:0.75rem; margin-bottom:2rem;">
+            <div style="background:#f1f5f9; border-radius:12px; padding:14px 20px; display:flex; align-items:center; gap:12px; margin-bottom:24px;">
               <span>🔍</span>
-              <input type="text" value="Clean Code Architecture & Python Patterns" readonly style="background:transparent; border:none; width:100%; font-size:1rem; outline:none;" />
-              <button style="background:#4338ca; color:#fff; border:none; padding:0.5rem 1.25rem; border-radius:8px; font-weight:700; cursor:pointer;">Search</button>
+              <input type="text" value="Clean Code Architecture & Python Patterns" readonly style="background:transparent; border:none; width:100%; font-size:15px; outline:none;" />
             </div>
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem;">
-              <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:1.25rem;">
-                <div style="height:100px; background:#4338ca; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; margin-bottom:0.75rem;">Clean Code</div>
-                <h4 style="font-size:0.95rem; margin-bottom:0.25rem;">Clean Code Handbook</h4>
-                <p style="color:#64748b; font-size:0.8rem;">Robert C. Martin • 464 pages</p>
-                <div style="color:#e5a93c; font-size:0.85rem; margin-top:0.5rem;">★★★★★ (4.8)</div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px;">
+              <div style="background:#fff; border:1px solid #d8e0ea; border-radius:16px; padding:20px;">
+                <div style="height:100px; background:#862fe7; color:#fff; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:700; margin-bottom:12px;">Clean Code</div>
+                <h4 style="font-size:15px; font-weight:700; margin-bottom:4px;">Clean Code Handbook</h4>
+                <p style="color:#6b7589; font-size:13px;">Robert C. Martin • 464 pages</p>
               </div>
-              <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:1.25rem;">
-                <div style="height:100px; background:#0284c7; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; margin-bottom:0.75rem;">Fluent Python</div>
-                <h4 style="font-size:0.95rem; margin-bottom:0.25rem;">Fluent Python 2nd Ed.</h4>
-                <p style="color:#64748b; font-size:0.8rem;">Luciano Ramalho • 1014 pages</p>
-                <div style="color:#e5a93c; font-size:0.85rem; margin-top:0.5rem;">★★★★★ (4.9)</div>
+              <div style="background:#fff; border:1px solid #d8e0ea; border-radius:16px; padding:20px;">
+                <div style="height:100px; background:#ad6df4; color:#fff; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:700; margin-bottom:12px;">Fluent Python</div>
+                <h4 style="font-size:15px; font-weight:700; margin-bottom:4px;">Fluent Python 2nd Ed.</h4>
+                <p style="color:#6b7589; font-size:13px;">Luciano Ramalho • 1014 pages</p>
               </div>
             </div>
           </div>
@@ -1892,22 +2051,22 @@
         url: 'https://eventplan-pro.app/admin',
         html: `
           <div style="max-width:850px; margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:1rem; margin-bottom:1.5rem;">
-              <h2 style="font-size:1.6rem; color:#7e22ce; font-weight:800;">🎟️ EventPlan Pro — Django Architecture</h2>
-              <span style="background:#faf5ff; color:#7e22ce; padding:0.35rem 0.9rem; border-radius:999px; font-weight:700; font-size:0.85rem;">Django 5.x</span>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d8e0ea; padding-bottom:16px; margin-bottom:24px;">
+              <h2 style="font-size:24px; color:#111827; font-weight:800;">🎟️ EventPlan Pro — Django Architecture</h2>
+              <span style="background:#111827; color:#fff; padding:6px 14px; border-radius:9999px; font-weight:700; font-size:13px;">Django 5.x</span>
             </div>
-            <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; margin-bottom:2rem;">
-              <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:1.25rem;">
-                <span style="color:#64748b; font-size:0.8rem;">Active Events</span>
-                <h3 style="font-size:1.6rem; font-weight:800; color:#7e22ce;">14 Events</h3>
+            <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;">
+              <div style="background:#f1f5f9; border-radius:16px; padding:20px;">
+                <span style="color:#6b7589; font-size:13px;">Active Events</span>
+                <h3 style="font-size:24px; font-weight:800; color:#862fe7;">14 Events</h3>
               </div>
-              <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:1.25rem;">
-                <span style="color:#64748b; font-size:0.8rem;">Confirmed Bookings</span>
-                <h3 style="font-size:1.6rem; font-weight:800; color:#0284c7;">1,280 Guests</h3>
+              <div style="background:#f1f5f9; border-radius:16px; padding:20px;">
+                <span style="color:#6b7589; font-size:13px;">Confirmed Guests</span>
+                <h3 style="font-size:24px; font-weight:800; color:#111827;">1,280 Guests</h3>
               </div>
-              <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:1.25rem;">
-                <span style="color:#64748b; font-size:0.8rem;">Venues Managed</span>
-                <h3 style="font-size:1.6rem; font-weight:800; color:#10b981;">8 Venues</h3>
+              <div style="background:#f1f5f9; border-radius:16px; padding:20px;">
+                <span style="color:#6b7589; font-size:13px;">Venues Managed</span>
+                <h3 style="font-size:24px; font-weight:800; color:#0c6953;">8 Venues</h3>
               </div>
             </div>
           </div>
@@ -1917,13 +2076,13 @@
         url: 'https://youka-flory.store/shop',
         html: `
           <div style="font-family:'Tajawal',sans-serif; direction:rtl; max-width:850px; margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #fbcfe8; padding-bottom:1rem; margin-bottom:1.5rem;">
-              <h2 style="font-size:1.6rem; color:#db2777; font-weight:800;">🌸 Youka_Flory | بوكيهات ورد فاخرة</h2>
-              <span style="background:#fdf2f8; color:#db2777; padding:0.35rem 0.9rem; border-radius:999px; font-weight:700; font-size:0.85rem;">🛍️ سلة التسوق (2)</span>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d8e0ea; padding-bottom:16px; margin-bottom:24px;">
+              <h2 style="font-size:24px; color:#e22ba4; font-weight:800;">🌸 Youka_Flory | بوكيهات ورد فاخرة</h2>
+              <span style="background:#ff5fe4; color:#fff; padding:6px 14px; border-radius:9999px; font-weight:700; font-size:13px;">🛍️ السلة (2)</span>
             </div>
-            <div style="background:#fdf2f8; border:1px solid #fbcfe8; border-radius:14px; padding:1.5rem; margin-bottom:1.5rem; text-align:center;">
-              <h3 style="color:#9d174d; font-size:1.3rem; margin-bottom:0.3rem;">تنسيقات ورد طبيعي راقية وتوصيل سريع في نفس اليوم</h3>
-              <p style="color:#64748b; font-size:0.9rem;">بوكيهات مناسبات وهدايا وتغليف فاخر وبطاقات مخصصة</p>
+            <div style="background:#f1f5f9; border-radius:16px; padding:24px; text-align:center;">
+              <h3 style="color:#111827; font-size:20px; font-weight:800; margin-bottom:8px;">تنسيقات ورد طبيعي راقية وتوصيل فوري</h3>
+              <p style="color:#6b7589; font-size:14px;">بوكيهات مناسبات وهدايا وتغليف فاخر وبطاقات إهداء</p>
             </div>
           </div>
         `
@@ -1931,46 +2090,17 @@
       cisco: {
         url: 'https://cisco-lab.dev/simulator',
         html: `
-          <div style="font-family:'JetBrains Mono',monospace; max-width:850px; margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:1rem; margin-bottom:1.5rem;">
-              <h2 style="font-size:1.4rem; color:#0284c7; font-weight:800;">📟 Cisco Packet Tracer Simulator</h2>
-              <span style="background:#e0f2fe; color:#0284c7; padding:0.35rem 0.9rem; border-radius:999px; font-weight:700; font-size:0.85rem;">Connected</span>
+          <div style="font-family:var(--font-mono); max-width:850px; margin:0 auto;">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d8e0ea; padding-bottom:16px; margin-bottom:24px;">
+              <h2 style="font-size:20px; color:#111827; font-weight:700;">📟 Cisco Packet Tracer Simulator</h2>
+              <span style="background:#d6fcf4; color:#0c6953; padding:6px 14px; border-radius:9999px; font-weight:700; font-size:12px;">Terminal Ready</span>
             </div>
-            <div style="background:#090d16; color:#22c55e; border-radius:12px; padding:1.5rem; font-size:0.9rem; line-height:1.7;">
-              <div style="color:#94a3b8;">Router# configure terminal</div>
-              <div style="color:#94a3b8;">Router(config)# interface GigabitEthernet0/0</div>
+            <div style="background:#090d16; color:#3fb950; border-radius:16px; padding:24px; font-size:14px; line-height:1.8;">
+              <div style="color:#8b949e;">Router# configure terminal</div>
+              <div style="color:#8b949e;">Router(config)# interface GigabitEthernet0/0</div>
               <div>Router(config-if)# ip address 192.168.1.1 255.255.255.0</div>
               <div>Router(config-if)# no shutdown</div>
-              <div style="color:#38bdf8; font-weight:700;">%LINK-5-CHANGED: Interface GigabitEthernet0/0, state changed to up</div>
-            </div>
-          </div>
-        `
-      },
-      schedule: {
-        url: 'https://schedule-smart.edu/timetable',
-        html: `
-          <div style="font-family:'Tajawal',sans-serif; direction:rtl; max-width:850px; margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:1rem; margin-bottom:1.5rem;">
-              <h2 style="font-size:1.6rem; color:#0284c7; font-weight:800;">📅 جدولي الدراسي الذكي</h2>
-              <span style="background:#f1f5f9; padding:0.35rem 0.9rem; border-radius:999px; font-weight:700;">الفصل الدراسي الحالي</span>
-            </div>
-            <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:1rem; overflow-x:auto;">
-              <table style="width:100%; border-collapse:collapse; text-align:center;">
-                <thead>
-                  <tr style="background:#f8fafc; border-bottom:1px solid #cbd5e1;">
-                    <th style="padding:0.75rem;">اليوم</th>
-                    <th style="padding:0.75rem;">09:00 ص - 11:00 ص</th>
-                    <th style="padding:0.75rem;">11:30 ص - 01:30 م</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="border-bottom:1px solid #f1f5f9;">
-                    <td style="padding:0.75rem; font-weight:700;">الأحد</td>
-                    <td style="padding:0.75rem;"><div style="background:#fee2e2; color:#991b1b; padding:0.5rem; border-radius:6px; font-weight:600;">محاضرة: Software Engineering</div></td>
-                    <td style="padding:0.75rem;"><div style="background:#d1fae5; color:#065f46; padding:0.5rem; border-radius:6px; font-weight:600;">معمل: Database Systems</div></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div style="color:#58a6ff; font-weight:700;">%LINK-5-CHANGED: Interface GigabitEthernet0/0, state changed to up</div>
             </div>
           </div>
         `
@@ -1980,8 +2110,8 @@
     function openDemoModal(key) {
       const demo = appDemos[key];
       if (!demo) return;
-      modalUrlDisplay.textContent = '🔒 ' + demo.url;
-      modalViewportContent.innerHTML = demo.html;
+      modalUrlDisplay.textContent = demo.url;
+      modalContentArea.innerHTML = demo.html;
       demoModal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
