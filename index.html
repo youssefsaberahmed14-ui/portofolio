@@ -19,42 +19,66 @@
        SUPAHUB DESIGN SYSTEM TOKENS
        ========================================================================== */
     :root {
-      /* Colors */
-      --color-voltage-violet: #862fe7;
-      --color-ultra-violet: #5f259e;
-      --color-lavender-mist: #ad6df4;
-      --color-orchid-wash: #bd8ff0;
-      --color-magenta-spark: #ff5fe4;
-      --color-hot-pink-ray: #e22ba4;
-      --color-amber-pulse: #dc5f05;
-      --color-midnight-ink: #111827;
-      --color-graphite: #3f4654;
-      --color-slate: #6b7589;
+      /* ==========================================================================
+         UNIFIED 3-COLOR SYSTEM (60-30-10 Design Architecture)
+         1. Primary Dark  (60% Contrast/Structure): #0f172a (Deep Midnight Slate)
+         2. Primary Light (30% Surface/Canvas):     #ffffff & #f8fafc (Clean Mist)
+         3. Accent Focus  (10% Action/Attention):   #f59e0b / #d97706 (Warm Golden Amber)
+         ========================================================================== */
+
+      /* Primary Color 1: Deep Midnight (Text, Headings, Dark Surfaces, High Contrast) */
+      --color-primary-dark: #0f172a;
+      --color-midnight-ink: #0f172a;
+      --color-graphite: #334155;
+      --color-slate: #64748b;
+
+      /* Primary Color 2: Clean Light (Canvas, Card Surfaces, Borders) */
+      --color-primary-light: #ffffff;
       --color-pure-white: #ffffff;
-      --color-fog: #f1f5f9;
-      --color-mist: #d8e0ea;
-      --color-mint-wash: #d6fcf4;
-      --color-lavender-field: #ebdafd;
+      --color-surface-soft: #f8fafc;
+      --color-fog: #f8fafc;
+      --color-mist: #e2e8f0;
+      --color-border-card: #e2e8f0;
+
+      /* Accent Color 3: Radiant Amber (Strict 10% Focus, Actions, Badges, Highlights) */
+      --color-accent-focus: #f59e0b;
+      --color-accent-hover: #d97706;
+      --color-accent-text: #b45309;
+      --color-accent-soft: rgba(245, 158, 11, 0.12);
+      --color-accent-glow: rgba(245, 158, 11, 0.25);
       --color-gold-star: #f59e0b;
+
+      /* Complete Legacy Token Mapping to ensure 100% color unification across components */
+      --color-voltage-violet: #f59e0b;
+      --color-ultra-violet: #d97706;
+      --color-lavender-mist: rgba(245, 158, 11, 0.15);
+      --color-orchid-wash: rgba(245, 158, 11, 0.08);
+      --color-magenta-spark: #f59e0b;
+      --color-hot-pink-ray: #f59e0b;
+      --color-amber-pulse: #f59e0b;
+      --color-mint-wash: rgba(245, 158, 11, 0.12);
+      --color-lavender-field: #f8fafc;
 
       /* Typography Families */
       --font-display: 'Bricolage Grotesque', sans-serif;
       --font-body: 'Inter', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
+      --font-serif-accent: 'Playfair Display', Georgia, serif;
       --font-arabic: 'Tajawal', sans-serif;
 
       /* Radii */
       --radius-nav: 12px;
       --radius-buttons: 12px;
       --radius-images: 16px;
-      --radius-cards: 24px;
-      --radius-featured-card: 40px;
+      --radius-cards: 20px;
+      --radius-featured-card: 32px;
       --radius-pills: 9999px;
 
-      /* Shadows */
-      --shadow-subtle: rgba(11, 61, 121, 0.16) 0px 0px 0px 1px inset;
-      --shadow-card-soft: 0 20px 40px rgba(134, 47, 231, 0.08);
-      --shadow-float-mockup: 0 25px 60px rgba(17, 24, 39, 0.09);
+      /* Subtle Shadows */
+      --shadow-subtle: 0 1px 3px rgba(15, 23, 42, 0.08);
+      --shadow-card-soft: 0 12px 30px rgba(15, 23, 42, 0.06);
+      --shadow-float-mockup: 0 20px 50px rgba(15, 23, 42, 0.1);
+      --shadow-accent-glow: 0 8px 24px rgba(245, 158, 11, 0.28);
 
       /* Layout */
       --page-max-width: 1200px;
@@ -1473,6 +1497,224 @@
       }
     }
 
+  
+    /* ==========================================================================
+       UNIFIED COMPONENT REFINEMENTS
+       ========================================================================== */
+    ::selection {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .eyebrow {
+      color: var(--color-accent-hover);
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .serif-accent {
+      font-family: var(--font-serif-accent);
+      font-style: italic;
+      font-weight: 600;
+      color: var(--color-accent-hover);
+    }
+
+    .eyebrow-minimal {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-slate);
+      margin-bottom: 12px;
+    }
+
+    .eyebrow-minimal::before {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 2px;
+      background: var(--color-accent-focus);
+      border-radius: 2px;
+    }
+
+    /* Ambient atmospheric orbs - Unified subtle amber & slate mist */
+    .orb-violet, .orb-backdrop.orb-violet {
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, rgba(245, 158, 11, 0) 70%) !important;
+    }
+    .orb-pink, .orb-backdrop.orb-pink {
+      background: radial-gradient(circle, rgba(15, 23, 42, 0.04) 0%, rgba(15, 23, 42, 0) 70%) !important;
+    }
+
+    /* Buttons Unified System */
+    .btn-primary {
+      background: var(--color-accent-focus);
+      color: var(--color-midnight-ink);
+      font-weight: 700;
+      border: 1px solid var(--color-accent-focus);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.22);
+    }
+    .btn-primary:hover {
+      background: var(--color-accent-hover);
+      border-color: var(--color-accent-hover);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-accent-glow);
+    }
+
+    .btn-dark {
+      background: var(--color-midnight-ink);
+      color: #ffffff;
+      border: 1px solid var(--color-midnight-ink);
+    }
+    .btn-dark:hover {
+      background: #000000;
+      border-color: var(--color-accent-focus);
+      color: var(--color-accent-focus);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.18);
+    }
+
+    .btn-ghost {
+      border: 1px solid var(--color-mist);
+      color: var(--color-midnight-ink);
+    }
+    .btn-ghost:hover {
+      border-color: var(--color-midnight-ink);
+      background: var(--color-surface-soft);
+      transform: translateY(-2px);
+    }
+
+    .btn-nav-compact {
+      background: var(--color-midnight-ink);
+      color: #ffffff;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .btn-nav-compact:hover {
+      background: var(--color-accent-focus);
+      color: var(--color-midnight-ink);
+      border-color: var(--color-accent-focus);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+    }
+
+    .btn-card-preview {
+      background: var(--color-surface-soft);
+      color: var(--color-midnight-ink);
+      border: 1px solid var(--color-mist);
+    }
+    .btn-card-preview:hover {
+      background: var(--color-midnight-ink);
+      color: var(--color-accent-focus);
+      border-color: var(--color-midnight-ink);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+    }
+
+    /* Tag Chips Unified */
+    .tag-chip {
+      background: var(--color-surface-soft);
+      color: var(--color-slate);
+      border: 1px solid var(--color-mist);
+    }
+    .tag-chip.violet,
+    .tag-chip.accent {
+      background: rgba(245, 158, 11, 0.12) !important;
+      color: #b45309 !important;
+      border-color: rgba(245, 158, 11, 0.25) !important;
+      font-weight: 600;
+    }
+
+    /* Navbar Brand Dot */
+    .brand-logo-text span {
+      color: var(--color-accent-focus);
+    }
+
+    /* Hover badges on card mockups */
+    .hover-badge-btn {
+      background: var(--color-accent-focus);
+      color: var(--color-midnight-ink);
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    }
+
+    /* Product Card Borders */
+    .product-preview-card {
+      border: 1px solid var(--color-mist);
+      background: var(--color-pure-white);
+    }
+    .product-preview-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+    }
+
+    /* Section 2 (Featured Band) */
+    section.lavender-feature-band {
+      background: var(--color-surface-soft) !important;
+      border-top: 1px solid var(--color-mist) !important;
+      border-bottom: 1px solid var(--color-mist) !important;
+    }
+    .lavender-card-highlight {
+      background: var(--color-pure-white) !important;
+      border: 1px solid var(--color-mist) !important;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
+    }
+    .mint-pill-tag {
+      background: rgba(245, 158, 11, 0.12) !important;
+      color: #b45309 !important;
+      border: 1px solid rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700;
+    }
+    .impact-number-pill {
+      background: var(--color-midnight-ink) !important;
+      color: #ffffff !important;
+      font-weight: 700;
+    }
+
+    /* Section 4 (Journey / Education) */
+    section.journey-section {
+      background: var(--color-pure-white) !important;
+      border-top: 1px solid var(--color-mist) !important;
+    }
+    .journey-card {
+      background: var(--color-surface-soft) !important;
+      border: 1px solid var(--color-mist) !important;
+    }
+    .journey-card:hover {
+      border-color: #cbd5e1;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+    }
+    .journey-period {
+      color: var(--color-accent-hover) !important;
+      font-weight: 700;
+    }
+
+    /* Contact channels & Submit button */
+    .contact-icon-circle-amber {
+      background: var(--color-accent-focus) !important;
+      box-shadow: 0 4px 10px rgba(245, 158, 11, 0.25) !important;
+    }
+    .btn-submit-pill-v2 {
+      background: var(--color-midnight-ink) !important;
+    }
+    .btn-submit-pill-v2:hover {
+      background: #000000 !important;
+    }
+    .submit-arrow-circle-v2 {
+      background: var(--color-accent-focus) !important;
+      color: var(--color-midnight-ink) !important;
+    }
+
+    /* Form controls focus */
+    .form-control-v2:focus,
+    .form-control:focus {
+      border-color: var(--color-accent-focus) !important;
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15) !important;
+    }
+
   </style>
 </head>
 <body>
@@ -1529,7 +1771,7 @@
         <div class="hero-content">
           <span class="eyebrow">FULL-STACK & AI SOFTWARE ENGINEER</span>
           <h1 class="display-headline">
-            Engineering scalable web apps with violet confidence.
+            Engineering scalable web apps with <span class="serif-accent">precision & intelligence</span>.
           </h1>
           <p class="sub-copy">
             Hi, I'm <strong>Youssef Saber Ahmed</strong>. I build high-performance web systems, Gemini AI integrations, and Progressive Web Apps (PWAs) that turn complex challenges into seamless experiences.
@@ -1548,9 +1790,9 @@
           <div class="social-proof-wrap">
             <div class="avatar-stack">
               <div class="avatar-item"><img src="portfolio.jpeg" alt="Youssef" /></div>
-              <div class="avatar-item" style="background:#ad6df4; color:#fff;">A</div>
-              <div class="avatar-item" style="background:#862fe7; color:#fff;">M</div>
-              <div class="avatar-item" style="background:#111827; color:#fff;">S</div>
+              <div class="avatar-item" style="background:#0f172a; color:#f59e0b;">A</div>
+              <div class="avatar-item" style="background:#1e293b; color:#f59e0b;">M</div>
+              <div class="avatar-item" style="background:#f59e0b; color:#0f172a;">S</div>
             </div>
             <div class="social-proof-text">
               <div class="stars-row">★★★★★</div>
@@ -1578,7 +1820,7 @@
 
           <!-- Floating Chip Badge -->
           <div class="floating-chip">
-            <div class="chip-badge">⚡</div>
+            <div class="chip-badge" style="background:#fef3c7; color:#d97706;">⚡</div>
             <div class="chip-info">
               <h5>Full-Stack & AI</h5>
               <p>Node • Python • PWA • React</p>
@@ -1628,11 +1870,11 @@
           <div style="background:var(--color-fog); border-radius:12px; padding:16px; display:flex; flex-direction:column; gap:8px;">
             <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600;">
               <span>Database Systems (Lecture)</span>
-              <span style="color:var(--color-voltage-violet);">09:00 AM</span>
+              <span style="color:var(--color-accent-hover);">09:00 AM</span>
             </div>
             <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600;">
               <span>Artificial Intelligence (Lab)</span>
-              <span style="color:var(--color-voltage-violet);">11:30 AM</span>
+              <span style="color:var(--color-accent-hover);">11:30 AM</span>
             </div>
           </div>
         </div>
@@ -1677,9 +1919,9 @@
             <div class="mini-screen ms-ai">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#c4b5fd; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
                 <span>✨ Lecture Buddy AI</span>
-                <span style="background:#7c3aed; padding:1px 6px; border-radius:4px;">Gemini Vision</span>
+                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); padding:1px 6px; border-radius:4px;">Gemini Vision</span>
               </div>
-              <div style="background:rgba(255,255,255,0.06); border:1px dashed #7c3aed; border-radius:6px; padding:12px; text-align:center; font-size:12px;">
+              <div style="background:rgba(255,255,255,0.06); border:1px dashed rgba(245,158,11,0.4); border-radius:6px; padding:12px; text-align:center; font-size:12px;">
                 اسحب صورة جدولك لتحليله بالذكاء الاصطناعي
               </div>
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:auto;">
@@ -1730,7 +1972,7 @@
             <div class="mini-screen ms-classroom" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#38bdf8; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:4px;">
                 <span>🎓 منصة الفصول التعليمية</span>
-                <span style="background:#0284c7; color:#fff; padding:1px 6px; border-radius:4px; font-size:10px;">LMS Portal</span>
+                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); padding:1px 6px; border-radius:4px; font-size:10px;">LMS Portal</span>
               </div>
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:8px;">
                 <div style="background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.2); border-radius:6px; padding:8px;">
@@ -1791,9 +2033,9 @@
                 <span>🔍</span><span>Search 40M+ book titles...</span>
               </div>
               <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; margin-top:auto;">
-                <div style="background:#4338ca; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:700;">Clean Code</div>
-                <div style="background:#0284c7; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:700;">Python Pro</div>
-                <div style="background:#059669; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:700;">System Design</div>
+                <div style="background:#1e293b; border:1px solid #334155; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:600; color:#f8fafc;">Clean Code</div>
+                <div style="background:#1e293b; border:1px solid #334155; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:600; color:#f8fafc;">Python Pro</div>
+                <div style="background:#1e293b; border:1px solid #334155; border-radius:4px; padding:8px 4px; text-align:center; font-size:10px; font-weight:600; color:#f8fafc;">System Design</div>
               </div>
             </div>
             <div class="mockup-hover-layer">
@@ -1941,7 +2183,7 @@
             </div>
           </div>
           <div class="card-mockup-viewport" onclick="window.open('https://weather-website-gray-ten.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen" style="background:linear-gradient(135deg, #0284c7 0%, #0369a1 100%); border-radius:8px; padding:12px; display:flex; flex-direction:column; height:100%;">
+            <div class="mini-screen" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius:8px; padding:12px; display:flex; flex-direction:column; height:100%;">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#e0f2fe; border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:4px;">
                 <span>🌤️ Weatherly Dashboard</span>
                 <span>Cairo, EG</span>
@@ -1994,15 +2236,15 @@
             </div>
           </div>
           <div class="card-mockup-viewport" onclick="window.open('https://study-ashen-six.vercel.app', '_blank')" title="Click to open live site">
-            <div class="mini-screen" style="background:linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border-radius:8px; padding:12px; display:flex; flex-direction:column; height:100%;">
+            <div class="mini-screen" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius:8px; padding:12px; display:flex; flex-direction:column; height:100%;">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#c7d2fe; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
                 <span>📖 أكاديمية النور التعليمية</span>
-                <span style="background:#4f46e5; color:#fff; padding:1px 6px; border-radius:4px; font-size:10px;">E-Learning</span>
+                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); padding:1px 6px; border-radius:4px; font-size:10px;">E-Learning</span>
               </div>
               <div style="background:rgba(255,255,255,0.06); border-radius:6px; padding:8px; margin:8px 0;">
                 <div style="font-size:11px; color:#a5b4fc; font-weight:600;">مسار تعلم البرمجة والذكاء الاصطناعي</div>
                 <div style="background:rgba(255,255,255,0.15); height:5px; border-radius:99px; margin-top:6px; overflow:hidden;">
-                  <div style="background:#22c55e; width:75%; height:100%;"></div>
+                  <div style="background:#f59e0b; width:75%; height:100%;"></div>
                 </div>
               </div>
               <div style="font-size:10px; color:#e0e7ff; margin-top:auto;">
@@ -2048,9 +2290,9 @@
             <div class="mini-screen ms-youka">
               <div style="display:flex; justify-content:space-between; font-size:12px; color:#fbcfe8; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:4px;">
                 <span>🛋️ شركة سهام للأثاث</span>
-                <span style="background:#db2777; color:#fff; padding:1px 6px; border-radius:4px; font-size:10px;">Landing Page</span>
+                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); padding:1px 6px; border-radius:4px; font-size:10px;">Landing Page</span>
               </div>
-              <div style="background:rgba(219,39,119,0.25); border-radius:6px; padding:8px; margin:8px 0; font-size:11px; color:#fdf2f8;">
+              <div style="background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.2); border-radius:6px; padding:8px; margin:8px 0; font-size:11px; color:#fdf2f8;">
                 فحص فوري وتسعير عادل بأعلى الأسعار بالرياض
               </div>
               <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.08); padding:6px 8px; border-radius:4px; margin-top:auto; font-size:11px; color:#22c55e;">
@@ -2591,7 +2833,7 @@
       const urlDisplay = document.getElementById('modalUrlDisplay');
       const contentArea = document.getElementById('modalContentArea');
       
-      urlDisplay.innerHTML = `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline;">${url}</a> <span style="margin-left:8px; font-weight:600; color:var(--color-voltage-violet);">[Open Full ↗]</span>`;
+      urlDisplay.innerHTML = `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline;">${url}</a> <span style="margin-left:8px; font-weight:600; color:var(--color-accent-hover);">[Open Full ↗]</span>`;
       
       contentArea.style.padding = '0';
       contentArea.innerHTML = `
