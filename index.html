@@ -496,17 +496,7 @@
       display: block;
     }
 
-    /* Bottom gradient vignette for seamless depth */
-    .hero-portrait-card::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 150px;
-      background: linear-gradient(to top, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.4) 60%, transparent 100%);
-      pointer-events: none;
-    }
+    
 
     /* Floating Chip Badge over portrait */
     .portrait-floating-chip {
@@ -1309,13 +1299,6 @@
         <div class="hero-right-col">
           <div class="hero-portrait-card">
             <img src="portfolio.jpeg" alt="Youssef Saber Ahmed" class="hero-portrait-img" />
-            <div class="portrait-floating-chip">
-              <div class="chip-icon-box">⚡</div>
-              <div class="chip-meta">
-                <h5>Youssef Saber Ahmed</h5>
-                <p>Full-Stack &amp; AI Systems Engineer</p>
-              </div>
-            </div>
           </div>
         </div>
 
